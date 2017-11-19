@@ -8,21 +8,89 @@
 	<title>Crypto Consulting Cosmonauts - BitCraft</title>
 
 	<style>
+		@keyframes move-twink-back {
+			from {background-position:0 0;}
+			to {background-position:-10000px 5000px;}
+		}
+		@-webkit-keyframes move-twink-back {
+			from {background-position:0 0;}
+			to {background-position:-10000px 5000px;}
+		}
+		@-moz-keyframes move-twink-back {
+			from {background-position:0 0;}
+			to {background-position:-10000px 5000px;}
+		}
+		@-ms-keyframes move-twink-back {
+			from {background-position:0 0;}
+			to {background-position:-10000px 5000px;}
+		}
+
+		@keyframes move-clouds-back {
+			from {background-position:0 0;}
+			to {background-position:10000px 0;}
+		}
+		@-webkit-keyframes move-clouds-back {
+			from {background-position:0 0;}
+			to {background-position:10000px 0;}
+		}
+		@-moz-keyframes move-clouds-back {
+			from {background-position:0 0;}
+			to {background-position:10000px 0;}
+		}
+		@-ms-keyframes move-clouds-back {
+			from {background-position: 0;}
+			to {background-position:10000px 0;}
+		}
+
 		body,html{
 			margin:0;
 			padding:0;
 			font-family: 'Lora', serif;
+			columns: #444444;
 		}
 
 		h1, h2 {
 			font-family: 'Istok Web', sans-serif;	
 		}
 
+		.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.stars {
+  background:#4a97d2 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
 		.main {
 			height:90vh;
 			background-color: #4a97d2;
 			color:#eee;
+			position: relative;
 			padding-left:64px;
+		}
+
+		.main .on-top {
+			position: relative;
+			z-index: 3;
 		}
 
 		.main .pitch {
@@ -66,66 +134,102 @@
 
 		.team-area{
 			padding-left:64px;
+			padding-right:64px;
+			padding-top: 16px;
 		}
 
 		.team-area .header {
 			font-size:2em;
+			margin:0;
 		}
 
+		.team-members {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			flex-flow: row wrap;
+		}
+
+		.team-member {
+			margin-right:24px;
+			margin-left:0;
+			text-align: center;
+		}
+
+		.team-member img {
+			border-radius:100px;
+			height: 150px;
+    		width: 150px;
+		}
+
+		.team-member figcaption {
+			text-align: center;
+		}
+
+		.team-member figcaption p {
+			margin:0;
+		}
 	</style>
 </head>
 <body>
 	<header class="main">
-		<img src="http://lorempixel.com/400/200" alt="BitCraft" class="logo">
-		<div class="pitch-area">
-			<h2 class="pitch">We make tools and services <br/> to help companies succeed in <br/>crypotocurrency markets</h2>
+		<div class="stars"></div>
+		<div class="twinkling"></div>
+		<div class="on-top">
+				<img src="http://lorempixel.com/400/200" alt="BitCraft" class="logo">
+				<div class="pitch-area">
+						<h2 class="pitch">We make tools and services <br/> to help companies succeed in <br/>crypotocurrency markets</h2>
+					</div>
+					<a class="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&body=Tell us about the goals of your project and how we could help.">Hire Us</a>
 		</div>
-		<a class="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&body=Tell us about the goals of your project and how we could help.">Hire Us</a>
 	</header>
 	<div class="team-area">
 		<h2 class="header">Meet the team</h2>
-		<figure class="team-member">
-			<img src="http://lorempixel.com/400/200" alt="">
-			<figcaptoion>
-				<p>Occupation</p>
-				<p>Lorem ipsum dolor sit amet consectetur.</p>
-			</figcaptoion>
-		</figure>
-		<figure class="team-member">
-			<img src="http://lorempixel.com/400/200" alt="">
-			<figcaptoion>
-				<p>Occupation</p>
-				<p>Lorem ipsum dolor sit amet consectetur.</p>
-			</figcaptoion>
-		</figure>
-		<figure class="team-member">
-			<img src="http://lorempixel.com/400/200" alt="">
-			<figcaptoion>
-				<p>Occupation</p>
-				<p>Lorem ipsum dolor sit amet consectetur.</p>
-			</figcaptoion>
-		</figure>
-		<figure class="team-member">
-			<img src="http://lorempixel.com/400/200" alt="">
-			<figcaptoion>
-				<p>Occupation</p>
-				<p>Lorem ipsum dolor sit amet consectetur.</p>
-			</figcaptoion>
-		</figure>
-		<figure class="team-member">
-			<img src="http://lorempixel.com/400/200" alt="">
-			<figcaptoion>
-				<p>Occupation</p>
-				<p>Lorem ipsum dolor sit amet consectetur.</p>
-			</figcaptoion>
-		</figure>
-		<figure class="team-member">
-			<img src="http://lorempixel.com/400/200" alt="">
-			<figcaptoion>
-				<p>Occupation</p>
-				<p>Lorem ipsum dolor sit amet consectetur.</p>
-			</figcaptoion>
-		</figure>		
+
+		<div class="team-members">
+			<figure class="team-member">
+					<img src="http://lorempixel.com/400/200" alt="">
+					<figcaptoion>
+						<p>Occupation</p>
+						<p>Lorem ipsum dolor sit amet consectetur.</p>
+					</figcaptoion>
+				</figure>
+				<figure class="team-member">
+					<img src="http://lorempixel.com/400/200" alt="">
+					<figcaptoion>
+						<p>Occupation</p>
+						<p>Lorem ipsum dolor sit amet consectetur.</p>
+					</figcaptoion>
+				</figure>
+				<figure class="team-member">
+					<img src="http://lorempixel.com/400/200" alt="">
+					<figcaptoion>
+						<p>Occupation</p>
+						<p>Lorem ipsum dolor sit amet consectetur.</p>
+					</figcaptoion>
+				</figure>
+				<figure class="team-member">
+					<img src="http://lorempixel.com/400/200" alt="">
+					<figcaptoion>
+						<p>Occupation</p>
+						<p>Lorem ipsum dolor sit amet consectetur.</p>
+					</figcaptoion>
+				</figure>
+				<figure class="team-member">
+					<img src="http://lorempixel.com/400/200" alt="">
+					<figcaptoion>
+						<p>Occupation</p>
+						<p>Lorem ipsum dolor sit amet consectetur.</p>
+					</figcaptoion>
+				</figure>
+				<figure class="team-member">
+					<img src="http://lorempixel.com/400/200" alt="">
+					<figcaptoion>
+						<p>Occupation</p>
+						<p>Lorem ipsum dolor sit amet consectetur.</p>
+					</figcaptoion>
+				</figure>		
+		</div>
 	</div>
 	<div class="footer">
 		<p>&copy; BitCraft 2017</p>
