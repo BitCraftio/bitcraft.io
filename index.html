@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Istok+Web|Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web|Lato" rel="stylesheet">
+    <link href="/images/bitcraft.png" rel="shortcut icon">
+
     <title>Crypto Consulting Cosmonauts - BitCraft</title>
 
     <style>
@@ -85,7 +87,7 @@
         html {
             margin: 0;
             padding: 0;
-            font-family: 'Lora', serif;
+            font-family: 'Lato', sans-serif;
             columns: #444444;
         }
 
@@ -97,7 +99,6 @@
         .twinkling {
             background: transparent url(images/twinkling.png) repeat top center;
             z-index: 1;
-
             -moz-animation: move-twink-back 300s linear infinite;
             -ms-animation: move-twink-back 300s linear infinite;
             -o-animation: move-twink-back 300s linear infinite;
@@ -123,11 +124,11 @@
         }
 
         .main {
-            height: 90vh;
             background-color: #4a97d2;
             color: #eee;
             position: relative;
             padding-left: 64px;
+            padding-bottom: 32px;
         }
 
         .main .on-top {
@@ -135,11 +136,26 @@
             z-index: 3;
         }
 
-        .main .pitch {
+        .main .pitch,
+        .main .name {
             margin: 0;
+            font-family: 'Istok Web', sans-serif;
+        }
+
+        .main .name {
+            line-height: 1.5;
+            font-size: 4em;
+            font-weight: 100;
+        }
+
+        .main .name span {
+            font-weight: 800;
+        }
+
+        .main .pitch {
             line-height: 1.1;
             font-size: 3em;
-            font-family: 'Istok Web', sans-serif;
+            max-width: 50vw;
         }
 
         .logo {
@@ -149,11 +165,11 @@
         }
 
         .pitch-area {
-            margin-top: 35vh;
+            margin-top: 3vh;
         }
 
         .main .pitch {
-            font-weight: 600;
+            font-weight: 200;
         }
 
         .main .button {
@@ -219,11 +235,11 @@
         <div class="stars"></div>
         <div class="twinkling"></div>
         <div class="on-top">
-            <img src="bitcraft_logo-09.png" alt="BitCraft" class="logo">
+            <img src="images/bitcraft.png" alt="BitCraft" class="logo">
             <div class="pitch-area">
-                <h2 class="pitch">We make tools and services
-                    <br/> to help companies succeed in
-                    <br/>crypotocurrency markets</h2>
+                <h1 class="name">We are
+                    <span>BitCraft</span>.</h1>
+                <h2 class="pitch">We build tools and services to help our customers succeed in cryptocurrency markets.</h2>
             </div>
             <a class="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help.">Hire Us</a>
         </div>
