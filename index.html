@@ -126,9 +126,11 @@
         .main {
             background-color: #4a97d2;
             color: #eee;
-            position: relative;
-            padding-left: 64px;
-            padding-bottom: 32px;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            top: 0;
         }
 
         .main .on-top {
@@ -152,10 +154,14 @@
             font-weight: 800;
         }
 
-        .main .pitch {
-            line-height: 1.1;
-            font-size: 3em;
-            max-width: 50vw;
+        .main .footer {
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+            z-index: 999;
+            text-align: right;
+            line-height: .4em;
+            opacity: .8;
         }
 
         .logo {
@@ -168,8 +174,25 @@
             margin-top: 3vh;
         }
 
+        .main .inner {
+            padding-left: 64px;
+            position: absolute;
+            bottom: 0;
+            padding-bottom: 64px;
+        }
+
+        .main .logo-box {
+            padding-left: 64px;
+            position: absolute;
+            top: 32px;
+            z-index: 9999;
+        }
+
         .main .pitch {
             font-weight: 200;
+            font-size: 2.5em;
+            line-height: 1.1;
+            max-width: 50vw;
         }
 
         .main .button {
@@ -231,71 +254,27 @@
 </head>
 
 <body>
-    <header class="main">
+    <div class="main">
         <div class="stars"></div>
         <div class="twinkling"></div>
-        <div class="on-top">
+        <div class="logo-box">
             <img src="images/bitcraft.png" alt="BitCraft" class="logo">
-            <div class="pitch-area">
-                <h1 class="name">We are
-                    <span>BitCraft</span>.</h1>
-                <h2 class="pitch">We build tools and services to help our customers succeed in cryptocurrency markets.</h2>
+        </div>
+        <div class="inner">
+            <div class="on-top">
+                <div class="pitch-area">
+                    <h1 class="name">We are
+                        <span>BitCraft</span>.</h1>
+                    <h2 class="pitch">We build tools and services to help our customers succeed in cryptocurrency markets.</h2>
+                </div>
+                <a class="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help.">Hire Us</a>
             </div>
-            <a class="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help.">Hire Us</a>
+            </header>
         </div>
-    </header>
-    <div class="team-area">
-        <h2 class="header">Meet the team</h2>
-
-        <div class="team-members">
-            <figure class="team-member">
-                <img src="http://lorempixel.com/400/200" alt="">
-                <figcaptoion>
-                    <p>Caleb L.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </figcaptoion>
-            </figure>
-            <figure class="team-member">
-                <img src="http://lorempixel.com/400/200" alt="">
-                <figcaptoion>
-                    <p>Haroon Q.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </figcaptoion>
-            </figure>
-            <figure class="team-member">
-                <img src="http://lorempixel.com/400/200" alt="">
-                <figcaptoion>
-                    <p>Harsha G.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </figcaptoion>
-            </figure>
-            <figure class="team-member">
-                <img src="http://lorempixel.com/400/200" alt="">
-                <figcaptoion>
-                    <p>Luis F.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </figcaptoion>
-            </figure>
-            <figure class="team-member">
-                <img src="http://lorempixel.com/400/200" alt="">
-                <figcaptoion>
-                    <p>Sri R.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </figcaptoion>
-            </figure>
-            <figure class="team-member">
-                <img src="https://www.gravatar.com/avatar/e3957bbb3f5b4e4e4259db3d9f1d21bb.jpg?s=150" alt="">
-                <figcaptoion>
-                    <p>Zach B.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </figcaptoion>
-            </figure>
+        <div class="footer">
+            <p>&copy; BitCraft 2017</p>
+            <p>Made in Atlanta, Georgia, USA</p>
         </div>
-    </div>
-    <div class="footer">
-        <p>&copy; BitCraft 2017</p>
-        <p>Made in
-            <a href="https://en.wikipedia.org/wiki/Atlanta">Atlanta</a>, Georgia, USA</p>
     </div>
 </body>
 
