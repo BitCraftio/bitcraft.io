@@ -1,241 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=Istok+Web|Lora" rel="stylesheet">
-	<title>Crypto Consulting Cosmonauts - BitCraft</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web|Lora" rel="stylesheet">
+    <title>Crypto Consulting Cosmonauts - BitCraft</title>
 
-	<style>
-		@keyframes move-twink-back {
-			from {background-position:0 0;}
-			to {background-position:-10000px 5000px;}
-		}
-		@-webkit-keyframes move-twink-back {
-			from {background-position:0 0;}
-			to {background-position:-10000px 5000px;}
-		}
-		@-moz-keyframes move-twink-back {
-			from {background-position:0 0;}
-			to {background-position:-10000px 5000px;}
-		}
-		@-ms-keyframes move-twink-back {
-			from {background-position:0 0;}
-			to {background-position:-10000px 5000px;}
-		}
+    <style>
+        @keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
 
-		@keyframes move-clouds-back {
-			from {background-position:0 0;}
-			to {background-position:10000px 0;}
-		}
-		@-webkit-keyframes move-clouds-back {
-			from {background-position:0 0;}
-			to {background-position:10000px 0;}
-		}
-		@-moz-keyframes move-clouds-back {
-			from {background-position:0 0;}
-			to {background-position:10000px 0;}
-		}
-		@-ms-keyframes move-clouds-back {
-			from {background-position: 0;}
-			to {background-position:10000px 0;}
-		}
+        @-webkit-keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
 
-		body,html{
-			margin:0;
-			padding:0;
-			font-family: 'Lora', serif;
-			columns: #444444;
-		}
+        @-moz-keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
 
-		h1, h2 {
-			font-family: 'Istok Web', sans-serif;	
-		}
+        @-ms-keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
 
-		.twinkling{
+        @keyframes move-clouds-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 10000px 0;
+            }
+        }
 
-  background:transparent url(twinkling.png) repeat top center;
-  /* background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center; */
-  z-index:1;
+        @-webkit-keyframes move-clouds-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 10000px 0;
+            }
+        }
 
-  -moz-animation:move-twink-back 300s linear infinite;
-  -ms-animation:move-twink-back 300s linear infinite;
-  -o-animation:move-twink-back 300s linear infinite;
-  -webkit-animation:move-twink-back 300s linear infinite;
-  animation:move-twink-back 300s linear infinite;
-}
+        @-moz-keyframes move-clouds-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 10000px 0;
+            }
+        }
 
-.stars {
-  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index:0;
-}
+        @-ms-keyframes move-clouds-back {
+            from {
+                background-position: 0;
+            }
+            to {
+                background-position: 10000px 0;
+            }
+        }
 
-.stars, .twinkling {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  display:block;
-}
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lora', serif;
+            columns: #444444;
+        }
 
-		.main {
-			height:90vh;
-			background-color: #4a97d2;
-			color:#eee;
-			position: relative;
-			padding-left:64px;
-		}
+        h1,
+        h2 {
+            font-family: 'Istok Web', sans-serif;
+        }
 
-		.main .on-top {
-			position: relative;
-			z-index: 3;
-		}
+        .twinkling {
+            background: transparent url(images/twinkling.png) repeat top center;
+            z-index: 1;
 
-		.main .pitch {
-			margin:0;
-			line-height: 1.1;
-			font-size:3em;
-			font-family: 'Istok Web', sans-serif;
-		}
+            -moz-animation: move-twink-back 300s linear infinite;
+            -ms-animation: move-twink-back 300s linear infinite;
+            -o-animation: move-twink-back 300s linear infinite;
+            -webkit-animation: move-twink-back 300s linear infinite;
+            animation: move-twink-back 300s linear infinite;
+        }
 
-		.logo{
-			width: 100px;
-			height: 100px;
-			margin-top:48px;
-		}
+        .stars {
+            background: #000 url(images/stars.png) repeat top center;
+            z-index: 0;
+        }
 
-		.pitch-area {
-			margin-top:35vh;
-		}
-		
-		.main .pitch {
-			font-weight: 600;
-		}
+        .stars,
+        .twinkling {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
 
-		.main .button {
-			font-family: 'Istok Web', sans-serif;
-			font-size:1.2em;
-			display: inline-block;
-			margin-top:24px;
-			text-decoration: none;
-			padding:8px 32px;
-			border:1px solid #eee;
-			border-radius:3px;
-			color:#fff;
-			transition:all ease-in-out .25s;
-		}
+        .main {
+            height: 90vh;
+            background-color: #4a97d2;
+            color: #eee;
+            position: relative;
+            padding-left: 64px;
+        }
 
-		.main .button:hover {
-			background-color:#fff;
-			color:#4a97d2;
-		}
+        .main .on-top {
+            position: relative;
+            z-index: 3;
+        }
 
-		.team-area{
-			padding-left:64px;
-			padding-right:64px;
-			padding-top: 16px;
-		}
+        .main .pitch {
+            margin: 0;
+            line-height: 1.1;
+            font-size: 3em;
+            font-family: 'Istok Web', sans-serif;
+        }
 
-		.team-area .header {
-			font-size:2em;
-			margin:0;
-		}
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-top: 48px;
+        }
 
-		.team-members {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			flex-flow: row wrap;
-		}
+        .pitch-area {
+            margin-top: 35vh;
+        }
 
-		.team-member {
-			margin-right:24px;
-			margin-left:0;
-			text-align: center;
-		}
+        .main .pitch {
+            font-weight: 600;
+        }
 
-		.team-member img {
-			border-radius:100px;
-			height: 150px;
-    		width: 150px;
-		}
+        .main .button {
+            font-family: 'Istok Web', sans-serif;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-top: 24px;
+            text-decoration: none;
+            padding: 8px 32px;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            color: #fff;
+            transition: all ease-in-out .25s;
+        }
 
-		.team-member figcaption {
-			text-align: center;
-		}
+        .main .button:hover {
+            background-color: #fff;
+            color: #4a97d2;
+        }
 
-		.team-member figcaption p {
-			margin:0;
-		}
-	</style>
+        .team-area {
+            padding-left: 64px;
+            padding-right: 64px;
+            padding-top: 16px;
+        }
+
+        .team-area .header {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .team-members {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-flow: row wrap;
+        }
+
+        .team-member {
+            margin-right: 24px;
+            margin-left: 0;
+            text-align: center;
+        }
+
+        .team-member img {
+            border-radius: 100px;
+            height: 150px;
+            width: 150px;
+        }
+
+        .team-member figcaption {
+            text-align: center;
+        }
+
+        .team-member figcaption p {
+            margin: 0;
+        }
+    </style>
 </head>
-<body>
-	<header class="main">
-		<div class="stars"></div>
-		<div class="twinkling"></div>
-		<div class="on-top">
-				<img src="bitcraft_logo-09.png" alt="BitCraft" class="logo">
-				<div class="pitch-area">
-						<h2 class="pitch">We make tools and services <br/> to help companies succeed in <br/>crypotocurrency markets</h2>
-					</div>
-					<a class="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&body=Tell us about the goals of your project and how we could help.">Hire Us</a>
-		</div>
-	</header>
-	<div class="team-area">
-		<h2 class="header">Meet the team</h2>
 
-		<div class="team-members">
-			<figure class="team-member">
-					<img src="http://lorempixel.com/400/200" alt="">
-					<figcaptoion>
-						<p>Occupation</p>
-						<p>Lorem ipsum dolor sit amet consectetur.</p>
-					</figcaptoion>
-				</figure>
-				<figure class="team-member">
-					<img src="http://lorempixel.com/400/200" alt="">
-					<figcaptoion>
-						<p>Occupation</p>
-						<p>Lorem ipsum dolor sit amet consectetur.</p>
-					</figcaptoion>
-				</figure>
-				<figure class="team-member">
-					<img src="http://lorempixel.com/400/200" alt="">
-					<figcaptoion>
-						<p>Occupation</p>
-						<p>Lorem ipsum dolor sit amet consectetur.</p>
-					</figcaptoion>
-				</figure>
-				<figure class="team-member">
-					<img src="http://lorempixel.com/400/200" alt="">
-					<figcaptoion>
-						<p>Occupation</p>
-						<p>Lorem ipsum dolor sit amet consectetur.</p>
-					</figcaptoion>
-				</figure>
-				<figure class="team-member">
-					<img src="http://lorempixel.com/400/200" alt="">
-					<figcaptoion>
-						<p>Occupation</p>
-						<p>Lorem ipsum dolor sit amet consectetur.</p>
-					</figcaptoion>
-				</figure>
-				<figure class="team-member">
-					<img src="http://lorempixel.com/400/200" alt="">
-					<figcaptoion>
-						<p>Occupation</p>
-						<p>Lorem ipsum dolor sit amet consectetur.</p>
-					</figcaptoion>
-				</figure>		
-		</div>
-	</div>
-	<div class="footer">
-		<p>&copy; BitCraft 2017</p>
-		<p>Made in <a href="https://en.wikipedia.org/wiki/Atlanta">Atlanta</a>, Georgia, USA</p>
-	</div>
+<body>
+    <header class="main">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="on-top">
+            <img src="bitcraft_logo-09.png" alt="BitCraft" class="logo">
+            <div class="pitch-area">
+                <h2 class="pitch">We make tools and services
+                    <br/> to help companies succeed in
+                    <br/>crypotocurrency markets</h2>
+            </div>
+            <a class="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help.">Hire Us</a>
+        </div>
+    </header>
+    <div class="team-area">
+        <h2 class="header">Meet the team</h2>
+
+        <div class="team-members">
+            <figure class="team-member">
+                <img src="http://lorempixel.com/400/200" alt="">
+                <figcaptoion>
+                    <p>Caleb L.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </figcaptoion>
+            </figure>
+            <figure class="team-member">
+                <img src="http://lorempixel.com/400/200" alt="">
+                <figcaptoion>
+                    <p>Haroon Q.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </figcaptoion>
+            </figure>
+            <figure class="team-member">
+                <img src="http://lorempixel.com/400/200" alt="">
+                <figcaptoion>
+                    <p>Harsha G.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </figcaptoion>
+            </figure>
+            <figure class="team-member">
+                <img src="http://lorempixel.com/400/200" alt="">
+                <figcaptoion>
+                    <p>Luis F.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </figcaptoion>
+            </figure>
+            <figure class="team-member">
+                <img src="http://lorempixel.com/400/200" alt="">
+                <figcaptoion>
+                    <p>Sri R.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </figcaptoion>
+            </figure>
+            <figure class="team-member">
+                <img src="https://www.gravatar.com/avatar/e3957bbb3f5b4e4e4259db3d9f1d21bb.jpg?s=150" alt="">
+                <figcaptoion>
+                    <p>Zach B.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </figcaptoion>
+            </figure>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; BitCraft 2017</p>
+        <p>Made in
+            <a href="https://en.wikipedia.org/wiki/Atlanta">Atlanta</a>, Georgia, USA</p>
+    </div>
 </body>
+
 </html>
