@@ -165,8 +165,8 @@
         }
 
         .logo {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             margin-top: 48px;
         }
 
@@ -249,6 +249,26 @@
 
         .team-member figcaption p {
             margin: 0;
+        }
+
+        @media screen and (max-device-width: 480px) {
+            .inner {
+                font-size: .6em;
+                padding-left: 30px !important;
+            }
+            .pitch {
+                max-width: 80vw !important;
+            }
+            .logo-box {
+                padding-left: 50% !important;
+                left: -75px !important;
+            }
+            .footer {
+                font-size: .8em;
+            }
+            .button {
+                font-size: 2em !important;
+            }
         }
     </style>
 </head>
