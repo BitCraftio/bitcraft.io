@@ -305,10 +305,20 @@
             </header>
         </div>
         <div class="footer">
-            <p>&copy; 2017 BitCraft LLC</p>
             <p>Made in Atlanta, Georgia, USA</p>
         </div>
     </div>
+    
+    <script>
+        var currentYear = (new Date()).getFullYear();
+        var node = document.createElement('p');
+        var textNode = document.createTextNode('© ' + currentYear + ' BitCraft LLC');
+        var footer = document.getElementsByClassName('footer')[0]; 
+
+        node.appendChild(textNode);
+        footer.insertBefore(node, footer.firstChild);
+    </script>
+
 </body>
 
 </html>
