@@ -277,6 +277,28 @@
                 font-size: 2em !important;
             }
         }
+
+        @media screen and (max-height: 600px) {
+            .main .logo-box {
+                top: 40px;
+                left: -60px !important;
+                padding-left: 50% !important;
+            }
+
+            .main .logo {
+                margin-top: 0px;
+                width: 120px;
+                height: auto;
+            }
+
+            .main .name {
+                font-size: 3.5em;
+            }
+
+            .main .pitch {
+                font-size: 2.1em;
+            }
+        }
     </style>
 </head>
 
@@ -305,10 +327,20 @@
             </header>
         </div>
         <div class="footer">
-            <p>&copy; 2017 BitCraft LLC</p>
             <p>Made in Atlanta, Georgia, USA</p>
         </div>
     </div>
+    
+    <script>
+        var currentYear = (new Date()).getFullYear();
+        var node = document.createElement('p');
+        var textNode = document.createTextNode('© ' + currentYear + ' BitCraft LLC');
+        var footer = document.getElementsByClassName('footer')[0]; 
+
+        node.appendChild(textNode);
+        footer.insertBefore(node, footer.firstChild);
+    </script>
+
 </body>
 
 </html>
