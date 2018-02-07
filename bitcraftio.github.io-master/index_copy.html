@@ -1,0 +1,574 @@
+---
+layout: none
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://use.fontawesome.com/3085819002.js"></script>
+    <link href="/images/bitcraft.png" rel="shortcut icon">
+
+    <title>{{ site.title }} | {{ site.tagline }}</title>
+
+    <style type="text/css">
+        @font-face {
+            font-family: "Noway";
+            src: url(fonts/noway-regular.woff2) format("woff2"),
+                 url(fonts/noway-regular.woff) format("woff"),
+                 url(fonts/noway-regular.ttf) format("truetype");
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: "Noway";
+            src: url(fonts/noway-light.woff2) format("woff2"),
+                 url(fonts/noway-light.woff) format("woff"),
+                 url(fonts/noway-light.ttf) format("truetype");
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: "Noway";
+            src: url(fonts/noway-medium.woff2) format("woff2"),
+                 url(fonts/noway-medium.woff) format("woff"),
+                 url(fonts/noway-medium.ttf) format("truetype");
+            font-weight: 700;
+        }
+    </style>
+
+    <style>
+
+    @keyframes star-move {
+      from {
+          background-position: 0 0;
+      }
+      to {
+          background-position: -10000px 5000px;
+      }
+    }
+
+      @keyframes move-twink-back {
+        50% {
+          transform: translateX(4vw);
+        }
+        100% {
+          transform: translateX(-4vw);
+        }
+
+        /*from {
+            background-position: 0 0;
+        }
+        to {
+            background-position: -10000px 5000px;
+        }*/
+      }
+
+    @-webkit-keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
+
+        @-moz-keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
+
+        @-ms-keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
+
+        @keyframes move-clouds-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 10000px 0;
+            }
+        }
+
+        @-webkit-keyframes move-clouds-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 10000px 0;
+            }
+        }
+
+        @-moz-keyframes move-clouds-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 10000px 0;
+            }
+        }
+
+        @-ms-keyframes move-clouds-back {
+            from {
+                background-position: 0;
+            }
+            to {
+                background-position: 10000px 0;
+            }
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noway', sans-serif;
+            columns: #444444;
+        }
+
+        h1, h2 {
+            font-family: 'Noway', sans-serif;
+            letter-spacing: 0.1rem;
+        }
+
+
+        .target-repeat {
+          display: none;
+          margin-top: -200vh;
+          padding: .5vw;
+          /* display: block; */
+          /* max-width: 100%; */
+          height: 200vh;
+          /* overflow: hidden; */
+          width: 100%;
+          opacity: 1;
+          /* background: red; */
+          background: linear-gradient(to bottom, black 10%, #311d4b 100%);
+          -webkit-mask-image: url(./images/twinkling.png);
+          /* -webkit-mask-image: url(http://telegraphaudio.com/rw_common/themes/Lime/images/overlayCircles.png); */
+          -webkit-mask-repeat: round;
+          -webkit-mask-size: 10vw 3vw;
+          /*animation: move-twink-back 5s linear infinite;*/
+          }
+
+
+        .twinkling {
+            /*display: none;*/
+            background: url(images/twinkling.png) repeat top center;
+            z-index: 1;
+            -moz-animation: move-twink-back 300s linear infinite;
+            -ms-animation: move-twink-back 300s linear infinite;
+            -o-animation: move-twink-back 300s linear infinite;
+            -webkit-animation: move-twink-back 300s linear infinite;
+            animation: move-twink-back 300s linear infinite;
+            background-attachment: fixed;
+        }
+
+        .stars {
+            background:url(images/stars.png) repeat top center;
+            z-index: 0;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+            /*animation: star-move 1000s linear infinite;*/
+        }
+
+        .bg {
+          /* Background image and gradient */
+          background: fixed, linear-gradient(to bottom, black 5%,#311d4b 100%);
+          z-index: -1;
+          background-blend-mode: color-burn;
+          /*padding: 100%;*/
+          height: 250vw;
+        }
+        .stars, .twinkling {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 200%;
+            display: block;
+        }
+
+        .main {
+            background-color: #4a97d2;
+            color: #eee;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            top: 0;
+
+          }
+
+        .main .on-top {
+            position: relative;
+            z-index: 3;
+        }
+
+        .main .pitch,
+        .main .name {
+            margin: 0;
+        }
+
+        .main .name {
+            line-height: 1.5;
+            font-size: 4em;
+            font-weight: 500;
+        }
+
+        .main .name span {
+            font-weight: bolder;
+        }
+
+        .main .footer {
+            position: absolute;
+            right: 10px;
+            bottom: -200vw;
+            z-index: 999;
+            text-align: right;
+            line-height: .4em;
+            opacity: .8;
+        }
+
+        .logo {
+            width: 40vw;
+            height: 40vw;
+            /*margin-top: 48px;*/
+        }
+
+        .pitch-area {
+            margin-top: 3vh;
+        }
+
+        .main .inner {
+            position: absolute;
+            bottom: -100vh;
+            font-family: 'Noway', sans-serif;
+            letter-spacing: 0.1rem;
+            padding: 0 64px 64px 64px;
+        }
+
+        .main .nav-button {
+          height:3vw;
+          width:9vw;
+          position: fixed;
+          background-color: black;
+          border: .01vw solid white;
+          color: white;
+          padding: .5vw 1vw;
+          top: 3vw;
+          text-align: center;
+          display: inline-block;
+          font-family: 'Noway', sans-serif;
+          font-size: 1.5vw;
+          z-index: 999999;
+        }
+
+        .main .nav-button:hover {
+          background: white;
+          color: black;
+        }
+
+          #about {
+            margin-left: 30vw;
+          }
+          #projects {
+            margin-left: 45.5vw;
+
+          }
+          #contact {
+            margin-left: 61vw;
+
+          }
+
+        .main .home-container {
+          position: absolute;
+          width: 80%;
+          height: 80%;
+          top: 10vw;
+          left: 10vw;
+          right: 10vw;
+        }
+
+        .main .page-title {
+            font-size: 12vw;
+            color: white;
+            position: absolute;
+            margin-left: 43%;
+            margin-top: 2%;
+            font-family: 'Noway', sans-serif;
+            letter-spacing: .1rem;
+            z-index: 99999;
+        }
+
+        .main .page-subtitle {
+            font-size: 3vw;
+            color: white;
+            position: absolute;
+            font-family: 'Noway', sans-serif;
+            letter-spacing: .1rem;
+            z-index: 99999;
+        }
+
+        #cryptocurrency {
+          margin-top: 30%;
+          margin-left: 50%;
+        }
+
+        #development {
+          margin-top: 35%;
+          margin-left: 48%;
+        }
+
+        #consulting {
+          margin-top: 40%;
+          margin-left: 45%;
+        }
+
+        .main .logo-box {
+            position: absolute;
+            z-index: 9999;
+        }
+
+        .main .pitch {
+            font-weight: lighter;
+            font-size: 2.5em;
+            line-height: 1.1;
+            max-width: 15em;
+        }
+
+        .main .button {
+            font-size: 1.2em;
+            display: inline-block;
+            margin-top: 12px;
+            margin-right: 32px;
+            text-decoration: none;
+            padding: 8px;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            color: #fff;
+            transition: all ease-in-out .25s;
+            font-weight: lighter;
+        }
+
+        .main .button > i {
+            width: 20px;
+        }
+
+        .main .button:hover {
+            background-color: #fff;
+            color: #4a97d2;
+        }
+
+        .team-area {
+            padding-left: 64px;
+            padding-right: 64px;
+            padding-top: 16px;
+        }
+
+        .team-area .header {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .team-members {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-flow: row wrap;
+        }
+
+        .team-member {
+            margin-right: 24px;
+            margin-left: 0;
+            text-align: center;
+        }
+
+        .team-member img {
+            border-radius: 100px;
+            height: 150px;
+            width: 150px;
+        }
+
+        .team-member figcaption {
+            text-align: center;
+        }
+
+        .team-member figcaption p {
+            margin: 0;
+        }
+
+        @media screen and (max-device-width: 480px) {
+            .inner {
+                font-size: .6em;
+                padding-left: 30px !important;
+            }
+            .pitch {
+                max-width: 80vw !important;
+            }
+            .logo-box {
+                padding-left: 50% !important;
+                left: -75px !important;
+            }
+            .footer {
+                font-size: .8em;
+            }
+            .button {
+                font-size: 2em !important;
+            }
+        }
+
+        @media screen and (max-height: 600px) {
+            .main .logo-box {
+                top: 40px;
+                left: -60px !important;
+                padding-left: 50% !important;
+            }
+
+            .main .logo {
+                position: absolute;
+                margin-top: 0px;
+                width: 120px;
+                height: auto;
+            }
+
+            .main .name {
+                font-size: 3.5em;
+            }
+
+            .main .pitch {
+                font-size: 2.1em;
+            }
+        }
+        .our-work {
+          margin-top: -160vw;
+          margin-left: 23vw;
+          padding: 2vw 5vw 2vw 5vw;
+          background: linear-gradient(rgba(152, 148, 148, .1), rgba(152, 148, 148, .7));
+          color: rgb(255, 255, 255);
+          width: 44vw;
+          height: 12vw;
+        }
+        .meet-team {
+          margin-top: 20vw;
+          width: 100%;
+
+        }
+        .photo-box {
+          height: 50vw;
+          width: 45vw;
+          margin-left: 5vw;
+          margin-top: -10vw;
+        }
+        .left {
+          transform: scale(.4) translate(-3vw, 0vw);
+        }
+        .right {
+          transform: scale(.4) translate(56vw, -23vw);
+        }
+        .member-photo {
+          height: 25vw;
+          width: 25vw;
+          border-radius: 25vw;
+        }
+        .about-box {
+          float:right;
+          position: sticky;
+          top: 3em;
+        }
+        .mem-desc-left {
+          font-size: 1vw;
+          margin-left: 4vw;
+          text-align: center;
+          margin-top: -6.5vw;
+          width: 15vw;
+        }
+        .mem-desc-right {
+          font-size: 1vw;
+          text-align: center;
+          width: 15vw;
+          transform: translate(27.5vw, -16.5vw);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+      <div class="bg"></div>
+      <div class="stars"></div>
+      <!-- <div id="twinkling" class="twinkling"></div> -->
+      <button id= "about" class="nav-button">About</button>
+      <button id= "projects" class="nav-button">Projects</button>
+      <button id= "contact" class="nav-button">Contact</button>
+      <div class="home-container">
+          <div class="logo-box">
+            <img src="images/bitcraft.png" alt="BitCraft" class="logo">
+          </div>
+          <div class="page-title">BitCraft
+          </div>
+          <div class="page-subtitle" id="cryptocurrency">cryptocurrency</div>
+          <div class="page-subtitle" id="development">development</div>
+          <div class="page-subtitle" id="consulting">+ consulting</div>
+      </div>
+      <div class="our-work">
+        <h1> Our Work </h1>
+        <h2> We build tools and services to help our customers succeed in cryptocurrency markets. </h2>
+      </div>
+        <!-- <div class="inner">
+            <div class="on-top">
+                <div class="pitch-area">
+                    <h1 class="name">We are
+                        <span>BitCraft</span>.</h1>
+                    <h2 class="pitch">We build tools and services to help our customers succeed in cryptocurrency markets.</h2>
+                </div>
+                <br/>
+                <a class="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help.">
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Get in touch
+                </a>
+                <a class="button" href="https://www.linkedin.com/company/11373741/">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i> Connect on LinkedIn
+                </a>
+            </div>
+            </header>
+        </div> -->
+        <div class="stars">
+          </div>
+          <!-- <img class="target-repeat"> -->
+          <div class="meet-team">
+            <div class="about-box"> <h1>Meet the team </h1></div>
+            <div class="photo-box">
+            <img class="member-photo left" src="zach.jpg"><h2 class="mem-desc-left">Zachary Bloomquist</h2></img>
+            <img class="member-photo right" style="" src="harsha.jpg">
+            <h2 class="mem-desc-right" style="">Harsha Goli</h2></img>
+            <div class="shift" style="margin-top: -25vw;">
+            <img class="member-photo left" src="luis.jpg"> <h2 class="mem-desc-left">Luis</h2></img>
+            <img class="member-photo right" src="caleb.jpg"><h2 class="mem-desc-right">Caleb Lewis</h2></img>
+            <img class="member-photo left" src="sri.jpg" style="margin-top: -25vw;"><h2 class="mem-desc-left">Sri </h2></img>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+            <p>&copy; {{ site.time | date: '%Y' }} BitCraft LLC</p>
+            <p>Made in Atlanta, Georgia, USA</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
