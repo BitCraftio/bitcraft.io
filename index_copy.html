@@ -188,11 +188,11 @@ layout: none
 
         .bg {
           /* Background image and gradient */
-          background: fixed, linear-gradient(to bottom, black 5%,#311d4b 100%);
+          background: fixed, linear-gradient(to bottom, black 20%,#190a2b 100%);
           z-index: -1;
           background-blend-mode: color-burn;
           /*padding: 100%;*/
-          height: 250vw;
+          height: 260vw;
         }
         .stars, .twinkling {
             position: fixed;
@@ -237,15 +237,14 @@ layout: none
         }
 
         .main .footer {
-          position: absolute;
-          /* right: 10px; */
-          /* background: #0985b8; */
+          position: sticky;
+          margin-top: 15vw;
+          bottom: -160vw;
           background: rgba(152, 148, 148, 0.8);
-          height: 25vw;
-              width: 100vw;
-              bottom: -197.5vw;
+          height: 30vw;
+          width: 100vw;
           z-index: 999;
-          text-align: right;
+          /*text-align: right;*/
           line-height: .4em;
         }
 
@@ -371,7 +370,7 @@ layout: none
         }
 
         .main .button > i {
-            width: 20px;
+            width: 5vw;
         }
 
         .main .button:hover {
@@ -538,7 +537,7 @@ layout: none
           background: rgba(152, 148, 148, .5);
         }
       .caption-1 {
-        margin-top: -185vw;
+        margin-top: -194.5vw;
         width: 60vw;
         margin-left: 20vw;
         text-align: center;
@@ -559,13 +558,78 @@ layout: none
         margin-top: 30vw;
         margin-left: 5vw;
         width: 46vw;
-        background: rgba(3, 4, 5, .4);
+        background: border-box;
       }
       .about-words {
         height: 25vw;
         width: 30vw;
         font-size: 1.3vw;
         padding-top: 1vw;
+      }
+      .footer-logo {
+        height: 6vw;
+        width: 6vw;
+        background: #190a2b;
+        /* background: white; */
+        border-radius: 5vw;
+        margin-left: 47vw;
+        margin-top: -4vw;
+        border: .5vw solid #190a2b;
+      }
+
+      .about-git-button {
+        font-size: 1vw;
+      }
+      .fa {
+        margin-top: .8vw;
+        color: white;
+        font-size: 5vw;
+      }
+      .footer-button {
+        display: inline-block;
+        height: 7vw;
+        width: 7vw;
+        margin-top: 5vw;
+        text-align: center;
+        border-radius: 5vw;
+        color: #fff;
+        transition: all ease-in-out .25s;
+        font-weight: lighter;
+      }
+
+      .footer-button:hover {
+        background: #190a2b;
+      }
+
+      .social-buttons {
+        margin-left: 33vw;
+      }
+
+      #git {
+        margin-top: 0vw;
+        color: white;
+        width: 1vw;
+        margin-left: 1vw;
+        font-size: 2vw;
+      }
+      .copyright {
+        font-size: 1vw;
+        margin-top: 5vw;
+        text-align: center;
+      }
+      .linkedin{
+        margin-left: 40vw;
+      }
+      .mailto {
+        float: right;
+        margin-right: 40vw;
+      }
+      .say-hello {
+        width: 100vw;
+        font-size: 3vw;
+        text-align: center;
+        margin-top: 5vw;
+
       }
     </style>
 </head>
@@ -575,8 +639,8 @@ layout: none
       <div class="bg"></div>
       <div class="stars"></div>
       <!-- <div id="twinkling" class="twinkling"></div> -->
-      <button id= "about" class="nav-button">About</button>
-      <button id= "projects" class="nav-button">Projects</button>
+      <button id= "about" class="nav-button">Our Work</button>
+      <button id= "projects" class="nav-button">About</button>
       <button id= "contact" class="nav-button">Contact</button>
       <div class="home-container">
           <div class="logo-box">
@@ -590,8 +654,8 @@ layout: none
       </div>
       <!-- <div class="our-work"> -->
       <div class= "caption-1"> <p>We build tools and services to help our customers succeed in cryptocurrency markets.</p></div>
-      <div class="section-1"><p class="third-title">Technologies we use</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. </p> </div>
-      <div class="section-2"><p class="third-title"> Our projects </p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. Donec a neque dignissim, congue metus sollicitudin, placerat odio. Nam tempor sem massa, vitae pretium augue gravida id. </p> </div>
+      <div class="section-1"><p class="third-title">Technologies + tools</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. </p> </div>
+      <div class="section-2"><p class="third-title"> Our work </p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. Donec a neque dignissim, congue metus sollicitudin, placerat odio. Nam tempor sem massa, vitae pretium augue gravida id. </p> </div>
       <div class="section-3"><p class="third-title"> Who uses BitCraft?</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod.</p> </div>
       <!-- <div class="section-4"></div>  -->
         <!-- <div class="inner">
@@ -621,26 +685,23 @@ layout: none
             <div class="about-words"> Nulla volutpat venenatis mi, at molestie justo tempus quis. Nulla at ligula placerat, aliquam sapien vitae, tempor augue. Duis rhoncus tellus vitae lacinia dignissim. Ut tempor magna erat, nec pharetra lacus efficitur a. Donec facilisis risus sed leo blandit interdum. Pellentesque condimentum at ligula et laoreet. Sed egestas luctus tellus vitae pretium. Morbi semper dapibus lectus, id porta justo maximus at. Aliquam malesuada nibh non nibh lacinia, vitae mattis leo congue.</div>
             </div>
             <div class="photo-box">
-            <img class="member-photo left" src="zach.jpg"><p class="mem-desc-left">Zachary Bloomquist</p></img>
+            <img class="member-photo left" src="zach.jpg"><p class="mem-desc-left">Zachary Bloomquist <a type="button" ><i id="git" class="fa fa-github"></i></a></p></img>
             <img class="member-photo right" style="" src="harsha.jpg">
-            <p class="mem-desc-right">Harsha Goli</p></img>
+            <p class="mem-desc-right">Harsha Goli<a type="button" ><i id="git" class="fa fa-github"></i></a></p></img>
             <div class="shift" style="margin-top: -25vw;">
-            <img class="member-photo left" src="luis.jpg"> <p class="mem-desc-left">Luis</p></img>
-            <img class="member-photo right" src="caleb.jpg"><p class="mem-desc-right">Caleb Lewis</p></img>
-            <img class="member-photo left" src="sri.jpg" style="margin-top: -25vw;"><p class="mem-desc-left">Sri </p></img>
+            <img class="member-photo left" src="luis.jpg"> <p class="mem-desc-left">Luis<a type="button" ><i id="git" class="fa fa-github"></i></a></p></img>
+            <img class="member-photo right" src="caleb.jpg"><p class="mem-desc-right">Caleb Lewis<a type="button" ><i id="git" class="fa fa-github"></i></a></p></img>
+            <img class="member-photo left" src="sri.jpg" style="margin-top: -25vw;"><p class="mem-desc-left">Sri<a type="button" ><i id="git" class="fa fa-github"></i></a></p></img>
             </div>
           </div>
         </div>
         <div class="footer">
-
-          <a class="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help.">
-              <i class="fa fa-envelope" aria-hidden="true"></i> Get in touch
-          </a>
-          <a class="button" href="https://www.linkedin.com/company/11373741/">
-              <i class="fa fa-linkedin" aria-hidden="true"></i> Connect on LinkedIn
-          </a>
-            <p>&copy; {{ site.time | date: '%Y' }} BitCraft LLC</p>
-            <p>Made in Atlanta, Georgia, USA</p>
+          <div> <img class="footer-logo" src="images/bitcraft.png"></img></div>
+          <div class="say-hello"> Get in touch! </div>
+          <div class="linkedin footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-linkedin"></i></a></div>
+          <div class="mailto footer-button"<a type="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help."><i class="fa fa-envelope"></i></a></div>
+          <div class="copyright"><p>&copy; {{ site.time | date: '%Y' }} BitCraft LLC</p>
+            <p>Made in Atlanta, Georgia, USA</p></div>
         </div>
     </div>
 
