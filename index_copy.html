@@ -483,7 +483,7 @@ layout: none
           transform: scale(.5) translate(-3vw, 0vw);
         }
         .right {
-          transform: scale(.5) translate(42vw, -10vw);
+          transform: scale(.5) translate(42vw, -20vw);
         }
         .member-photo {
           height: 25vw;
@@ -502,13 +502,13 @@ layout: none
           margin-left: 3.5vw;
           text-align: center;
           margin-top: -5.5vw;
-          width: 15vw;
+          width: 17vw;
         }
         .mem-desc-right {
           font-size: 1.2vw;
           text-align: center;
-          width: 15vw;
-          transform: translate(26vw, -11.5vw);
+          width: 17vw;
+          transform: translate(26vw, -17.5vw);
         }
         .underline {
           width: 5vw;
@@ -629,7 +629,25 @@ layout: none
         font-size: 3vw;
         text-align: center;
         margin-top: 5vw;
-
+      }
+      .job-role{
+        font-style: italic;
+        font-size: 1.3vw;
+        text-align: center;
+        margin-left: 3.5vw;
+        text-align: center;
+        margin-top: -1.5vw;
+        width: 16vw;
+      }
+      .job-role-right {
+        font-style: italic;
+        font-size: 1.3vw;
+        text-align: center;
+        margin-top: -19vw;
+        margin-bottom: 10vw;
+        margin-left: 22.5vw;
+        /* transform: translate(26vw, -11.5vw); */
+        text-align: center;
       }
     </style>
 </head>
@@ -638,10 +656,13 @@ layout: none
     <div class="main">
       <div class="bg"></div>
       <div class="stars"></div>
+      
       <!-- <div id="twinkling" class="twinkling"></div> -->
       <button id= "about" class="nav-button">Our Work</button>
       <button id= "projects" class="nav-button">About</button>
       <button id= "contact" class="nav-button">Contact</button>
+
+
       <div class="home-container">
           <div class="logo-box">
             <img src="images/bitcraft.png" alt="BitCraft" class="logo">
@@ -652,49 +673,38 @@ layout: none
           <div class="page-subtitle" id="development">development</div>
           <div class="page-subtitle" id="consulting">+ consulting</div>
       </div>
-      <!-- <div class="our-work"> -->
+
+
       <div class= "caption-1"> <p>We build tools and services to help our customers succeed in cryptocurrency markets.</p></div>
       <div class="section-1"><p class="third-title">Technologies + tools</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. </p> </div>
       <div class="section-2"><p class="third-title"> Our work </p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. Donec a neque dignissim, congue metus sollicitudin, placerat odio. Nam tempor sem massa, vitae pretium augue gravida id. </p> </div>
       <div class="section-3"><p class="third-title"> Who uses BitCraft?</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod.</p> </div>
-      <!-- <div class="section-4"></div>  -->
-        <!-- <div class="inner">
-            <div class="on-top">
-                <div class="pitch-area">
-                    <h1 class="name">We are
-                        <span>BitCraft</span>.</h1>
-                    <h2 class="pitch">We build tools and services to help our customers succeed in cryptocurrency markets.</h2>
-                </div>
-                <br/>
-                <a class="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help.">
-                    <i class="fa fa-envelope" aria-hidden="true"></i> Get in touch
-                </a>
-                <a class="button" href="https://www.linkedin.com/company/11373741/">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i> Connect on LinkedIn
-                </a>
-            </div>
-            </header>
-        </div> -->
-        <div class="stars">
-          </div>
+
+        <div class="stars"></div>
           <!-- <img class="target-repeat"> -->
+
           <div class="meet-team">
             <div class="squares"></div>
+
             <div class="about-box"> <h style="font-size: 2vw;">A bit </h> <div><h style="font-size: 3.5vw;">about us</h></div>
             <div class= "underline"></div> <p class= "about-us"></p>
             <div class="about-words"> Nulla volutpat venenatis mi, at molestie justo tempus quis. Nulla at ligula placerat, aliquam sapien vitae, tempor augue. Duis rhoncus tellus vitae lacinia dignissim. Ut tempor magna erat, nec pharetra lacus efficitur a. Donec facilisis risus sed leo blandit interdum. Pellentesque condimentum at ligula et laoreet. Sed egestas luctus tellus vitae pretium. Morbi semper dapibus lectus, id porta justo maximus at. Aliquam malesuada nibh non nibh lacinia, vitae mattis leo congue.</div>
             </div>
+
+
             <div class="photo-box">
-            <img class="member-photo left" src="zach.jpg"><p class="mem-desc-left">Zachary Bloomquist <a type="button" ><i id="git" class="fa fa-github"></i></a></p></img>
+            <img class="member-photo left" src="zach.jpg"><p class="mem-desc-left">Zachary Bloomquist <a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role">Bitserf</p></p></img>
             <img class="member-photo right" style="" src="harsha.jpg">
-            <p class="mem-desc-right">Harsha Goli<a type="button" ><i id="git" class="fa fa-github"></i></a></p></img>
-            <div class="shift" style="margin-top: -25vw;">
-            <img class="member-photo left" src="luis.jpg"> <p class="mem-desc-left">Luis<a type="button" ><i id="git" class="fa fa-github"></i></a></p></img>
-            <img class="member-photo right" src="caleb.jpg"><p class="mem-desc-right">Caleb Lewis<a type="button" ><i id="git" class="fa fa-github"></i></a></p></img>
-            <img class="member-photo left" src="sri.jpg" style="margin-top: -25vw;"><p class="mem-desc-left">Sri<a type="button" ><i id="git" class="fa fa-github"></i></a></p></img>
+            <p class="mem-desc-right">Harsha Goli<a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role-right">Bitserf</p></p></img>
+            <div class="shift" style="margin-top: -20vw;">
+            <img class="member-photo left" src="luis.jpg"> <p class="mem-desc-left">Luis<a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role">Bitserf</p></p></img>
+            <img class="member-photo right" src="caleb.jpg"><p class="mem-desc-right">Caleb Lewis<a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role-right">Bitserf</p></p></img>
+            <img class="member-photo left" src="sri.jpg" style="margin-top: -20vw;"><p class="mem-desc-left">Sri<a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role">Bitserf</p></p></img>
             </div>
           </div>
         </div>
+
+
         <div class="footer">
           <div> <img class="footer-logo" src="images/bitcraft.png"></img></div>
           <div class="say-hello"> Get in touch! </div>
