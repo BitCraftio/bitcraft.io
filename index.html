@@ -9,7 +9,8 @@ layout: none
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://use.fontawesome.com/3085819002.js"></script>
+    <script src="https://use.fontawesome.com/3085819002.js">
+    </script>
     <link href="/images/bitcraft.png" rel="shortcut icon">
 
     <title>{{ site.title }} | {{ site.tagline }}</title>
@@ -39,260 +40,539 @@ layout: none
             font-weight: 700;
         }
     </style>
-  <style>
 
-    html {
-      height: 100%;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-      font-family: 'Noway', sans-serif;
-      columns: #444444;
-    }
+    <style>
 
-    h1, h2 {
-        font-family: 'Noway', sans-serif;
-        letter-spacing: 0.1rem;
-    }
+      @keyframes move-twink-back {
+        50% {
+          transform: translateX(4vw);
+        }
+        100% {
+          transform: translateX(-4vw);
+        }
 
-    body {
-      margin:0;
-      padding:0;
-    	perspective: 1px;
-      font-family: 'Noway', sans-serif;
-      columns: #444444;
-    	transform-style: preserve-3d;
-      height: 100%;
-      overflow-y: scroll;
-      overflow-x: hidden;
-    }
-
-    p {
-      font-size: 140%;
-      line-height: 150%;
-      font-family: 'Noway', sans-serif;
-      color: #ffffff;
-    }
-
-    .slide {
-      position: relative;
-      padding: 25vh 10%;
-      /*min-height: 110vh;*/
-      width: 100vw;
-      box-sizing: border-box;
-      box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
-    	transform-style: inherit;
-    }
-
-    img {
-      position: absolute;
-      /*top: 50%;
-      left: 35%;
-      width: 320px;
-      height: 240px;
-      transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
-      padding: 10px;
-      border-radius: 5px;
-      background: rgba(240,230,220, .7);
-      box-shadow: 0 0 8px rgba(0, 0, 0, .7);*/
-    }
-
-    img:last-of-type {
-      /*transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);*/
-    }
-
-    .slide:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-
-    .title {
-      width: 50%;
-    }
-
-    .slide:nth-child(2n) .title {
-      margin-left: 0;
-      margin-right: auto;
-    }
-
-    .slide:nth-child(2n+1) .title {
-      margin-left: auto;
-      margin-right: 0;
-    }
-
-    .slide, .slide:before {
-      background: 50% 50% / cover;
-    }
-
-    .header {
-      text-align: center;
-      font-size: 175%;
-      color: #fff;
-      text-shadow: 0 2px 2px #000;
-    }
-
-    .home-container {
-      position: absolute;
-      width: 80%;
-      height: 80%;
-      top: 200px;
-      left: 200px;
-      right: 200px;
-    }
-
-    .page-title {
-        font-size: 12vw;
-        color: white;
-        position: absolute;
-        margin-left: 43%;
-        margin-top: 2%;
-        font-family: 'Noway', sans-serif;
-        letter-spacing: .1rem;
-        z-index: 99999;
-    }
-
-    .page-subtitle {
-        font-size: 3vw;
-        color: white;
-        position: absolute;
-        font-family: 'Noway', sans-serif;
-        letter-spacing: .1rem;
-        z-index: 99999;
-    }
-
-      #cryptocurrency {
-        margin-top: 30%;
-        margin-left: 50%;
+        /*from {
+            background-position: 0 0;
+        }
+        to {
+            background-position: -10000px 5000px;
+        }*/
       }
 
-      #development {
-        margin-top: 35%;
-        margin-left: 48%;
-      }
+    @-webkit-keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
 
-      #consulting {
-        margin-top: 40%;
-        margin-left: 45%;
-      }
+        @-moz-keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
 
-     .logo-box {
+        @-ms-keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
+
+        @keyframes move-clouds-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 10000px 0;
+            }
+        }
+
+        @-webkit-keyframes move-clouds-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 10000px 0;
+            }
+        }
+
+        @-moz-keyframes move-clouds-back {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 10000px 0;
+            }
+        }
+
+        @-ms-keyframes move-clouds-back {
+            from {
+                background-position: 0;
+            }
+            to {
+                background-position: 10000px 0;
+            }
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noway', sans-serif;
+            columns: #444444;
+        }
+
+        h1, h2 {
+            font-family: 'Noway', sans-serif;
+            letter-spacing: 0.1rem;
+        }
+
+        /*.target-repeat {
+          display: none;
+          margin-top: -200vh;
+          padding: .5vw;
+          height: 200vh;
+          width: 100%;
+          opacity: 1;
+          background: linear-gradient(to bottom, black 10%, #311d4b 100%);
+          -webkit-mask-image: url(./images/twinkling.png);
+          -webkit-mask-repeat: round;
+          -webkit-mask-size: 10vw 3vw;
+          animation: move-twink-back 5s linear infinite;
+          }*/
+
+        .twinkling {
+            background: url(images/twinkling.png) repeat top center;
+            z-index: 1;
+            -moz-animation: move-twink-back 300s linear infinite;
+            -ms-animation: move-twink-back 300s linear infinite;
+            -o-animation: move-twink-back 300s linear infinite;
+            -webkit-animation: move-twink-back 300s linear infinite;
+            animation: move-twink-back 300s linear infinite;
+            background-attachment: fixed;
+        }
+
+        .stars {
+            background:url(images/stars.png) repeat top center;
+            z-index: 0;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+            /*animation: star-move 1000s linear infinite;*/
+        }
+
+        .stars, .twinkling {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 200%;
+            display: block;
+        }
+
+        .background-gradient {
+          background: fixed, linear-gradient(to bottom, black 20%, #190a2b 100%);
+          z-index: -1;
+          background-blend-mode: color-burn;
+          height: 260vw;
+        }
+
+        .main {
+            background-color: black;
+            color: #eee;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            top: 0;
+          }
+
+        .main .footer {
+          position: sticky;
+          margin-top: 15vw;
+          bottom: -160vw;
+          background: rgba(152, 148, 148, .5);
+          height: 30vw;
+          width: 100vw;
+          z-index: 999;
+          line-height: .4em;
+        }
+
+        .logo {
+            width: 40vw;
+            height: 40vw;
+        }
+
+        .main .nav-button {
+          height:3vw;
+          width:9vw;
+          position: fixed;
+          background-color: black;
+          border: .01vw solid white;
+          color: white;
+          padding: .5vw 1vw;
+          top: 3vw;
+          text-align: center;
+          display: inline-block;
+          font-family: 'Noway', sans-serif;
+          font-size: 1.5vw;
+          z-index: 999999;
+          transition: all ease-in-out .25s;
+        }
+
+        .main .nav-button:hover {
+          background: white;
+          color: black;
+        }
+
+          #about {
+            margin-left: 30vw;
+          }
+          #projects {
+            margin-left: 45.5vw;
+
+          }
+          #contact {
+            margin-left: 61vw;
+
+          }
+
+        .main .home-container {
           position: absolute;
-          z-index: 9999;
+          width: 80%;
+          height: 80%;
+          top: 10vw;
+          left: 10vw;
+          right: 10vw;
+        }
+
+        .main .page-title {
+            font-size: 12vw;
+            color: white;
+            position: absolute;
+            margin-left: 43%;
+            margin-top: 2%;
+            font-family: 'Noway', sans-serif;
+            letter-spacing: .1rem;
+            z-index: 99999;
+        }
+
+        .main .page-subtitle {
+            font-size: 3vw;
+            color: white;
+            position: absolute;
+            font-family: 'Noway', sans-serif;
+            letter-spacing: .1rem;
+            z-index: 99999;
+        }
+
+        #cryptocurrency {
+          margin-top: 30%;
+          margin-left: 50%;
+        }
+
+        #development {
+          margin-top: 35%;
+          margin-left: 48%;
+        }
+
+        #consulting {
+          margin-top: 40%;
+          margin-left: 45%;
+        }
+
+        .main .logo-box {
+            position: absolute;
+            z-index: 9999;
+        }
+
+        .main .button:hover {
+            background-color: #fff;
+            color: #4a97d2;
+        }
+
+
+        @media screen and (max-device-width: 480px) {
+            /*.inner {
+                font-size: .6em;
+                padding-left: 30px !important;
+            }
+            .pitch {
+                max-width: 80vw !important;
+            }
+            .logo-box {
+                padding-left: 50% !important;
+                left: -75px !important;
+            }
+            .footer {
+                font-size: .8em;
+            }
+            .button {
+                font-size: 2em !important;
+            }*/
+        }
+
+        @media screen and (max-height: 600px) {
+            /*.main .logo-box {
+                top: 40px;
+                left: -60px !important;
+                padding-left: 50% !important;
+            }
+
+            .main .logo {
+                position: absolute;
+                margin-top: 0px;
+                width: 120px;
+                height: auto;
+            }
+
+            .main .name {
+                font-size: 3.5em;
+            }
+
+            .main .pitch {
+                font-size: 2.1em;
+            }*/
+        }
+        .our-work {
+          margin-top: -160vw;
+          margin-left: 23vw;
+          padding: 2vw 5vw 2vw 5vw;
+          background: linear-gradient(rgba(152, 148, 148, .1), rgba(152, 148, 148, .7));
+          color: rgb(255, 255, 255);
+          width: 44vw;
+          height: 12vw;
+        }
+
+        .meet-team {
+          margin-top: -10vw;
+          height: 80vw;
+          width: 100%;
+        }
+
+        .photo-box {
+          height: 50vw;
+          width: 45vw;
+          margin-left: 5vw;
+          margin-top: -80vw;
+        }
+
+        .left {
+          transform: scale(.5) translate(-3vw, 0vw);
+        }
+
+        .right {
+          transform: scale(.5) translate(42vw, -20vw);
+        }
+
+        .member-photo {
+          height: 25vw;
+          width: 25vw;
+          border-radius: 25vw;
+        }
+
+        .about-box {
+          float: right;
+          position: sticky;
+          margin-top: -80vw;
+          top: 15vw;
+          margin-right: 10vw;
+        }
+
+        .mem-desc-left {
+          font-size: 1.2vw;
+          margin-left: 3.5vw;
+          text-align: center;
+          margin-top: -5.5vw;
+          width: 17vw;
+        }
+
+        .mem-desc-right {
+          font-size: 1.2vw;
+          text-align: center;
+          width: 17vw;
+          transform: translate(26vw, -17.5vw);
+        }
+
+        .underline {
+          width: 5vw;
+          margin-top: 2vw;
+          border-bottom: .2vw solid white;
+        }
+
+        .section-1 {
+          margin-left: 6.33vw;
+          margin-top: 3vw;
+          width: 25vw;
+          height: 35vw;
+          background: rgba(152, 148, 148, .5);
+        }
+
+        .section-2 {
+          margin-left: 37.33vw;
+          margin-top: -37vw;
+          width: 25vw;
+          height: 35vw;
+          background: rgba(152, 148, 148, .5);
+        }
+
+        .section-3{
+          margin-left: 68.33vw;
+          margin-top: -36.7vw;
+          width: 25vw;
+          height: 35vw;
+          background: rgba(152, 148, 148, .5);
+        }
+
+      .caption-1 {
+        margin-top: -194.5vw;
+        width: 60vw;
+        margin-left: 20vw;
+        text-align: center;
+        font-size: 2.5vw;
+        border-bottom: .1vw solid white;
       }
-      .logo {
-          width: 40vw;
-          height: 40vw;
-          /*margin-top: 48px;*/
+
+      .work-subtitles {
+        padding-top: 2vw;
+        padding-left: 2vw;
+        font-size: 1.8vw;
       }
 
-    #title {
-      background-image: url("https://lorempixel.com/640/480/abstract/6/");
-      z-index:2;
-    }
+      .paragraph {
+        padding: 2vw;
+        font-size: 1.3vw;
+      }
 
-    #title h1 {
-     transform: translateZ(.25px) scale(.75);
-     transform-origin: 50% 100%;
+      .squares {
+        height: 80vw;
+        margin-top: 30vw;
+        margin-left: 5vw;
+        width: 46vw;
+        background: border-box;
+      }
 
-    }
+      .about-words {
+        height: 25vw;
+        width: 30vw;
+        font-size: 1.3vw;
+        padding-top: 1vw;
+      }
 
-    #slide1:before {
-      background-color: black;
-      background-image: url("images/stars.png");
-      transform: translateZ(-1px) scale(2);
-      height: 100vw;
-    }
+      .footer-logo {
+        height: 6vw;
+        width: 6vw;
+        background: #190a2b;
+        border-radius: 5vw;
+        margin-left: 47vw;
+        margin-top: -4vw;
+        border: .5vw solid #190a2b;
+      }
 
-    #slide2 {
-       /*background-image: url("images/stars.png");*/
-      z-index:2;
-      height: 10vw;
-    }
-    #slide2-title{
-      margin-top: -10vw;
-      margin-left: 15vw;
-      text-align: center;
-      padding: 3vw;
-      z-index: 2;
-      background: border-box;
-      color: white;
-      background: rgba(169, 169, 169, 0.4);
-    }
+      .about-git-button {
+        font-size: 1vw;
+      }
 
-    #slide3:before {
+      .fa {
+        margin-top: .8vw;
+        color: white;
+        font-size: 5vw;
+      }
 
-      background-color:rgba(0, 0, 0, .5);
-      background-image: url("images/stars.png");
-      transform: translateZ(-1px) scale(2);
-    }
+      .footer-button {
+        display: inline-block;
+        height: 7vw;
+        width: 7vw;
+        margin-top: 3vw;
+        text-align: center;
+        border-radius: 5vw;
+        color: #fff;
+        transition: all ease-in-out .25s;
+        font-weight: lighter;
+      }
 
-    #slide4 {
-      background: #222;
-    }
-    #nav {
-      font-family: 'Noway', sans-serif;
-      position: fixed;
-      top:0;
-      left: 30vw;
-      z-index: 5;
-      color: white;
-      font-size: 4vw;
+      .footer-button:hover {
+        background: #190a2b;
+      }
 
-    }
+      .social-buttons {
+        margin-left: 33vw;
+      }
+
+      #git {
+        margin-top: 0vw;
+        color: white;
+        width: 1vw;
+        margin-left: 1vw;
+        font-size: 2vw;
+      }
+      .copyright {
+        font-size: 1vw;
+        margin-top: 3vw;
+        text-align: center;
+      }
+
+      .linkedin{
+        margin-left: 40vw;
+      }
+
+      .mailto {
+        float: right;
+        margin-right: 40vw;
+      }
+
+      .say-hello {
+        width: 100vw;
+        font-size: 3vw;
+        text-align: center;
+        margin-top: 5vw;
+      }
+
+      .job-role{
+        font-style: italic;
+        font-size: 1.1vw;
+        text-align: center;
+        margin-left: 3.5vw;
+        text-align: center;
+        margin-top: -1.5vw;
+        width: 16vw;
+      }
+
+      .job-role-right {
+        font-style: italic;
+        font-size: 1.1vw;
+        text-align: center;
+        margin-top: -19vw;
+        margin-bottom: 10vw;
+        margin-left: 22.5vw;
+        text-align: center;
+      }
+
     </style>
 </head>
 
 <body>
-<div id="nav">NAVIGATION HERE</div>
-<div id="slide1" class="slide">
-  <div class="home-container">
-      <div class="logo-box">
-        <img src="images/bitcraft.png" alt="BitCraft" class="logo">
-      </div>
-      <div class="page-title">BitCraft
-      </div>
-      <div class="page-subtitle" id="cryptocurrency">cryptocurrency</div>
-      <div class="page-subtitle" id="development">development</div>
-      <div class="page-subtitle" id="consulting">+ consulting</div>
-    </div>
-  <!-- <div class="title">
-    <h1>Slide 1</h1>
-    <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
-  </div> -->
-  <div style="width:100vw; background: black; height: 2px; margin-top:110vh;"></div>
-</div>
-
-<div id="slide2" class="slide">
-  <div class="title" id="slide2-title">
-    <h1>We build tools and services to help our customers succeed in cryptocurrency markets.</h1>
-  </div>
-</div>
-
-<div id="slide3" class="slide">
-  <div class="title">
-    <h1>Slide 3</h1>
-    <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
-  </div>
-  <img src="https://lorempixel.com/640/480/abstract/6/" style="transform: translate(0, -30vw) scale(.4);">
-  <img src="https://lorempixel.com/640/480/abstract/4/" style="translate(-5vw, -20vw) scale(.4)">
-</div>
-
-<div id="slide4" class="slide header">
-    <h1>The End</h1>
-</div>
-
-
-    <!-- <div class="main">
-      <div class="bg"></div>
+    <div class="main">
+      <div class="background-gradient"></div>
       <div class="stars"></div>
+
       <!-- <div id="twinkling" class="twinkling"></div> -->
-      <!-- <button id= "about" class="nav-button">About</button>
-      <button id= "projects" class="nav-button">Projects</button>
+      <button id= "about" class="nav-button">Our Work</button>
+      <button id= "projects" class="nav-button">About</button>
       <button id= "contact" class="nav-button">Contact</button>
+
+
       <div class="home-container">
           <div class="logo-box">
             <img src="images/bitcraft.png" alt="BitCraft" class="logo">
@@ -302,31 +582,48 @@ layout: none
           <div class="page-subtitle" id="cryptocurrency">cryptocurrency</div>
           <div class="page-subtitle" id="development">development</div>
           <div class="page-subtitle" id="consulting">+ consulting</div>
-        </div>
-        <div class="inner">
-            <div class="on-top">
-                <div class="pitch-area">
-                    <h1 class="name">We are
-                        <span>BitCraft</span>.</h1>
-                    <h2 class="pitch">We build tools and services to help our customers succeed in cryptocurrency markets.</h2>
-                </div>
-                <br/>
-                <a class="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help.">
-                    <i class="fa fa-envelope" aria-hidden="true"></i> Get in touch
-                </a>
-                <a class="button" href="https://www.linkedin.com/company/11373741/">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i> Connect on LinkedIn
-                </a>
+      </div>
+
+
+      <div class= "caption-1"> <p>We build tools and services to help our customers succeed in cryptocurrency markets.</p></div>
+      <div class="section-1"><p class="work-subtitles">Technologies + tools</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. </p> </div>
+      <div class="section-2"><p class="work-subtitles"> Our work </p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. Donec a neque dignissim, congue metus sollicitudin, placerat odio. Nam tempor sem massa, vitae pretium augue gravida id. </p> </div>
+      <div class="section-3"><p class="work-subtitles"> Who uses BitCraft?</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod.</p> </div>
+
+        <div class="stars"></div>
+          <!-- <img class="target-repeat"> -->
+
+          <div class="meet-team">
+            <div class="squares"></div>
+
+            <div class="about-box"> <h style="font-size: 2vw;">A bit </h> <div><h style="font-size: 3.5vw;">about us</h></div>
+            <div class= "underline"></div> <p class= "about-us"></p>
+            <div class="about-words"> Nulla volutpat venenatis mi, at molestie justo tempus quis. Nulla at ligula placerat, aliquam sapien vitae, tempor augue. Duis rhoncus tellus vitae lacinia dignissim. Ut tempor magna erat, nec pharetra lacus efficitur a. Donec facilisis risus sed leo blandit interdum. Pellentesque condimentum at ligula et laoreet. Sed egestas luctus tellus vitae pretium. Morbi semper dapibus lectus, id porta justo maximus at. Aliquam malesuada nibh non nibh lacinia, vitae mattis leo congue.</div>
             </div>
-            </header>
+
+
+            <div class="photo-box">
+            <img class="member-photo left" src="zach.jpg"><p class="mem-desc-left">Zachary Bloomquist <a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role">Bitserf</p></p></img>
+            <img class="member-photo right" style="" src="harsha.jpg">
+            <p class="mem-desc-right">Harsha Goli<a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role-right">Bitserf</p></p></img>
+            <div class="shift" style="margin-top: -20vw;">
+            <img class="member-photo left" src="luis.jpg"> <p class="mem-desc-left">Luis Ferrer Labarca<a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role">Bitserf</p></p></img>
+            <img class="member-photo right" src="caleb.jpg"><p class="mem-desc-right">Caleb Lewis<a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role-right">Bitserf</p></p></img>
+            <img class="member-photo left" src="sri.jpg" style="margin-top: -20vw;"><p class="mem-desc-left">Sri Rajasekaran<a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role">Bitserf</p></p></img>
+            </div>
+          </div>
         </div>
-        <div class="stars">
-          </div> <img class="target-repeat"> -->
-        <!-- <div class="footer">
-            <p>&copy; {{ site.time | date: '%Y' }} BitCraft LLC</p>
-            <p>Made in Atlanta, Georgia, USA</p>
+
+
+        <div class="footer">
+          <div> <img class="footer-logo" src="images/bitcraft.png"></img></div>
+          <div class="say-hello"> Get in touch! </div>
+          <div class="linkedin footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-linkedin"></i></a></div>
+          <div class="mailto footer-button"<a type="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help."><i class="fa fa-envelope"></i></a></div>
+          <div class="copyright"><p>&copy; {{ site.time | date: '%Y' }} BitCraft LLC</p>
+            <p>Made in Atlanta, Georgia, USA</p></div>
         </div>
-    </div> -->
+    </div>
 
 </body>
 
