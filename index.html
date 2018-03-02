@@ -1,3 +1,8 @@
+---
+layout: none
+---
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -5,6 +10,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://use.fontawesome.com/3085819002.js">
+    </script>
+
+    <script>
+      function getOffset( element ) {
+        var top = 0, left = 0;
+        do {
+            top += element.offsetTop  || 0;
+            left += element.offsetLeft || 0;
+            element = element.parentNode;
+        } while(element);
+
+        return {
+            top: top,
+            left: left
+        };
+      }
+
+      function scrollToId(id) {
+        var i = window.scrollY;
+        var offset = getOffset(document.getElementById(id))
+        var int = setInterval(function() {
+          window.scrollTo(window.scrollX, i);
+          i += (Math.abs(offset.top-window.scrollY))/20
+          if (i >= offset.top) clearInterval(int);
+        }, 10);
+      }
+
+      if (window.hash) {
+        scrollToId(window.location.hash.slice(1))
+      }
+
+      window.onhashchange = function(event) {
+        scrollToId(window.location.hash.slice(1))
+        return true
+      }
     </script>
     <link href="/images/bitcraft.png" rel="shortcut icon">
 
@@ -46,12 +86,6 @@
           transform: translateX(-4vw);
         }
 
-        /*from {
-            background-position: 0 0;
-        }
-        to {
-            background-position: -10000px 5000px;
-        }*/
       }
 
     @-webkit-keyframes move-twink-back {
@@ -125,24 +159,14 @@
             columns: #444444;
         }
 
+        body {
+          overflow-x: hidden;
+        }
+
         h1, h2 {
             font-family: 'Noway', sans-serif;
             letter-spacing: 0.1rem;
         }
-
-        /*.target-repeat {
-          display: none;
-          margin-top: -200vh;
-          padding: .5vw;
-          height: 200vh;
-          width: 100%;
-          opacity: 1;
-          background: linear-gradient(to bottom, black 10%, #311d4b 100%);
-          -webkit-mask-image: url(./images/twinkling.png);
-          -webkit-mask-repeat: round;
-          -webkit-mask-size: 10vw 3vw;
-          animation: move-twink-back 5s linear infinite;
-          }*/
 
         .twinkling {
             background: url(images/twinkling.png) repeat top center;
@@ -195,7 +219,7 @@
 
         .main .footer {
           position: sticky;
-          margin-top: 15vw;
+          margin-top: -2vw;
           bottom: -160vw;
           background: rgba(152, 148, 148, .5);
           height: 30vw;
@@ -205,16 +229,19 @@
         }
 
         .logo {
-            width: 40vw;
-            height: 40vw;
+          width: 4vw;
+          margin-top: .5vw;
+          margin-left: 5vw;
+          padding-right: 31vw;
+          height: 4vw;
         }
 
         .main .nav-button {
           height:3vw;
           width:9vw;
           position: fixed;
-          background-color: black;
-          border: .01vw solid white;
+          background-color: rgba(37, 37, 37, .1);
+          border: .01vw solid transparent;
           color: white;
           padding: .5vw 1vw;
           top: 3vw;
@@ -232,64 +259,45 @@
         }
 
           #about {
-            margin-left: 30vw;
+            margin-left: 20vw;
           }
           #projects {
-            margin-left: 45.5vw;
+            margin-left: 33vw;
 
           }
           #contact {
-            margin-left: 61vw;
+            margin-left: 46vw;
 
           }
 
         .main .home-container {
           position: absolute;
-          width: 80%;
-          height: 80%;
-          top: 10vw;
-          left: 10vw;
-          right: 10vw;
+          width: 52vw;
+          text-align: center;
+          height: 30vw;
+          top: 18vw;
+          left: 24vw;
         }
 
         .main .page-title {
-            font-size: 12vw;
-            color: white;
-            position: absolute;
-            margin-left: 43%;
-            margin-top: 2%;
-            font-family: 'Noway', sans-serif;
-            letter-spacing: .1rem;
-            z-index: 99999;
+          margin-top: -3.5vw;
+          margin-left: 10vw;
+          font-weight: bold;
+          font-size: 2.5vw;
+          color: white;
+          position: absolute;
+          font-family: 'Noway', sans-serif;
+          letter-spacing: .1rem;
+          z-index: 99999;
         }
 
         .main .page-subtitle {
-            font-size: 3vw;
+            font-size: 4vw;
             color: white;
             position: absolute;
             font-family: 'Noway', sans-serif;
             letter-spacing: .1rem;
             z-index: 99999;
-        }
-
-        #cryptocurrency {
-          margin-top: 30%;
-          margin-left: 50%;
-        }
-
-        #development {
-          margin-top: 35%;
-          margin-left: 48%;
-        }
-
-        #consulting {
-          margin-top: 40%;
-          margin-left: 45%;
-        }
-
-        .main .logo-box {
-            position: absolute;
-            z-index: 9999;
         }
 
         .main .button:hover {
@@ -297,49 +305,6 @@
             color: #4a97d2;
         }
 
-
-        @media screen and (max-device-width: 480px) {
-            /*.inner {
-                font-size: .6em;
-                padding-left: 30px !important;
-            }
-            .pitch {
-                max-width: 80vw !important;
-            }
-            .logo-box {
-                padding-left: 50% !important;
-                left: -75px !important;
-            }
-            .footer {
-                font-size: .8em;
-            }
-            .button {
-                font-size: 2em !important;
-            }*/
-        }
-
-        @media screen and (max-height: 600px) {
-            /*.main .logo-box {
-                top: 40px;
-                left: -60px !important;
-                padding-left: 50% !important;
-            }
-
-            .main .logo {
-                position: absolute;
-                margin-top: 0px;
-                width: 120px;
-                height: auto;
-            }
-
-            .main .name {
-                font-size: 3.5em;
-            }
-
-            .main .pitch {
-                font-size: 2.1em;
-            }*/
-        }
         .our-work {
           margin-top: -160vw;
           margin-left: 23vw;
@@ -403,40 +368,36 @@
         .underline {
           width: 5vw;
           margin-top: 2vw;
+          margin-bottom: 1.8vw;
           border-bottom: .2vw solid white;
         }
 
         .section-1 {
-          margin-left: 6.33vw;
-          margin-top: 3vw;
-          width: 25vw;
-          height: 35vw;
-          background: rgba(152, 148, 148, .5);
+          margin-top: -200vw;
+          margin-left: 20vw;
+          width: 60vw;
+          height: 20vw;
+          background: rgba(37, 37, 37, 0.5);
         }
 
         .section-2 {
-          margin-left: 37.33vw;
-          margin-top: -37vw;
-          width: 25vw;
-          height: 35vw;
-          background: rgba(152, 148, 148, .5);
+          margin-top: 5vw;
+          margin-left: 20vw;
+          width: 60vw;
+          height: 20vw;
+          background: rgba(37, 37, 37, 0.5);
         }
 
         .section-3{
-          margin-left: 68.33vw;
-          margin-top: -36.7vw;
-          width: 25vw;
-          height: 35vw;
-          background: rgba(152, 148, 148, .5);
+          margin-top:5vw;
+          margin-left: 20vw;
+          width: 60vw;
+          height: 20vw;
+          background: rgba(37, 37, 37, 0.5);
         }
 
       .caption-1 {
-        margin-top: -194.5vw;
-        width: 60vw;
-        margin-left: 20vw;
-        text-align: center;
         font-size: 2.5vw;
-        border-bottom: .1vw solid white;
       }
 
       .work-subtitles {
@@ -450,12 +411,13 @@
         font-size: 1.3vw;
       }
 
-      .squares {
+      .team-spacer {
         height: 80vw;
         margin-top: 30vw;
         margin-left: 5vw;
         width: 46vw;
         background: border-box;
+        z-index: -10;
       }
 
       .about-words {
@@ -553,7 +515,33 @@
         margin-left: 22.5vw;
         text-align: center;
       }
+      .navbar {
+        z-index: 9999;
+        width: 100vw;
+        top: 2vw;
+        left: 0;
+        height: 5vw;
+        background: rgba(37, 37, 37, .6);
+        position: fixed;
+      }
+      .line{
+        width: 62vw;
+        margin-top: 13vw;
+        margin-left: -5vw;
+        /* margin-bottom: 1.8vw; */
+        border-bottom: .2vw solid white;
+    }
 
+      .nav-button > a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .heart {
+        color: #ff1111;
+        font-size: 200%;
+        vertical-align: sub;
+      }
     </style>
 </head>
 
@@ -561,63 +549,78 @@
     <div class="main">
       <div class="background-gradient"></div>
       <div class="stars"></div>
-
-      <!-- <div id="twinkling" class="twinkling"></div> -->
-      <button id= "about" class="nav-button">Our Work</button>
-      <button id= "projects" class="nav-button">About</button>
-      <button id= "contact" class="nav-button">Contact</button>
-
-
-      <div class="home-container">
-          <div class="logo-box">
-            <img src="images/bitcraft.png" alt="BitCraft" class="logo">
-          </div>
-          <div class="page-title">BitCraft
-          </div>
-          <div class="page-subtitle" id="cryptocurrency">cryptocurrency</div>
-          <div class="page-subtitle" id="development">development</div>
-          <div class="page-subtitle" id="consulting">+ consulting</div>
+      <div class="navbar">
+      <img src="images/bitcraft.png" alt="BitCraft" class="logo">
+      <div class="page-title">BitCraft</div>
+      <button id="about" class="nav-button"><a href="#our-work">Our Work</a></button>
+      <button id="projects" class="nav-button"><a href="#about">About</a></button>
+      <button id="contact" class="nav-button"><a href="#footer">Contact</a></button>
       </div>
 
+      <div class="home-container">
+          <div class="page-subtitle" id="cryptocurrency">Cryptocurrency development + consulting</div>
+          <div class="line"></div>
+          <div class="caption-1" id="our-work"><p>We build tools and services to help our customers succeed in cryptocurrency markets.</p></div>
+      </div>
 
-      <div class= "caption-1"> <p>We build tools and services to help our customers succeed in cryptocurrency markets.</p></div>
       <div class="section-1"><p class="work-subtitles">Technologies + tools</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. </p> </div>
       <div class="section-2"><p class="work-subtitles"> Our work </p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. Donec a neque dignissim, congue metus sollicitudin, placerat odio. Nam tempor sem massa, vitae pretium augue gravida id. </p> </div>
       <div class="section-3"><p class="work-subtitles"> Who uses BitCraft?</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod.</p> </div>
 
-        <div class="stars"></div>
-          <!-- <img class="target-repeat"> -->
-
-          <div class="meet-team">
-            <div class="squares"></div>
-
-            <div class="about-box"> <h style="font-size: 2vw;">A bit </h> <div><h style="font-size: 3.5vw;">about us</h></div>
-            <div class= "underline"></div> <p class= "about-us"></p>
-            <div class="about-words"> Nulla volutpat venenatis mi, at molestie justo tempus quis. Nulla at ligula placerat, aliquam sapien vitae, tempor augue. Duis rhoncus tellus vitae lacinia dignissim. Ut tempor magna erat, nec pharetra lacus efficitur a. Donec facilisis risus sed leo blandit interdum. Pellentesque condimentum at ligula et laoreet. Sed egestas luctus tellus vitae pretium. Morbi semper dapibus lectus, id porta justo maximus at. Aliquam malesuada nibh non nibh lacinia, vitae mattis leo congue.</div>
-            </div>
-
-
-            <div class="photo-box">
-            <img class="member-photo left" src="zach.jpg"><p class="mem-desc-left">Zachary Bloomquist <a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role">Bitserf</p></p></img>
-            <img class="member-photo right" style="" src="harsha.jpg">
-            <p class="mem-desc-right">Harsha Goli<a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role-right">Bitserf</p></p></img>
-            <div class="shift" style="margin-top: -20vw;">
-            <img class="member-photo left" src="luis.jpg"> <p class="mem-desc-left">Luis Ferrer Labarca<a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role">Bitserf</p></p></img>
-            <img class="member-photo right" src="caleb.jpg"><p class="mem-desc-right">Caleb Lewis<a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role-right">Bitserf</p></p></img>
-            <img class="member-photo left" src="sri.jpg" style="margin-top: -20vw;"><p class="mem-desc-left">Sri Rajasekaran<a type="button" ><i id="git" class="fa fa-github"></i></a> <p class="job-role">Bitserf</p></p></img>
-            </div>
+      <div class="stars"></div>
+      <div class="meet-team">
+        <div class="team-spacer"></div>
+        <div class="about-box" id="about">
+          <span style="font-size: 2vw;">A bit </span> <div style="font-size: 3.5vw;">about us</div>
+          <div class="underline"></div>
+          <div class="about-words">
+            Nulla volutpat venenatis mi, at molestie justo tempus quis. Nulla at ligula placerat, aliquam sapien vitae, tempor augue. Duis rhoncus tellus vitae lacinia dignissim. Ut tempor magna erat, nec pharetra lacus efficitur a. Donec facilisis risus sed leo blandit interdum. Pellentesque condimentum at ligula et laoreet. Sed egestas luctus tellus vitae pretium. Morbi semper dapibus lectus, id porta justo maximus at. Aliquam malesuada nibh non nibh lacinia, vitae mattis leo congue.
           </div>
         </div>
-
-
-        <div class="footer">
-          <div> <img class="footer-logo" src="images/bitcraft.png"></img></div>
-          <div class="say-hello"> Get in touch! </div>
-          <div class="linkedin footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-linkedin"></i></a></div>
-          <div class="mailto footer-button"<a type="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help."><i class="fa fa-envelope"></i></a></div>
-          <div class="copyright"><p>&copy; {{ site.time | date: '%Y' }} BitCraft LLC</p>
-            <p>Made in Atlanta, Georgia, USA</p></div>
+        <div class="photo-box">
+          <img class="member-photo left" src="zach.jpg">
+          <p class="mem-desc-left">
+            Zachary Bloomquist
+            <a href="https://github.com/flotwig"><i id="git" class="fa fa-github"></i></a>
+            <p class="job-role">Bitserf</p>
+          </p>
+          <img class="member-photo right" src="harsha.jpg">
+          <p class="mem-desc-right">
+            Harsha Goli
+            <a type="button" href="https://github.com/arshbot"><i id="git" class="fa fa-github"></i></a>
+            <p class="job-role-right">Bitserf</p>
+          </p>
+          <div class="shift" style="margin-top: -20vw;">
+            <img class="member-photo left" src="luis.jpg">
+            <p class="mem-desc-left">
+              Luis Ferrer Labarca
+              <a type="button" href="https://github.com/ferrerluis"><i id="git" class="fa fa-github"></i></a>
+              <p class="job-role">Bitserf</p>
+            </p>
+            <img class="member-photo right" src="caleb.jpg">
+            <p class="mem-desc-right">
+              Caleb Lewis
+              <a type="button" href="https://github.com/calebdre"><i id="git" class="fa fa-github"></i></a>
+              <p class="job-role-right">Bitserf</p>
+            </p>
+            <img class="member-photo left" src="sri.jpg" style="margin-top: -20vw;">
+            <p class="mem-desc-left">
+              Sri Rajasekaran
+              <a type="button" href="https://github.com/sri96"><i id="git" class="fa fa-github"></i></a>
+              <p class="job-role">Bitserf</p>
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div class="footer" id="footer">
+        <div> <img class="footer-logo" src="images/bitcraft.png"></img></div>
+        <div class="say-hello"> Get in touch! </div>
+        <div class="linkedin footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-linkedin"></i></a></div>
+        <div class="mailto footer-button"<a type="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help."><i class="fa fa-envelope"></i></a></div>
+        <div class="copyright"><p>&copy; {{ site.time | date: '%Y' }} BitCraft LLC</p>
+          <p>Made with <span class="heart">&hearts;</span> in Atlanta, Georgia, USA</p></div>
+      </div>
     </div>
 
 </body>
