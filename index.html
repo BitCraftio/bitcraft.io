@@ -76,70 +76,6 @@ layout: none
     </style>
 
     <style>
-      @keyframes move-twink-back {
-          50% {
-              transform: translateX(4vw);
-        }
-          100% {
-              transform: translateX(-4vw);
-        }
-      }
-      @-webkit-keyframes move-twink-back {
-          from {
-              background-position: 0 0;
-        }
-          to {
-              background-position: -10000px 5000px;
-        }
-      }
-      @-moz-keyframes move-twink-back {
-          from {
-              background-position: 0 0;
-        }
-          to {
-              background-position: -10000px 5000px;
-        }
-      }
-      @-ms-keyframes move-twink-back {
-          from {
-              background-position: 0 0;
-        }
-          to {
-              background-position: -10000px 5000px;
-        }
-      }
-      @keyframes move-clouds-back {
-          from {
-              background-position: 0 0;
-        }
-          to {
-              background-position: 10000px 0;
-        }
-      }
-      @-webkit-keyframes move-clouds-back {
-          from {
-              background-position: 0 0;
-        }
-          to {
-              background-position: 10000px 0;
-        }
-      }
-      @-moz-keyframes move-clouds-back {
-          from {
-              background-position: 0 0;
-        }
-          to {
-              background-position: 10000px 0;
-        }
-      }
-      @-ms-keyframes move-clouds-back {
-          from {
-              background-position: 0;
-        }
-          to {
-              background-position: 10000px 0;
-        }
-      }
       body, html {
           margin: 0;
           padding: 0;
@@ -152,36 +88,6 @@ layout: none
       h1, h2 {
           font-family: 'Noway', sans-serif;
           letter-spacing: 0.1rem;
-      }
-      .twinkling {
-          background: url(images/twinkling.png) repeat top center;
-          z-index: 1;
-          -moz-animation: move-twink-back 300s linear infinite;
-          -ms-animation: move-twink-back 300s linear infinite;
-          -o-animation: move-twink-back 300s linear infinite;
-          -webkit-animation: move-twink-back 300s linear infinite;
-          animation: move-twink-back 300s linear infinite;
-          background-attachment: fixed;
-      }
-      .stars {
-          background:url(images/stars.png) repeat top center;
-          z-index: 0;
-          background-attachment: fixed;
-          background-position: center;
-          background-repeat: repeat;
-          background-size: cover;
-        /*animation: star-move 1000s linear infinite;
-        */
-      }
-      .stars, .twinkling {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          width: 100%;
-          height: 200%;
-          display: block;
       }
       .background-gradient {
           background: fixed, linear-gradient(to bottom, black 20%, #190a2b 100%);
@@ -413,7 +319,7 @@ layout: none
       .social-buttons {
           margin-left: 33vw;
       }
-      #git {
+      .git {
           margin-top: 0vw;
           color: white;
           width: 1vw;
@@ -487,6 +393,25 @@ layout: none
           font-size: 200%;
           vertical-align: sub;
       }
+      .shift {
+          margin-top: -20vw;
+      }
+      .stars {
+            background:url(images/stars.png) repeat top center;
+            z-index: 0;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 200%;
+            display: block;
+      }
     </style>
 </head>
 
@@ -526,7 +451,6 @@ layout: none
          orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. Donec a neque dignissim, congue metus sollicitudin, placerat odio. Nam tempor sem massa, vitae pretium augue gravida id. </p> </div>
       <!-- <div class="section-3"><p class="work-subtitles"> Who uses BitCraft?</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod.</p> </div> -->
 
-      <div class="stars"></div>
       <div class="meet-team">
         <div class="team-spacer"></div>
         <div class="about-box" id="about">
@@ -540,32 +464,32 @@ layout: none
           <img class="member-photo left" src="zach.jpg">
           <p class="mem-desc-left">
             Zachary Bloomquist
-            <a href="https://github.com/flotwig"><i id="git" class="fa fa-github"></i></a>
+            <a href="https://github.com/flotwig"><i class="fa fa-github git"></i></a>
             <p class="job-role">Bitserf</p>
           </p>
           <img class="member-photo right" src="harsha.jpg">
           <p class="mem-desc-right">
             Harsha Goli
-            <a type="button" href="https://github.com/arshbot"><i id="git" class="fa fa-github"></i></a>
+            <a type="button" href="https://github.com/arshbot"><i class="fa fa-github git"></i></a>
             <p class="job-role-right">Bitserf</p>
           </p>
-          <div class="shift" style="margin-top: -20vw;">
+          <div class="shift">
             <img class="member-photo left" src="luis.jpg">
             <p class="mem-desc-left">
               Luis Ferrer Labarca
-              <a type="button" href="https://github.com/ferrerluis"><i id="git" class="fa fa-github"></i></a>
+              <a type="button" href="https://github.com/ferrerluis"><i class="fa fa-github git"></i></a>
               <p class="job-role">Bitserf</p>
             </p>
             <img class="member-photo right" src="caleb.jpg">
             <p class="mem-desc-right">
               Caleb Lewis
-              <a type="button" href="https://github.com/calebdre"><i id="git" class="fa fa-github"></i></a>
+              <a type="button" href="https://github.com/calebdre"><i class="fa fa-github git"></i></a>
               <p class="job-role-right">Bitserf</p>
             </p>
             <img class="member-photo left" src="sri.jpg" style="margin-top: -20vw;">
             <p class="mem-desc-left">
               Sri Rajasekaran
-              <a type="button" href="https://github.com/sri96"><i id="git" class="fa fa-github"></i></a>
+              <a type="button" href="https://github.com/sri96"><i class="fa fa-github git"></i></a>
               <p class="job-role">Bitserf</p>
             </p>
           </div>
