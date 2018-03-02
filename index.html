@@ -85,21 +85,22 @@ layout: none
       }
       body {
           overflow-x: hidden;
+          background: linear-gradient(to bottom, black 20%, #190a2b 100%);
       }
       h1, h2 {
           font-family: 'Noway', sans-serif;
           letter-spacing: 0.1rem;
       }
-      .background-gradient {
+      /*.background-gradient {
+        position: absolute;
           background: fixed, linear-gradient(to bottom, black 20%, #190a2b 100%);
-          z-index: -1;
+          z-index: 0;
           background-blend-mode: color-burn;
-          height: 260vw;
-      }
+          height: 100%;
+          width:100vw;
+      }*/
       .main {
-          background-color: black;
           color: #eee;
-          position: absolute;
           left: 0;
           width: 100%;
           height: 100%;
@@ -150,12 +151,11 @@ layout: none
           margin-left: 46vw;
       }
       .main .home-container {
-          position: absolute;
-          width: 52vw;
-          text-align: center;
-          height: 30vw;
-          top: 34vmin;
-          left: 24vw;
+        width: 60vw;
+        margin-top: 34vmin;
+        margin-left: 20vw;
+        height: 100vh;
+        text-align: center;
       }
       .main .link-container {
           float: right;
@@ -174,18 +174,18 @@ layout: none
           color: white;
       }
       .main .page-subtitle {
-          font-size: 4vw;
-          color: white;
-          position: absolute;
-          font-family: 'Noway', sans-serif;
-          letter-spacing: .1rem;
-          z-index: 999;
+        width: 50vw;
+        font-size: 4vw;
+        color: white;
+        font-family: 'Noway', sans-serif;
+        letter-spacing: .1rem;
+        z-index: 999;
       }
       .main .button:hover {
           background-color: #fff;
           color: #4a97d2;
       }
-      .our-work {
+      /*.our-work {
           margin-top: -160vw;
           margin-left: 23vw;
           padding: 2vw 5vw 2vw 5vw;
@@ -193,12 +193,12 @@ layout: none
           color: rgb(255, 255, 255);
           width: 44vw;
           height: 12vw;
-      }
-      .meet-team {
+      }*/
+      /* . {
           margin-top: -10vw;
           height: 80vw;
           width: 100%;
-      }
+      } */
       .photo-box {
           height: 50vw;
           width: 45vw;
@@ -243,20 +243,19 @@ layout: none
           border-bottom: .2vw solid white;
       }
       .section-1 {
-          margin-top: -200vw;
           margin-left: 20vw;
           width: 60vw;
           height: 20vw;
           background: rgba(37, 37, 37, 0);
       }
-      .section-2{
-          margin-top:5vw;
+      .section-2 {
           margin-left: 20vw;
           width: 60vw;
           height: 20vw;
           background: rgba(37, 37, 37, 0.5);
       }
       .caption-1 {
+          width: 60vw;
           font-size: 2.5vw;
       }
       .work-subtitles {
@@ -264,9 +263,16 @@ layout: none
         padding-left: 2vw;*/
         font-size: 2vw;
       }
+      .work {
+        font-size: 2vw;
+        padding-top: 2vw;
+        padding-left: 2vw;
+      }
+
       .paragraph {
           padding: 2vw;
           font-size: 1.3vw;
+          padding-top: 0vw;
       }
       .team-spacer {
           height: 80vw;
@@ -328,13 +334,7 @@ layout: none
           margin-top: 3vw;
           text-align: center;
       }
-      .linkedin{
-          margin-left: 40vw;
-      }
-      .mailto {
-          float: right;
-          margin-right: 40vw;
-      }
+
       .say-hello {
           width: 100vw;
           font-size: 3vw;
@@ -370,12 +370,11 @@ layout: none
           position: fixed;
       }
       .line{
-          width: 62vw;
-          margin-top: 13vw;
-          margin-left: -5vw;
-        /* margin-bottom: 1.8vw;
-          */
-          border-bottom: .2vw solid white;
+        width: 60vw;
+        /* margin-top: 13vw; */
+        /* margin-left: -5vw; */
+        /* margin-bottom: 1.8vw; */
+        border-bottom: .2vw solid white;
       }
       .nav-button {
           color: inherit;
@@ -413,17 +412,24 @@ layout: none
             height: 200%;
             display: block;
       }
+      .meet-team {
+        margin-top: -10vw;
+        height: 80vw;
+        width: 100%;
+        margin-bottom: 20vw;
+      }
       .blockexplorer{
         width: 20vw;
         height: 5vw
       }
+      .me
       .hail{
         width: 10vw;
         height: 5vw;
       }
       .tab{
-        height: 6vw;
-        width: 21vw;
+        height: 5vw;
+        width: 19vw;
       }
     </style>
 </head>
@@ -462,7 +468,7 @@ layout: none
         <img class="tab" src="images/logos/tab.png">
       </div>
     </div>
-      <div class="section-2"><p class="work-subtitles"> Our work </p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur
+      <div class="section-2"><p class="work"> Our work </p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur
          adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in
          orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. Donec a neque dignissim, congue metus sollicitudin, placerat odio. Nam tempor sem massa, vitae pretium augue gravida id. </p> </div>
       <!-- <div class="section-3"><p class="work-subtitles"> Who uses BitCraft?</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod.</p> </div> -->
@@ -517,7 +523,7 @@ layout: none
         <div class="say-hello"> Get in touch! </div>
         <div class = "footer-link-container">
           <div class="instagram footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-instagram"></i></a></div>
-          <div class="twitter footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-twitter-square"></i></a></div>
+          <div class="twitter footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-twitter"></i></a></div>
           <div class="linkedin footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-linkedin"></i></a></div>
           <div class="mailto footer-button"<a type="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help."><i class="fa fa-envelope"></i></a></div>
         </div>
