@@ -170,6 +170,9 @@ layout: none
           height: 100%;
           vertical-align: middle;
       }
+      a .page-title {
+          color: white;
+      }
       .main .page-subtitle {
           font-size: 4vw;
           color: white;
@@ -359,6 +362,7 @@ layout: none
       .navbar {
           z-index: 9999;
           width: 100vw;
+          padding: 1vw 0;
           top: 0;
           left: 0;
           height: 4vw;
@@ -429,8 +433,10 @@ layout: none
       <div class="background-gradient"></div>
       <div class="stars"></div>
       <div class="navbar">
-        <img src="images/bitcraft.png" alt="BitCraft" class="logo">
-        <h1 class="page-title">BitCraft</h1>
+        <a href="">
+          <img src="images/bitcraft.png" alt="BitCraft" class="logo">
+          <h1 class="page-title">BitCraft</h1>
+        </a>
         <nav class="link-container">
           <a href="#our-work" class="nav-button">Our Work</a>
           <a href="#about" class="nav-button">About</a>
