@@ -1,6 +1,6 @@
----
+<!-- ---
 layout: none
----
+--- -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -267,7 +267,6 @@ layout: none
           }
           #contact {
             margin-left: 46vw;
-
           }
 
         .main .home-container {
@@ -297,7 +296,7 @@ layout: none
             position: absolute;
             font-family: 'Noway', sans-serif;
             letter-spacing: .1rem;
-            z-index: 99999;
+            z-index: 999;
         }
 
         .main .button:hover {
@@ -531,7 +530,11 @@ layout: none
         /* margin-bottom: 1.8vw; */
         border-bottom: .2vw solid white;
     }
-
+    .link-container {
+      float: right;
+      width: 100vw;
+      margin-right: -42vw;
+    }
       .nav-button > a {
         color: inherit;
         text-decoration: none;
@@ -550,11 +553,13 @@ layout: none
       <div class="background-gradient"></div>
       <div class="stars"></div>
       <div class="navbar">
-      <img src="images/bitcraft.png" alt="BitCraft" class="logo">
-      <div class="page-title">BitCraft</div>
-      <button id="about" class="nav-button"><a href="#our-work">Our Work</a></button>
-      <button id="projects" class="nav-button"><a href="#about">About</a></button>
-      <button id="contact" class="nav-button"><a href="#footer">Contact</a></button>
+        <img src="images/bitcraft.png" alt="BitCraft" class="logo">
+        <div class="page-title">BitCraft</div>
+        <div class="link-container">
+          <button id="about" class="nav-button"><a href="#our-work">Our Work</a></button>
+          <button id="projects" class="nav-button"><a href="#about">About</a></button>
+          <button id="contact" class="nav-button"><a href="#footer">Contact</a></button>
+        </div>
       </div>
 
       <div class="home-container">
@@ -563,9 +568,21 @@ layout: none
           <div class="caption-1" id="our-work"><p>We build tools and services to help our customers succeed in cryptocurrency markets.</p></div>
       </div>
 
-      <div class="section-1"><p class="work-subtitles">Technologies + tools</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. </p> </div>
-      <div class="section-2"><p class="work-subtitles"> Our work </p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. Donec a neque dignissim, congue metus sollicitudin, placerat odio. Nam tempor sem massa, vitae pretium augue gravida id. </p> </div>
-      <div class="section-3"><p class="work-subtitles"> Who uses BitCraft?</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod.</p> </div>
+      <div class="section-1">
+        <div class="our-clients">
+        <p class="work-subtitles">Our clients</p>
+        <img class="blockexplorer" src="images/logos/blockexplorer.png"></img>
+        <img class="hail" src="images/logos/hail.png"></img>
+      </div>
+      <div class="sponsoring">
+        <p class="">Proud sponsors of </p>
+        <img class="tab" src="images/logos/tab.png">
+      </div>
+    </div>
+      <div class="section-2"><p class="work-subtitles"> Our work </p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur
+         adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in
+         orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod. Nulla nec nunc pulvinar, vestibulum tortor non, efficitur nunc. Donec a neque dignissim, congue metus sollicitudin, placerat odio. Nam tempor sem massa, vitae pretium augue gravida id. </p> </div>
+      <!-- <div class="section-3"><p class="work-subtitles"> Who uses BitCraft?</p> <p class="paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur nisl in odio dignissim, vel scelerisque mauris dictum. Integer ullamcorper felis in orci convallis, sed lacinia velit sollicitudin. Etiam condimentum metus sed libero malesuada euismod.</p> </div> -->
 
       <div class="stars"></div>
       <div class="meet-team">
@@ -616,8 +633,12 @@ layout: none
       <div class="footer" id="footer">
         <div> <img class="footer-logo" src="images/bitcraft.png"></img></div>
         <div class="say-hello"> Get in touch! </div>
-        <div class="linkedin footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-linkedin"></i></a></div>
-        <div class="mailto footer-button"<a type="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help."><i class="fa fa-envelope"></i></a></div>
+        <div class = "footer-link-container">
+          <div class="instagram footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-instagram"></i></a></div>
+          <div class="twitter footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-twitter-square"></i></a></div>
+          <div class="linkedin footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-linkedin"></i></a></div>
+          <div class="mailto footer-button"<a type="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help."><i class="fa fa-envelope"></i></a></div>
+        </div>
         <div class="copyright"><p>&copy; {{ site.time | date: '%Y' }} BitCraft LLC</p>
           <p>Made with <span class="heart">&hearts;</span> in Atlanta, Georgia, USA</p></div>
       </div>
