@@ -29,11 +29,12 @@ layout: none
       function scrollToId(id) {
         var i = window.scrollY;
         var offset = getOffset(document.getElementById(id))
+        var scroll = 10;
+        if (offset.top < window.scrollY) scroll *= -1;
         var int = setInterval(function() {
-          window.scrollTo(window.scrollX, i);
-          i += (Math.abs(offset.top-window.scrollY))/20
-          if (i <= offset.top) clearInterval(int);
-        }, 10);
+          window.scrollBy(0, scroll)
+          if (window.scrollY >= offset.top) clearInterval(int);
+        }, 100);
       }
 
       if (window.hash) {
@@ -116,22 +117,20 @@ layout: none
       }
       .logo {
           width: 4vw;
-          margin-top: .5vw;
           margin-left: 5vw;
-          padding-right: 31vw;
           height: 4vw;
+          float:left
       }
       .main .nav-button {
-          height:3vw;
-          width:9vw;
-          position: fixed;
+          height:1.5vw;
+          width:7vw;
+          margin-top: 1.5vw;
+          margin-left: 2vw;
           background-color: rgba(37, 37, 37, .1);
           border: .01vw solid transparent;
           color: white;
           padding: .5vw 1vw;
-          top: 3vw;
           text-align: center;
-          display: inline-block;
           font-family: 'Noway', sans-serif;
           font-size: 1.5vw;
           z-index: 999999;
@@ -155,19 +154,21 @@ layout: none
           width: 52vw;
           text-align: center;
           height: 30vw;
-          top: 18vw;
+          top: 34vmin;
           left: 24vw;
       }
+      .main .link-container {
+          float: right;
+          margin-right: 5vw;
+          margin-top: 1vw;
+      }
       .main .page-title {
-          margin-top: -3.5vw;
-          margin-left: 10vw;
-          font-weight: bold;
+          margin: .6vh 0 0 1vw;
           font-size: 2.5vw;
-          color: white;
-          position: absolute;
-          font-family: 'Noway', sans-serif;
-          letter-spacing: .1rem;
+          display: inline-block;
           z-index: 99999;
+          height: 100%;
+          vertical-align: middle;
       }
       .main .page-subtitle {
           font-size: 4vw;
@@ -358,10 +359,10 @@ layout: none
       .navbar {
           z-index: 9999;
           width: 100vw;
-          top: 2vw;
+          top: 0;
           left: 0;
-          height: 5vw;
-          background: rgba(37, 37, 37, .6);
+          height: 4vw;
+          background: rgba(0,0,0,.72);
           position: fixed;
       }
       .line{
@@ -372,12 +373,7 @@ layout: none
           */
           border-bottom: .2vw solid white;
       }
-      .link-container {
-          float: right;
-          width: 100vw;
-          margin-right: -42vw;
-      }
-      .nav-button > a {
+      .nav-button {
           color: inherit;
           text-decoration: none;
       }
@@ -434,12 +430,12 @@ layout: none
       <div class="stars"></div>
       <div class="navbar">
         <img src="images/bitcraft.png" alt="BitCraft" class="logo">
-        <div class="page-title">BitCraft</div>
-        <div class="link-container">
-          <button id="about" class="nav-button"><a href="#our-work">Our Work</a></button>
-          <button id="projects" class="nav-button"><a href="#about">About</a></button>
-          <button id="contact" class="nav-button"><a href="#footer">Contact</a></button>
-        </div>
+        <h1 class="page-title">BitCraft</h1>
+        <nav class="link-container">
+          <a href="#our-work" class="nav-button">Our Work</a>
+          <a href="#about" class="nav-button">About</a>
+          <a href="#footer" class="nav-button">Contact</a>
+        </nav>
       </div>
 
       <div class="home-container">
