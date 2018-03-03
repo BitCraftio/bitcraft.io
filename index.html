@@ -36,17 +36,17 @@ layout: none
           if (window.scrollY >= offset.top) clearInterval(int);
         }, 100);
       }
+      // some small bugs below
+      // if (window.hash) {
+      //   scrollToId(window.location.hash.slice(1))
+      // }
 
-      if (window.hash) {
-        scrollToId(window.location.hash.slice(1))
-      }
-
-      window.onhashchange = function(event) {
-        scrollToId(window.location.hash.slice(1))
-        return true
-      }
+      // window.onhashchange = function(event) {
+      //   scrollToId(window.location.hash.slice(1))
+      //   return true
+      // }
     </script>
-    <link href="/images/bitcraft.png" rel="shortcut icon">
+    <link href="images/bitcraft.png" rel="shortcut icon">
 
     <title>{{ site.title }} | {{ site.tagline }}</title>
 
@@ -326,13 +326,6 @@ layout: none
       .social-buttons {
           margin-left: 33vw;
       }
-      .git {
-          margin-top: 0vw;
-          color: white;
-          width: 1vw;
-          margin-left: 1vw;
-          font-size: 2vw;
-      }
       .copyright {
           font-size: 1vw;
           margin-top: 3vw;
@@ -354,13 +347,26 @@ layout: none
           margin-top: -1.5vw;
           width: 16vw;
       }
+      .job-role-right > span,
+      .job-role > span {
+          display: block;
+          margin-top: 0vw;
+      }
+      .job-role-right > span i,
+      .job-role > span i {
+          margin-top: .5vw;
+          width: 1vw;
+          margin-right: 1vw;
+          font-size: 1.5vw;
+          color: #909090;
+      }
       .job-role-right {
           font-style: italic;
           font-size: 1.1vw;
           text-align: center;
           margin-top: -19vw;
           margin-bottom: 10vw;
-          margin-left: 22.5vw;
+          margin-left: 23.5vw;
           text-align: center;
       }
       .navbar {
@@ -481,40 +487,65 @@ layout: none
           <span style="font-size: 2vw;">A bit </span> <div style="font-size: 3.5vw;">about us</div>
           <div class="underline"></div>
           <div class="about-words">
-            Nulla volutpat venenatis mi, at molestie justo tempus quis. Nulla at ligula placerat, aliquam sapien vitae, tempor augue. Duis rhoncus tellus vitae lacinia dignissim. Ut tempor magna erat, nec pharetra lacus efficitur a. Donec facilisis risus sed leo blandit interdum. Pellentesque condimentum at ligula et laoreet. Sed egestas luctus tellus vitae pretium. Morbi semper dapibus lectus, id porta justo maximus at. Aliquam malesuada nibh non nibh lacinia, vitae mattis leo congue.
+              BitCraft is a crypto development startup from Atlanta. We create cutting edge infrastructure to support the distributed financial networks of tomorrow. We pride ourselves on our engineering standards and our perfectionism, and our beliefs in financial freedom and independence. Let our uniquely qualified team transform your idea to reality today.
           </div>
         </div>
         <div class="photo-box">
           <img class="member-photo left" src="zach.jpg">
           <p class="mem-desc-left">
-            Zachary Bloomquist
-            <a href="https://github.com/flotwig"><i class="fa fa-github git"></i></a>
-            <p class="job-role">Bitserf</p>
+            Zach Bloomquist
+            <p class="job-role">
+              Lead Architect
+              <span>
+                <a href="https://github.com/flotwig"><i class="fa fa-github git"></i></a>
+                <a href="https://www.linkedin.com/in/zbloomq/"><i class="fa fa-linkedin git"></i></a>
+              </span>
+            </p>
           </p>
           <img class="member-photo right" src="harsha.jpg">
           <p class="mem-desc-right">
             Harsha Goli
-            <a type="button" href="https://github.com/arshbot"><i class="fa fa-github git"></i></a>
-            <p class="job-role-right">Bitserf</p>
+            <p class="job-role-right">
+              Lead Crypto Dev
+              <span>
+                  <a href="https://github.com/arshbot"><i class="fa fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/harshagoli/"><i class="fa fa-linkedin"></i></a>
+              </span>
+            </p>
           </p>
           <div class="shift">
             <img class="member-photo left" src="luis.jpg">
             <p class="mem-desc-left">
-              Luis Ferrer Labarca
-              <a type="button" href="https://github.com/ferrerluis"><i class="fa fa-github git"></i></a>
-              <p class="job-role">Bitserf</p>
+              Luis Ferrer-Labarca
+              <p class="job-role">
+                Lead Backend Dev
+                <span>
+                    <a href="https://github.com/ferrerluis"><i class="fa fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/luisferrerl/"><i class="fa fa-linkedin"></i></a>
+                </span>
+              </p>
             </p>
             <img class="member-photo right" src="caleb.jpg">
             <p class="mem-desc-right">
               Caleb Lewis
-              <a type="button" href="https://github.com/calebdre"><i class="fa fa-github git"></i></a>
-              <p class="job-role-right">Bitserf</p>
+              <p class="job-role-right">
+                Lead Mobile Dev
+                <span>
+                    <a href="https://github.com/calebdre"><i class="fa fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/developercaleb/"><i class="fa fa-linkedin"></i></a>
+                </span>
+              </p>
             </p>
             <img class="member-photo left" src="sri.jpg" style="margin-top: -20vw;">
             <p class="mem-desc-left">
               Sri Rajasekaran
-              <a type="button" href="https://github.com/sri96"><i class="fa fa-github git"></i></a>
-              <p class="job-role">Bitserf</p>
+              <p class="job-role">
+                Co-Founder &amp; HR
+                <span>
+                  <a href="https://github.com/sri96"><i class="fa fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/sri-rajasekaran/"><i class="fa fa-linkedin"></i></a>
+                </span>
+              </p>
             </p>
           </div>
         </div>
