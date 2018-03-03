@@ -82,23 +82,25 @@ layout: none
           padding: 0;
           font-family: 'Noway', sans-serif;
           columns: #444444;
+          height: 100%;
       }
       body {
           overflow-x: hidden;
-          background: linear-gradient(to bottom, black 20%, #190a2b 100%);
       }
       h1, h2 {
           font-family: 'Noway', sans-serif;
           letter-spacing: 0.1rem;
       }
-      /*.background-gradient {
+      .background-gradient {
         position: absolute;
-          background: fixed, linear-gradient(to bottom, black 20%, #190a2b 100%);
-          z-index: 0;
-          background-blend-mode: color-burn;
-          height: 100%;
-          width:100vw;
-      }*/
+        top: 0;
+        left: 0;
+        background: fixed, linear-gradient(to bottom, black 20%, #190a2b 100%);
+        z-index: -2;
+        background-blend-mode: color-burn;
+        height: 260vw;
+        width:100vw;
+      }
       .main {
           color: #eee;
           left: 0;
@@ -174,7 +176,6 @@ layout: none
           color: white;
       }
       .main .page-subtitle {
-        width: 50vw;
         font-size: 4vw;
         color: white;
         font-family: 'Noway', sans-serif;
@@ -255,7 +256,6 @@ layout: none
           background: rgba(37, 37, 37, 0.5);
       }
       .caption-1 {
-          width: 60vw;
           font-size: 2.5vw;
       }
       .work-subtitles {
@@ -296,6 +296,10 @@ layout: none
           margin-left: 47vw;
           margin-top: -4vw;
           border: .5vw solid #190a2b;
+      }
+      .footer-link-container {
+          width: 29vw;
+          margin-left: 35vw;
       }
       .about-git-button {
           font-size: 1vw;
@@ -398,7 +402,7 @@ layout: none
       }
       .stars {
             background:url(images/stars.png) repeat top center;
-            z-index: 0;
+            z-index: -1;
             background-attachment: fixed;
             background-position: center;
             background-repeat: repeat;
@@ -451,7 +455,7 @@ layout: none
       </div>
 
       <div class="home-container">
-          <div class="page-subtitle" id="cryptocurrency">Cryptocurrency development + consulting</div>
+          <div class="page-subtitle" id="cryptocurrency">Cryptocurrency<br/> development + consulting</div>
           <div class="line"></div>
           <div class="caption-1" id="our-work"><p>We build tools and services to help our customers succeed in cryptocurrency markets.</p></div>
       </div>
