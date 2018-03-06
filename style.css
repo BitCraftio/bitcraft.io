@@ -57,11 +57,12 @@ width:100vw;
 }
 .main .footer {
 margin-top: 35vw;
+padding-bottom: 20px;
 background: rgba(152, 148, 148, .5);
-height: 31vw;
+/* height: 31vw; */
 width: 100vw;
 z-index: 999;
-line-height: .4em;
+/* line-height: .4em; */
 }
 .main .nav-button {
   height:1.5vw;
@@ -223,30 +224,30 @@ margin-bottom: 0;
   border: .5vw solid #190a2b;
 }
 .footer-link-container {
-width: 100vw;
+margin-top: 20px;
 text-align: center;
 }
 .about-git-button {
   font-size: 1vw;
 }
 .fa {
-  margin-top: .8vw;
-  color: white;
   font-size: 5vw;
+}
+.footer-button .fa {
+  color: white;
+  font-size: 30px;
+  transition: all ease-in-out .25s;
+}
+.footer-button .fa:hover {
+  color: #000000;
 }
 .footer-button {
   display: inline-block;
-  height: 7vw;
-  width: 7vw;
-  margin-top: 3vw;
+  margin: 0 10px 0 10px;
   text-align: center;
   border-radius: 5vw;
   color: #fff;
-  transition: all ease-in-out .25s;
   font-weight: lighter;
-}
-.footer-button:hover {
-  background: #190a2b;
 }
 .social-buttons {
   margin-left: 33vw;
@@ -256,12 +257,11 @@ text-align: center;
   margin-top: 3vw;
   text-align: center;
 }
-
 .say-hello {
   width: 100vw;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
-  margin-top: 5vw;
+  margin-top: 15px;
 }
 .job-role{
   font-size: .8em;
