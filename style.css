@@ -171,29 +171,28 @@ font-weight: normal;
   background: rgba(37, 37, 37, 0);
 }
 .work-section h3 {
-    font-size: 1.5em;
-    font-weight: normal;
+  font-size: 1.5em;
+  font-weight: normal;
 }
 .work-section img {
-    max-height: 4em;
-    margin-bottom: 1em;
+  max-height: 4em;
+  margin-bottom: 1em;
 }
-.section-2 {
+.specialty {
+  margin-top: 80px;
   margin-left: 20vw;
   width: 60vw;
   background: rgba(37, 37, 37, 0.5);
   clear: both;
 }
 .work-subtitles {
-/*padding-top: 2vw;
-padding-left: 2vw;*/
-font-size: 2vw;
+  font-size: 2vw;
 }
 .work {
-font-size: 1.5em;
-padding-top: 2vw;
-padding-left: 2vw;
-margin-bottom: 0;
+  font-size: 1.5em;
+  padding-top: 2vw;
+  padding-left: 2vw;
+  margin-bottom: 0;
 }
 
 .paragraph {
@@ -308,7 +307,7 @@ text-align: center;
 }
 .navbar > .brand > h1 {
     margin: 0;
-    margin-left: .2em;
+    margin-left: .4em;
     font-size: 2em;
     display: inline-block;
     height: 100%;
@@ -324,11 +323,12 @@ margin-top: .5em;
 margin-bottom: .5em;
 border-bottom: .1em solid white;
 }
-.our-clients, .sponsoring{
+.clients, .sponsoring{
 width: 49.5%;
 margin: 0;
-float: left;
+display: inline-block;
 text-align: center;
+vertical-align: top;
 }
 
 .heart {
