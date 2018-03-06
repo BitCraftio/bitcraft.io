@@ -289,7 +289,7 @@ text-align: center;
 .navbar {
   z-index: 9999;
   width: 100vw;
-  padding: 1vw 0;
+  padding: 15px 0;
   top: 0;
   left: 0;
   height: 40px;
