@@ -22,7 +22,7 @@
   }
 
   .main .work-section {
-    margin: 30px 30px 0 30px;
+    margin: 30px 30px 70px 30px;
     width: auto;
   }
 
@@ -30,5 +30,10 @@
     display: block;
     width: auto;
     margin-bottom: 50px;
+  }
+
+  .main .specialty {
+    margin: 0 30px 0 30px;
+    width: auto;
   }
 }
