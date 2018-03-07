@@ -287,8 +287,12 @@ a .page-title {
 }
 
 .copyright {
-  font-size: 1em;
   margin-top: 20px;
+  text-align: center;
+}
+
+.love {
+  margin-top: 5px;
   text-align: center;
 }
 
@@ -386,8 +390,7 @@ a .page-title {
 
 .heart {
   color: #ff1111;
-  font-size: 200%;
-  vertical-align: sub;
+  font-size: 1em;
 }
 
 .shift {

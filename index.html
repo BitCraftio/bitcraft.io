@@ -32,15 +32,6 @@
           if (window.scrollY >= offset.top) clearInterval(int);
         }, 100);
       }
-      // some small bugs below
-      // if (window.hash) {
-      //   scrollToId(window.location.hash.slice(1))
-      // }
-
-      // window.onhashchange = function(event) {
-      //   scrollToId(window.location.hash.slice(1))
-      //   return true
-      // }
     </script>
     <link href="images/bitcraft.png" rel="shortcut icon">
 
@@ -181,8 +172,9 @@
         </div>
         <div class="copyright">
           &copy; {{ site.time | date: '%Y' }} BitCraft LLC
-          <br>
-          Made with <span class="heart">&hearts;</span> in Atlanta, Georgia, USA
+        </div>
+        <div class="love">
+          Made with <i class="fa fa-heart heart"></i> in Atlanta, Georgia, USA
         </div>
       </div>
     </div>
