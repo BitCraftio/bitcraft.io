@@ -236,14 +236,18 @@ a .page-title {
   padding-top: 1vw;
 }
 
+.footer-logo-wrapper {
+  height: 40px;
+  text-align: center;
+}
+
 .footer-logo {
-  height: 6vw;
-  width: 6vw;
+  height: 90px;
   background: #190a2b;
-  border-radius: 5vw;
-  margin-left: 47vw;
-  margin-top: -4vw;
-  border: .5vw solid #190a2b;
+  border-radius: 100%;
+  margin-top: -50px;
+  border: 6px solid #190a2b;
+  box-sizing: border-box;
 }
 
 .footer-link-container {
@@ -284,7 +288,7 @@ a .page-title {
 
 .copyright {
   font-size: 1em;
-  margin-top: 3vw;
+  margin-top: 20px;
   text-align: center;
 }
 

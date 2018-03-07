@@ -107,7 +107,16 @@
     margin-top: 0 !important;
   }
 
-  #about {
-    margin: 0;
+  .footer-logo-wrapper {
+    height: 30px;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    height: 70px;
+    background: #190a2b;
+    border-radius: 100%;
+    margin-top: -40px;
+    border: 5px solid #190a2b;
   }
 }
