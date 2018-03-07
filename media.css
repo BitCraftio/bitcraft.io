@@ -1,0 +1,23 @@
+@media only screen and (max-width: 500px) {
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navbar .brand .brand-name {
+    display: none;
+  }
+
+  .navbar .brand {
+    margin-left: 15px;
+  }
+
+  .navbar .link-container {
+    margin-right: 15px;
+  }
+
+  .main .home-container {
+    margin: 30vh 30px 0 30px;
+    width: auto;
+    height: 70vh;
+  }
+}

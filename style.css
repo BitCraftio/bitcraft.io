@@ -66,7 +66,6 @@ h1, h2 {
 .main .nav-button {
   height: 1.5vw;
   width: 7vw;
-  margin-top: 1.5vw;
   margin-left: 2vw;
   background-color: rgba(37, 37, 37, .1);
   border: .01vw solid transparent;
@@ -106,12 +105,6 @@ h1, h2 {
 
 .main .home-container .subtitle {
   font-size: 1.3em;
-}
-
-.main .link-container {
-  float: right;
-  margin-right: 5vw;
-  margin-top: 1vw;
 }
 
 a .page-title {
@@ -328,32 +321,40 @@ a .page-title {
 .navbar {
   z-index: 9999;
   width: 100vw;
-  padding: 15px 0;
+  padding: 20px 0;
   top: 0;
   left: 0;
   height: 40px;
   background: rgba(0, 0, 0, .72);
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar>.brand {
-  float: left;
-  margin-left: 5vw;
+.navbar .brand {
+  margin-left: 30px;
+  display: flex;
 }
 
-.navbar>.brand>img {
+.navbar .link-container {
+  margin-right: 30px;
+}
+
+.navbar .brand .brand-logo {
   width: 40px;
   height: 40px;
-  float: left;
+  display: inline-block;
 }
 
-.navbar>.brand>h1 {
+.navbar .brand .brand-name {
   margin: 0;
   margin-left: .4em;
   font-size: 2em;
   display: inline-block;
   height: 100%;
   vertical-align: middle;
+  font-weight: bold;
 }
 
 .navbar a {
