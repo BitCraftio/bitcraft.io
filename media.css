@@ -43,10 +43,6 @@
     white-space: nowrap;
   }
 
-  .meet-team .team-spacer {
-    display: none;
-  }
-
   .meet-team * {
     white-space: normal;    
   }

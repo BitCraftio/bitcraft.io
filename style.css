@@ -56,7 +56,7 @@ h1, h2 {
 }
 
 .main .footer {
-  margin-top: 35vw;
+  margin-top: 150px;
   padding-bottom: 20px;
   background: rgba(152, 148, 148, .5);
   width: 100vw;
@@ -81,10 +81,6 @@ h1, h2 {
 .main .nav-button:hover {
   background: white;
   color: black;
-}
-
-#about {
-  margin-left: 20vw;
 }
 
 #projects {
@@ -126,10 +122,9 @@ a .page-title {
 }
 
 .photo-box {
-  height: 50vw;
   width: 45vw;
   margin-left: 5vw;
-  margin-top: -80vw;
+  float: left;
 }
 
 .left {
@@ -149,7 +144,7 @@ a .page-title {
 .about-box {
   float: right;
   position: sticky;
-  margin-top: -80vw;
+  margin-top: 50px;
   top: 15vw;
   margin-right: 10vw;
 }
@@ -236,7 +231,6 @@ a .page-title {
 }
 
 .about-words {
-  height: 25vw;
   width: 30vw;
   font-size: 1em;
   padding-top: 1vw;
@@ -414,8 +408,11 @@ a .page-title {
 }
 
 .meet-team {
-  margin-top: -10vw;
-  height: 80vw;
   width: 100%;
-  margin-bottom: 20vw;
+  margin-top: 100px;
+
+  /* Clearfix */
+  content: "";
+  clear: both;
+  display: table;
 }
