@@ -154,6 +154,14 @@ a .page-title {
   margin-right: 10vw;
 }
 
+.about-box .pre-title {
+  font-size: 1.5em;
+}
+
+.about-box .title {
+  font-size: 3em;
+}
+
 .mem-desc-left {
   font-size: 1em;
   margin-left: 2.5vw;
@@ -186,11 +194,12 @@ a .page-title {
 .work-section h3 {
   font-size: 1.5em;
   font-weight: normal;
+  margin-top: 0;
 }
 
 .work-section img {
   max-height: 4em;
-  margin-bottom: 1em;
+  margin-bottom: 20px;
 }
 
 .specialty {
@@ -300,7 +309,7 @@ a .page-title {
 
 .job-role-right>span, .job-role>span {
   display: block;
-  margin-top: 0vw;
+  margin-top: 5px;
 }
 
 .job-role-right>span i, .job-role>span i {

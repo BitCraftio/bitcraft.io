@@ -22,7 +22,7 @@
   }
 
   .main .work-section {
-    margin: 30px 30px 70px 30px;
+    margin: 30px 30px 130px 30px;
     width: auto;
   }
 
@@ -33,7 +33,85 @@
   }
 
   .main .specialty {
-    margin: 0 30px 0 30px;
+    margin: 0 30px 150px 30px;
     width: auto;
+  }
+
+  .meet-team {
+    margin: 0;
+    height: auto;
+    white-space: nowrap;
+  }
+
+  .meet-team .team-spacer {
+    display: none;
+  }
+
+  .meet-team * {
+    white-space: normal;    
+  }
+
+  .meet-team .photo-box, .meet-team .about-box {
+    margin: 0;
+    float: none;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+
+  .meet-team .photo-box {
+    height: auto;
+    text-align: center;
+    padding-left: 30px;
+    width: 40%;
+  }
+
+  .meet-team .photo-box .shift {
+    margin: 0;
+  }
+
+  .meet-team .photo-box .member-photo {
+    transform: none;
+    height: auto;
+    width: 75%;
+  }
+
+  .meet-team .photo-box .mem-desc-left, .meet-team .photo-box .mem-desc-right {
+    margin: 0;
+    width: auto;
+    transform: none;
+    margin-bottom: 40px;
+  }
+
+  .meet-team .photo-box *:last-child {
+    margin-bottom: 0;
+  }
+
+  .meet-team .about-box {
+    top: 90px;
+    padding-left: 20px;
+    padding-right: 30px;
+    width: 60%;
+  }
+
+  .about-box .pre-title {
+    font-size: 1.3em;
+  }
+  
+  .about-box .title {
+    font-size: 2em;
+  }
+
+  .meet-team .about-box .about-words {
+    width: auto;
+    height: auto;
+  }
+
+  .member-photo.left {
+    margin-top: 0 !important;
+  }
+
+  #about {
+    margin: 0;
   }
 }
