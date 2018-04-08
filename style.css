@@ -183,6 +183,7 @@ a .page-title {
   margin-left: 20vw;
   width: 60vw;
   background: rgba(37, 37, 37, 0);
+  text-align: center;
 }
 
 .work-section h3 {
@@ -380,8 +381,7 @@ a .page-title {
 }
 
 .clients, .sponsoring {
-  width: 49.5%;
-  margin: 0;
+  margin: 0 50px 0 0;
   display: inline-block;
   text-align: center;
   vertical-align: top;

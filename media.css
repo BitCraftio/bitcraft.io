@@ -29,6 +29,7 @@
   .main .work-section .clients, .main .work-section .sponsoring {
     display: block;
     width: auto;
+    margin: 0;
     margin-bottom: 50px;
   }
 
