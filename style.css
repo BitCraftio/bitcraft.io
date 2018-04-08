@@ -186,6 +186,14 @@ a .page-title {
   text-align: center;
 }
 
+.work-section > * {
+  margin: 0 50px 0 0;
+}
+
+.work-section > *:last-child {
+  margin: 0;
+}
+
 .work-section h3 {
   font-size: 1.5em;
   font-weight: normal;
@@ -381,7 +389,6 @@ a .page-title {
 }
 
 .clients, .sponsoring {
-  margin: 0 50px 0 0;
   display: inline-block;
   text-align: center;
   vertical-align: top;
