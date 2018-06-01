@@ -56,7 +56,7 @@ h1, h2 {
 }
 
 .main .footer {
-  margin-top: 150px;
+  margin-top: 120px;
   padding-bottom: 20px;
   background: rgba(152, 148, 148, .5);
   width: 100vw;
@@ -179,7 +179,7 @@ a .page-title {
 }
 
 .work-section {
-  margin-top: 30px;
+  margin-top: 150px;
   margin-left: 20vw;
   width: 60vw;
   background: rgba(37, 37, 37, 0);
@@ -422,7 +422,7 @@ a .page-title {
 
 .meet-team {
   width: 100%;
-  margin-top: 100px;
+  margin-top: 20px;
 
   /* Clearfix */
   content: "";
