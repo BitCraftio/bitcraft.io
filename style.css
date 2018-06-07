@@ -429,11 +429,11 @@ a .page-title {
   display: table;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"], input[type="email"], textarea, input[type="submit"], input[type="button"] {
   box-sizing: border-box;
   
   border-style: solid;
-  border-color: rgba(254, 254, 254, .5);
+  border-color: rgba(255, 255, 255, .5);
   border-width: 1px;
   border-radius: 3px;
 
@@ -443,12 +443,24 @@ input[type="text"], input[type="email"], textarea {
 
   padding: 7px;
 
-  background-color: rgba(254, 254, 254, .2);
+  background-color: rgba(255, 255, 255, .2);
 }
 
 input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
   color: #fff;
   opacity: 0.8;
+}
+
+input[type="submit"], input[type="button"] {
+  padding: 7px 15px;
+  font-size: 1em;  
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+  color: #000;
+  background-color: #fff;
 }
 
 .contact-us {
