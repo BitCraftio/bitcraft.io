@@ -429,6 +429,28 @@ a .page-title {
   display: table;
 }
 
+input[type="text"], input[type="email"], textarea {
+  box-sizing: border-box;
+  
+  border-style: solid;
+  border-color: rgba(254, 254, 254, .5);
+  border-width: 1px;
+  border-radius: 3px;
+
+  color: #fff;
+  font-size: 0.9em;
+  font-family: 'Noway', sans-serif;
+
+  padding: 7px;
+
+  background-color: rgba(254, 254, 254, .2);
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+
 .contact-us {
   max-width: 810px;
   margin: 50px auto 0 auto;
@@ -443,20 +465,43 @@ a .page-title {
   margin-bottom: 20px;
 }
 
+.contact-us-same-line-group {
+  display: flex;
+  margin-bottom: 20px;
+}
+
 .contact-us-group {
   margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .contact-us-group:last-child {
   margin-bottom: 0;
 }
 
+.contact-us-same-line-group>* {
+  margin-right: 20px;
+  margin-bottom: 0;
+  flex-basis: 1;
+  flex-grow: 1;
+}
+
+.contact-us-same-line-group>*:last-child {
+  margin-right: 0;
+}
+
 .contact-us-form label {
   display: block;
   margin-bottom: 10px;
+  font-size: 1em;
 }
 
 .contact-us-input {
   width: 100%;
-  box-sizing: border-box;
+}
+
+.contact-us-textarea {
+  min-width: 100%;
+  max-width: 100%;
+  height: 200px;
 }
