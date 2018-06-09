@@ -29,6 +29,11 @@ document.getElementById('contact-us-form').addEventListener('submit', function(e
   response_el.classList.remove('failure');
   response_el.classList.add('hidden');
 
+  success_msg = 'We have received your message and will get back to you as soon as we can.'
+  error_msg = 'Something went wrong and we could not send your message. \
+    Please make sure you filled out all the fields. If this problem persists, please email us to \
+    <a href="mailto:help@bitcraft.io">help@bitcraft.io</a>.';
+
   if (is_form_ready) {
     axios.post('https://luis-bitcraft-api2.localtunnel.me/send', {
         name: name_el.value,
@@ -37,7 +42,7 @@ document.getElementById('contact-us-form').addEventListener('submit', function(e
         message: message_el.value
       })
       .then((response) => {
-        response_el.innerHTML = 'We have received your message and will get back to you as soon as we can.';
+        response_el.innerHTML = success_msg;
         
         // Make the response green
         response_el.classList.add('success');
@@ -45,7 +50,7 @@ document.getElementById('contact-us-form').addEventListener('submit', function(e
         response_el.classList.remove('hidden');
       })
       .catch((error) => {
-        response_el.innerHTML = 'Something went wrong and we could not send your message. Please make sure you filled out all the fields. If this problem persists, please email us to help@bitcraft.io.';
+        response_el.innerHTML = error_msg;
         
         // Make the response red
         response_el.classList.add('failure');

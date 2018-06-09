@@ -393,6 +393,10 @@ a .page-title {
   vertical-align: top;
 }
 
+.clients>*:last-child, .sponsoring>*:last-child {
+  margin-bottom: 0;
+}
+
 .heart {
   color: #ff1111;
   font-size: 1em;
@@ -545,6 +549,10 @@ input[type="submit"]:disabled, input[type="button"]:disabled {
 }
 
 #contact-us-response.failure {
+  color: #d46a6a;
+}
+
+#contact-us-response.failure a {
   color: #d46a6a;
 }
 
