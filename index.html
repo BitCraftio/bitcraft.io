@@ -179,7 +179,11 @@
             <label for="contact-us-message">Your message *</label>
             <textarea class="contact-us-input contact-us-textarea" id="contact-us-message" placeholder="Can you help me make the next biggest thing ever? I'm thinking of..." required></textarea>
           </div>
-          <input id="contact-us-submit" type="submit" value="Send">
+          <div class="contact-us-group">
+            <input id="contact-us-submit" type="submit" value="Send">
+            <div id="contact-us-loader" class="loader hidden"><div></div><div></div></div>
+            <div id="contact-us-response" class="hidden"></div>
+          </div>
         </form>
       </div>
     </div>

@@ -1,4 +1,4 @@
-document.getElementById('contact-us-form').addEventListener('submit', function(event){
+document.getElementById('contact-us-form').addEventListener('submit', function(event) {
   event.preventDefault()
 
   var name_el = document.getElementById('contact-us-name');
@@ -14,23 +14,50 @@ document.getElementById('contact-us-form').addEventListener('submit', function(e
     if (field.value === '') is_form_ready = false;
   });
 
-  if (is_form_ready) {
-    console.log(name_el.value);
-    console.log(email_el.value);
-    console.log(subject_el.value);
-    console.log(message_el.value);
+  var submit_el = document.getElementById('contact-us-submit');
+  var loader_el = document.getElementById('contact-us-loader');
+  var response_el = document.getElementById('contact-us-response');
 
-    axios.post('https://luis-bitcraft-api.localtunnel.me/send', {
+  // Disable submit button so we don't get duplicates
+  submit_el.disabled = true;
+
+  // Show the loader so that the user knows we're processing the request
+  loader_el.classList.remove('hidden');
+
+  // Preparing response div
+  response_el.classList.remove('success');
+  response_el.classList.remove('failure');
+  response_el.classList.add('hidden');
+
+  if (is_form_ready) {
+    axios.post('https://luis-bitcraft-api2.localtunnel.me/send', {
         name: name_el.value,
         email: email_el.value,
         subject: subject_el.value,
         message: message_el.value
       })
       .then((response) => {
-        console.log(response);
+        response_el.innerHTML = 'We have received your message and will get back to you as soon as we can.';
+        
+        // Make the response green
+        response_el.classList.add('success');
+        // Show the response
+        response_el.classList.remove('hidden');
       })
       .catch((error) => {
-        console.log(error);
+        response_el.innerHTML = 'Something went wrong and we could not send your message. Please make sure you filled out all the fields. If this problem persists, please email us to help@bitcraft.io.';
+        
+        // Make the response red
+        response_el.classList.add('failure');
+        // Show the response
+        response_el.classList.remove('hidden');
+
+        // Enable the button again only when sending the email fails
+        submit_el.disabled = false;
+      })
+      .finally(() => {
+        // No matter the response, hide the loader again
+        loader_el.classList.add('hidden');
       });
   }
 });
