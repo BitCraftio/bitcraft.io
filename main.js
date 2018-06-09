@@ -35,7 +35,7 @@ document.getElementById('contact-us-form').addEventListener('submit', function(e
     <a href="mailto:help@bitcraft.io">help@bitcraft.io</a>.';
 
   if (is_form_ready) {
-    axios.post('http://8.9.8.96/send', {
+    axios.post('https://bitcraft-temp-api.localtunnel.me/send', {
         name: name_el.value,
         email: email_el.value,
         subject: subject_el.value,
