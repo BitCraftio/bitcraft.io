@@ -160,7 +160,7 @@
     <div class="contact-us">
       <div class="contact-us-container">
         <div class="contact-us-title">Contact us</div>
-        <form class="contact-us-form" action="#">
+        <form id="contact-us-form" action="#">
           <div class="contact-us-same-line-group">
             <div class="contact-us-group">
               <label for="contact-us-name">Your name *</label>
@@ -179,7 +179,7 @@
             <label for="contact-us-message">Your message *</label>
             <textarea class="contact-us-input contact-us-textarea" id="contact-us-message" placeholder="Can you help me make the next biggest thing ever? I'm thinking of..." required></textarea>
           </div>
-          <input class="contact-us-submit" type="submit" value="Send">
+          <input id="contact-us-submit" type="submit" value="Send">
         </form>
       </div>
     </div>
@@ -203,7 +203,9 @@
       </div>
     </div>
   </div>
-  
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
