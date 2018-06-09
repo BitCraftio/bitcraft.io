@@ -22,7 +22,7 @@
   }
 
   .main .work-section {
-    margin: 100px 30px 130px 30px;
+    margin: 100px 30px 0 30px;
     width: auto;
   }
 
@@ -119,5 +119,23 @@
     border-radius: 100%;
     margin-top: -40px;
     border: 5px solid #190a2b;
+  }
+
+  .contact-us {
+    margin-top: 100px;
+  }
+
+  .contact-us-same-line-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .contact-us-same-line-group > * {
+    margin-right: 0;
+    margin-bottom: 20px !important;
+    width: 100%;
+    flex-basis: 1;
+    flex-grow: 1;
   }
 }

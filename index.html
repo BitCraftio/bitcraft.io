@@ -2,181 +2,214 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://use.fontawesome.com/3085819002.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://use.fontawesome.com/3085819002.js"></script>
 
-    <script>
-      function getOffset( element ) {
-        var top = 0, left = 0;
-        do {
-            top += element.offsetTop  || 0;
-            left += element.offsetLeft || 0;
-            element = element.parentNode;
-        } while(element);
+  <script>
+    function getOffset( element ) {
+      var top = 0, left = 0;
+      do {
+          top += element.offsetTop  || 0;
+          left += element.offsetLeft || 0;
+          element = element.parentNode;
+      } while(element);
 
-        return {
-            top: top,
-            left: left
-        };
-      }
+      return {
+          top: top,
+          left: left
+      };
+    }
 
-      function scrollToId(id) {
-        var i = window.scrollY;
-        var offset = getOffset(document.getElementById(id))
-        var scroll = 10;
-        if (offset.top < window.scrollY) scroll *= -1;
-        var int = setInterval(function() {
-          window.scrollBy(0, scroll)
-          if (window.scrollY >= offset.top) clearInterval(int);
-        }, 100);
-      }
-    </script>
-    <link href="images/bitcraft.png" rel="shortcut icon">
+    function scrollToId(id) {
+      var i = window.scrollY;
+      var offset = getOffset(document.getElementById(id))
+      var scroll = 10;
+      if (offset.top < window.scrollY) scroll *= -1;
+      var int = setInterval(function() {
+        window.scrollBy(0, scroll)
+        if (window.scrollY >= offset.top) clearInterval(int);
+      }, 100);
+    }
+  </script>
+  <link href="images/bitcraft.png" rel="shortcut icon">
 
-    <title>BitCraft - Crypto Consulting Cosmonauts</title>
+  <title>BitCraft - Crypto Consulting Cosmonauts</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css" >
-    <link rel="stylesheet" type="text/css" href="media.css" >
+  <link rel="stylesheet" type="text/css" href="style.css" >
+  <link rel="stylesheet" type="text/css" href="media.css" >
 </head>
 
 <body>
-    <div class="background-gradient"></div>
-    <div class="main">
-      <div class="stars"></div>
-      <div class="navbar">
-        <a href="" class="brand">
-          <img class="brand-logo" src="images/bitcraft.png" alt="BitCraft">
-          <div class="brand-name">BitCraft</div>
-        </a>
-        <nav class="link-container">
-          <a href="#about" class="nav-button">About</a>
-          <a href="#our-work" class="nav-button">Our Work</a>
-          <a href="#footer" class="nav-button">Contact</a>
-        </nav>
-      </div>
+  <div class="background-gradient"></div>
+  <div class="main">
+    <div class="stars"></div>
+    <div class="navbar">
+      <a href="" class="brand">
+        <img class="brand-logo" src="images/bitcraft.png" alt="BitCraft">
+        <div class="brand-name">BitCraft</div>
+      </a>
+      <nav class="link-container">
+        <a href="#about" class="nav-button">About</a>
+        <a href="#our-work" class="nav-button">Our Work</a>
+        <a href="#footer" class="nav-button">Contact</a>
+      </nav>
+    </div>
 
-      <div class="home-container">
-          <h2>Crypto Consulting Cosmonauts</h2>
-          <div class="line"></div>
-          <div class="subtitle">
-              We build tools and services to help our customers succeed in cryptocurrency markets.
+    <div class="home-container">
+        <h2>Crypto Consulting Cosmonauts</h2>
+        <div class="line"></div>
+        <div class="subtitle">
+            We build tools and services to help our customers succeed in cryptocurrency markets.
+        </div>
+    </div>
+
+    <div class="meet-team">
+      <div class="photo-box">
+        <img class="member-photo left" src="images/harsha.jpg">
+        <div class="mem-desc-left">
+          Harsha Goli
+          <p class="job-role">
+            Chief Executive Officer
+            <span>
+              <a href="https://github.com/arshbot"><i class="fa fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/harshagoli/"><i class="fa fa-linkedin"></i></a>
+            </span>
+          </p>
+        </div>
+        <img class="member-photo right" src="images/zach.jpg">
+        <div class="mem-desc-right">
+          Zach Bloomquist
+          <p class="job-role-right">
+            Chief Technology Officer
+            <span>
+                <a href="https://github.com/flotwig"><i class="fa fa-github git"></i></a>
+                <a href="https://www.linkedin.com/in/zbloomq/"><i class="fa fa-linkedin git"></i></a>
+            </span>
+          </p>
           </div>
-      </div>
-
-      <div class="meet-team">
-        <div class="photo-box">
-          <img class="member-photo left" src="images/harsha.jpg">
+        <div class="shift">
+          <img class="member-photo left" src="images/luis.jpg">
           <div class="mem-desc-left">
-            Harsha Goli
+            Luis Ferrer-Labarca
             <p class="job-role">
-              Chief Executive Officer
+              Chief Commercial Officer
               <span>
-                <a href="https://github.com/arshbot"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/harshagoli/"><i class="fa fa-linkedin"></i></a>
+                  <a href="https://github.com/ferrerluis"><i class="fa fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/luisferrerl/"><i class="fa fa-linkedin"></i></a>
               </span>
             </p>
           </div>
-          <img class="member-photo right" src="images/zach.jpg">
+          <img class="member-photo right" src="images/caleb.jpg">
           <div class="mem-desc-right">
-            Zach Bloomquist
+            Caleb Lewis
             <p class="job-role-right">
-              Chief Technology Officer
+              Principal Developer
               <span>
-                  <a href="https://github.com/flotwig"><i class="fa fa-github git"></i></a>
-                  <a href="https://www.linkedin.com/in/zbloomq/"><i class="fa fa-linkedin git"></i></a>
+                  <a href="https://github.com/calebdre"><i class="fa fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/developercaleb/"><i class="fa fa-linkedin"></i></a>
               </span>
             </p>
-            </div>
-          <div class="shift">
-            <img class="member-photo left" src="images/luis.jpg">
-            <div class="mem-desc-left">
-              Luis Ferrer-Labarca
-              <p class="job-role">
-                Chief Commercial Officer
-                <span>
-                    <a href="https://github.com/ferrerluis"><i class="fa fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/luisferrerl/"><i class="fa fa-linkedin"></i></a>
-                </span>
-              </p>
-            </div>
-            <img class="member-photo right" src="images/caleb.jpg">
-            <div class="mem-desc-right">
-              Caleb Lewis
-              <p class="job-role-right">
-                Principal Developer
-                <span>
-                    <a href="https://github.com/calebdre"><i class="fa fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/developercaleb/"><i class="fa fa-linkedin"></i></a>
-                </span>
-              </p>
-            </div>
-            <img class="member-photo left" src="images/sri.jpg" style="margin-top: -20vw;">
-            <div class="mem-desc-left">
-              Sri Rajasekaran
-              <p class="job-role">
-                Chief Operations Officer
-                <span>
-                  <a href="https://github.com/sri96"><i class="fa fa-github"></i></a>
-                  <a href="https://www.linkedin.com/in/sri-rajasekaran/"><i class="fa fa-linkedin"></i></a>
-                </span>
-              </p>
-            </div>
           </div>
-        </div>
-        <div class="about-box" id="about">
-          <span class="pre-title">A bit</span><div class="title">about us</div>
-          <div class="underline"></div>
-          <div class="about-words">
-              BitCraft is a crypto development startup from Atlanta. We create cutting-edge
-              infrastructures to support the distributed financial networks of tomorrow. We
-              pride ourselves on our engineering standards, our perfectionism, and our beliefs
-              in financial freedom and independence. At BitCraft, we specialize in building
-              cryptocurrency software including exchanges, mining systems, arbitrage bots,
-              and wallet apps. Our team is proficient in creating cross-platform mobile apps,
-              interactive web apps, and fully automated systems. Let our uniquely qualified
-              team transform your idea into reality today.
+          <img class="member-photo left" src="images/sri.jpg" style="margin-top: -20vw;">
+          <div class="mem-desc-left">
+            Sri Rajasekaran
+            <p class="job-role">
+              Chief Operations Officer
+              <span>
+                <a href="https://github.com/sri96"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sri-rajasekaran/"><i class="fa fa-linkedin"></i></a>
+              </span>
+            </p>
           </div>
         </div>
       </div>
-
-      <div id="our-work" class="work-section">
-          <div class="clients">
-              <h3>Our clients</h3>
-              <a href="https://blockexplorer.com/">
-                <img alt="Block Explorer" src="images/logos/blockexplorer.png"><br/>
-              </a>
-              <img alt="Hail" src="images/logos/hail.png">
-          </div>
-          <div class="sponsoring">
-              <h3>Sponsors of</h3>
-              <a href="http://theatlantablockchain.com/">
-                <img alt="The Atlanta Blockchain" src="images/logos/tab.png">
-              </a>
-          </div>
-      </div>
-
-      <div class="footer" id="footer">
-        <div class="footer-logo-wrapper">
-          <img class="footer-logo" src="images/bitcraft.png"></img>
-        </div>
-        <div class="say-hello"> Get in touch! </div>
-        <div class = "footer-link-container">
-          <div class="instagram footer-button"><a type="button" href="https://www.instagram.com/bitcraftio/"><i class="fa fa-instagram"></i></a></div>
-          <div class="twitter footer-button"><a type="button" href="https://twitter.com/BitcraftCrypto"><i class="fa fa-twitter"></i></a></div>
-          <div class="linkedin footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-linkedin"></i></a></div>
-          <div class="mailto footer-button"><a type="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help."><i class="fa fa-envelope"></i></a></div>
-        </div>
-        <div class="copyright">
-          &copy; 2018 BitCraft LLC
-        </div>
-        <div class="love">
-          Made with <i class="fa fa-heart heart"></i> in Atlanta, Georgia, USA
+      <div class="about-box" id="about">
+        <span class="pre-title">A bit</span><div class="title">about us</div>
+        <div class="underline"></div>
+        <div class="about-words">
+            BitCraft is a crypto development startup from Atlanta. We create cutting-edge
+            infrastructures to support the distributed financial networks of tomorrow. We
+            pride ourselves on our engineering standards, our perfectionism, and our beliefs
+            in financial freedom and independence. At BitCraft, we specialize in building
+            cryptocurrency software including exchanges, mining systems, arbitrage bots,
+            and wallet apps. Our team is proficient in creating cross-platform mobile apps,
+            interactive web apps, and fully automated systems. Let our uniquely qualified
+            team transform your idea into reality today.
         </div>
       </div>
     </div>
 
+    <div id="our-work" class="work-section">
+        <div class="clients">
+            <h3>Our clients</h3>
+            <a href="https://blockexplorer.com/">
+              <img alt="Block Explorer" src="images/logos/blockexplorer.png"><br/>
+            </a>
+            <img alt="Hail" src="images/logos/hail.png">
+        </div>
+        <div class="sponsoring">
+            <h3>Sponsors of</h3>
+            <a href="http://theatlantablockchain.com/">
+              <img alt="The Atlanta Blockchain" src="images/logos/tab.png">
+            </a>
+        </div>
+    </div>
+
+    <div class="contact-us">
+      <div class="contact-us-container">
+        <div class="contact-us-title">Contact us</div>
+        <form id="contact-us-form" action="#">
+          <div class="contact-us-same-line-group">
+            <div class="contact-us-group">
+              <label for="contact-us-name">Your name *</label>
+              <input class="contact-us-input" type="text" id="contact-us-name" placeholder="John Doe" required>
+            </div>
+            <div class="contact-us-group">
+              <label for="contact-us-email">Your email *</label>
+              <input class="contact-us-input" type="email" id="contact-us-email" placeholder="john.doe@amazingcompany.com" required>
+            </div>
+          </div>
+          <div class="contact-us-group">
+            <label for="contact-us-subject">Subject *</label>
+            <input class="contact-us-input" type="text" id="contact-us-subject" placeholder="Facebook on the blockchain" required>
+          </div>
+          <div class="contact-us-group">
+            <label for="contact-us-message">Your message *</label>
+            <textarea class="contact-us-input contact-us-textarea" id="contact-us-message" placeholder="Can you help me make the next biggest thing ever? I'm thinking of..." required></textarea>
+          </div>
+          <div class="contact-us-group">
+            <input id="contact-us-submit" type="submit" value="Send">
+            <div id="contact-us-loader" class="loader hidden"><div></div><div></div></div>
+            <div id="contact-us-response" class="hidden"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer" id="footer">
+      <div class="footer-logo-wrapper">
+        <img class="footer-logo" src="images/bitcraft.png"></img>
+      </div>
+      <div class="say-hello"> Get in touch! </div>
+      <div class = "footer-link-container">
+        <div class="instagram footer-button"><a type="button" href="https://www.instagram.com/bitcraftio/"><i class="fa fa-instagram"></i></a></div>
+        <div class="twitter footer-button"><a type="button" href="https://twitter.com/BitcraftCrypto"><i class="fa fa-twitter"></i></a></div>
+        <div class="linkedin footer-button"><a type="button" href="https://www.linkedin.com/company/11373741/"><i class="fa fa-linkedin"></i></a></div>
+        <div class="mailto footer-button"><a type="button" href="mailto:hello@bitcraft.io?subject=Website Inquiry&amp;body=Tell us about the goals of your project and how we could help."><i class="fa fa-envelope"></i></a></div>
+      </div>
+      <div class="copyright">
+        &copy; 2018 BitCraft LLC
+      </div>
+      <div class="love">
+        Made with <i class="fa fa-heart heart"></i> in Atlanta, Georgia, USA
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
