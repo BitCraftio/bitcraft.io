@@ -1,3 +1,9 @@
+// CONSTANTS
+
+const API_URL = 'https://api.bitcraft.io'
+
+// EVENT LISTENERS
+
 document.getElementById('contact-us-form').addEventListener('submit', function(event) {
   event.preventDefault()
 
@@ -35,7 +41,7 @@ document.getElementById('contact-us-form').addEventListener('submit', function(e
     <a href="mailto:help@bitcraft.io">help@bitcraft.io</a>.';
 
   if (is_form_ready) {
-    axios.post('https://bitcraft-temp-api.localtunnel.me/send', {
+    axios.post(API_URL + '/send', {
         name: name_el.value,
         email: email_el.value,
         subject: subject_el.value,
