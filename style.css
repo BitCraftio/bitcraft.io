@@ -93,7 +93,7 @@ h1, h2 {
 
 .main .home-container {
   width: 60vw;
-  margin-top: 40vh;
+  margin-top: 30vh;
   margin-left: 20vw;
   height: 60vh;
   text-align: center;
@@ -144,7 +144,7 @@ a .page-title {
   float: right;
   position: sticky;
   margin-top: 50px;
-  top: 15vw;
+  top: 10vh;
   margin-right: 10vw;
 }
 
@@ -340,12 +340,11 @@ a .page-title {
 .navbar {
   z-index: 9999;
   width: 100vw;
-  padding: 20px 0;
   top: 0;
   left: 0;
-  height: 40px;
+  height: 10vh;
   background: rgba(0, 0, 0, .72);
-  position: fixed;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -596,4 +595,23 @@ input[type="submit"]:disabled, input[type="button"]:disabled {
     height: 29px;
     opacity: 0;
   }
+}
+
+.top-banner {
+  color: #ffffff;
+  text-align: center;
+  display: none;
+}
+
+.top-banner.urgent {
+  background-color: #d82323;
+}
+
+.top-banner a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.top-banner .text {
+  padding: 10px 0;  
 }
