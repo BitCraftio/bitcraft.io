@@ -267,17 +267,17 @@ a .page-title {
   font-size: 1vw;
 }
 
-.fa {
+.fab, .fas {
   font-size: 5vw;
 }
 
-.footer-button .fa {
+.footer-button .fab, .footer-button .fas {
   color: white;
   font-size: 30px;
   transition: all ease-in-out .25s;
 }
 
-.footer-button .fa:hover {
+.footer-button .fab:hover, .footer-button .fas:hover {
   color: #000000;
 }
 
