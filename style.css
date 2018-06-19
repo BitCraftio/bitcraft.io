@@ -387,13 +387,13 @@ a .page-title {
   border-bottom: .1em solid white;
 }
 
-.clients, .sponsoring {
+.work-divider {
   display: inline-block;
   text-align: center;
   vertical-align: top;
 }
 
-.clients>*:last-child, .sponsoring>*:last-child {
+.work-divider > *:last-child {
   margin-bottom: 0;
 }
 
