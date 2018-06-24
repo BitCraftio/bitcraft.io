@@ -32,7 +32,7 @@ $('a:not([href=""]):not([href^="#"])').one('click', function(event) {
   handleOutboundLinkClicks(event);
 });
 
-document.getElementById('contact-us-form').addEventListener('submit', function(event) {
+$('#contact-us-form').on('submit', function(event) {
   event.preventDefault()
 
   handleFormSubmission('Contact Us');
@@ -45,9 +45,9 @@ document.getElementById('contact-us-form').addEventListener('submit', function(e
   // We perform this check in case some browser does not support
   // the "required" attribute we put in the HTML form
   var required_fields = [name_el, email_el, subject_el, message_el];
-  var is_form_ready = true;
+  var is_form_filled = true;
   required_fields.forEach((field) => {
-    if (field.value === '') is_form_ready = false;
+    if (field.value === '') is_form_filled = false;
   });
 
   var submit_el = document.getElementById('contact-us-submit');
@@ -70,7 +70,7 @@ document.getElementById('contact-us-form').addEventListener('submit', function(e
     Please make sure you filled out all the fields. If this problem persists, please email us to \
     <a href="mailto:help@bitcraft.io">help@bitcraft.io</a>.';
 
-  if (is_form_ready) {
+  if (is_form_filled) {
     axios.post(API_URL + '/send', {
         name: name_el.value,
         email: email_el.value,
