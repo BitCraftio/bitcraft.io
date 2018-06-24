@@ -283,6 +283,12 @@ a .page-title {
   background: #190a2b;
 }
 
+.footer-button i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
 .social-buttons {
   margin-left: 33vw;
 }
