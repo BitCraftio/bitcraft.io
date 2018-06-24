@@ -2,10 +2,22 @@
 
 const API_URL = 'https://api.bitcraft.io'
 
+// GOOGLE ANALYTICS
+
+function handleFormSubmission(name) {
+  ga('send', 'event', {
+    eventCategory: 'Form',
+    eventAction: 'submit',
+    eventLabel: name
+  });
+}
+
 // EVENT LISTENERS
 
 document.getElementById('contact-us-form').addEventListener('submit', function(event) {
   event.preventDefault()
+
+  handleFormSubmission('Contact Us');
 
   var name_el = document.getElementById('contact-us-name');
   var email_el = document.getElementById('contact-us-email');
