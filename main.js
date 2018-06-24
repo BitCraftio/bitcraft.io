@@ -4,6 +4,14 @@ const API_URL = 'https://api.bitcraft.io'
 
 // GOOGLE ANALYTICS
 
+function handleOutboundLinkClicks(event) {
+  ga('send', 'event', {
+    eventCategory: 'Outbound Link',
+    eventAction: 'click',
+    eventLabel: event.target.href
+  });
+}
+
 function handleFormSubmission(name) {
   ga('send', 'event', {
     eventCategory: 'Form',
@@ -13,6 +21,13 @@ function handleFormSubmission(name) {
 }
 
 // EVENT LISTENERS
+
+document.body.addEventListener('click', function (event) {
+  // Only listen for outbound links (i.e. that are empty or don't point to an id element)
+  if (event.target.href !== undefined && !(event.target.href === '' || event.target.href.startsWith('#'))) {
+    handleOutboundLinkClicks(event);
+  }
+});
 
 document.getElementById('contact-us-form').addEventListener('submit', function(event) {
   event.preventDefault()
