@@ -269,17 +269,18 @@ a .page-title {
   transition: all ease-in-out .25s;
 }
 
-.footer-button .fab:hover, .footer-button .fas:hover {
-  color: #000000;
-}
-
 .footer-button {
   display: inline-block;
-  margin: 0 10px 0 10px;
   text-align: center;
-  border-radius: 5vw;
+  border-radius: 30px;
+  padding: 10px;
   color: #fff;
   font-weight: lighter;
+  transition: all ease-in-out .25s;
+}
+
+.footer-button:hover {
+  background: #190a2b;
 }
 
 .social-buttons {
