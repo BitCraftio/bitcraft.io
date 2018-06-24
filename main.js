@@ -8,7 +8,11 @@ function handleOutboundLinkClicks(event) {
   ga('send', 'event', {
     eventCategory: 'Outbound Link',
     eventAction: 'click',
-    eventLabel: event.target.href
+    eventLabel: event.target.closest('a').href,
+    // After the click is sent to Analytics, resume normal behavior
+    hitCallback: function() {
+      $(event.target).trigger(event.type);
+    }
   });
 }
 
@@ -22,11 +26,10 @@ function handleFormSubmission(name) {
 
 // EVENT LISTENERS
 
-document.body.addEventListener('click', function (event) {
-  // Only listen for outbound links (i.e. that are empty or don't point to an id element)
-  if (event.target.href !== undefined && !(event.target.href === '' || event.target.href.startsWith('#'))) {
-    handleOutboundLinkClicks(event);
-  }
+// Only listen for outbound links (i.e. that are empty or don't point to an id element)
+$('a:not([href=""]):not([href^="#"])').one('click', function(event) {
+  event.preventDefault();
+  handleOutboundLinkClicks(event);
 });
 
 document.getElementById('contact-us-form').addEventListener('submit', function(event) {
