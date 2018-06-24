@@ -449,7 +449,7 @@ input[type="text"], input[type="email"], textarea, input[type="submit"], input[t
 }
 
 input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
-  color: #fff;
+  color: #aaa;
   opacity: 0.8;
 }
 
