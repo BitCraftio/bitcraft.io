@@ -16,6 +16,34 @@
   font-weight: 700;
 }
 
+@keyframes twinkle {
+    0% {
+      opacity: 1;
+  /*     transform: scale(0.5); */
+      animation-timing-function: ease-in;
+    } 
+    20% {
+      opacity: .2;
+  /*     transform: scale(0.5); */
+      animation-timing-function: ease-in;
+    } 
+    50% {
+      opacity: 1;
+  /*     transform: scale(0.5); */
+      animation-timing-function: ease-in;
+    } 
+    85% {
+      opacity: .5;
+  /*     transform: scale(2.8); */
+      animation-timing-function: linear;
+    }
+    100% {
+      opacity: 1;
+  /*     transform: scale(3.5); */
+    }
+}
+
+
 body, html {
   margin: 0;
   padding: 0;
@@ -405,12 +433,18 @@ a .page-title {
 }
 
 .stars {
-  background: url(images/stars.png) repeat top center;
   z-index: -1;
-  background-attachment: fixed;
-  background-position: center;
+  background-image:     radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+  radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+  radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+  radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+  radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
+  radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0)),
+  radial-gradient(2px 2px at 180px 80px, #ddd, rgba(0,0,0,0));
+  animation: twinkle 7s infinite;
   background-repeat: repeat;
-  background-size: cover;
+  opacity: 1;
+  background-attachment: fixed;
   position: fixed;
   top: 0;
   left: 0;
@@ -419,7 +453,25 @@ a .page-title {
   width: 100%;
   height: 200%;
   display: block;
+  background-size: 200px 200px;
 }
+
+.stars:nth-child(1) {
+  background-position: 50% 50%;
+  transform: scale(2) translate(10px, 60px);
+  animation-delay: 0s;
+}
+.stars:nth-child(2) {
+  background-position: 20% 60%;
+  transform: rotate(60);
+  animation-delay: 2s;
+}
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+  transform: scale(2) rotate(30);
+  animation-delay: 4s;
+}
+
 
 .meet-team {
   width: 100%;
