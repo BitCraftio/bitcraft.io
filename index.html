@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
 
   <!-- <script>
     function getOffset( element ) {
@@ -230,21 +231,19 @@
     </div>
   </div>
 
-  <div id="bottom-banner" class="bottom-banner info">
+  <div id="bottom-banner" class="bottom-banner info" style="display: none;">
     <div class="bottom-banner-container">
-      <div id="newsletter" class="bottom-banner-">
-        <div class="bottom-banner-header">Hard to keep up with the latest crypto trends?</div>
-        <div class="bottom-banner-explanation">Sign up for our new <b>weekly</b> newsletter and never miss out on the most vital crypto news!</div>
-        <form id="bottom-banner-form" action="#">
-          <div class="bottom-banner-group">
-            <label for="bottom-banner-email">Your email:</label>
-            <input class="bottom-banner-input" type="email" id="bottom-banner-email" placeholder="satoshi@amazingcompany.com" required>
-            <input id="bottom-banner-submit" type="submit" value="Send">
-          </div>
-        </form>
-      </div>
+      <div class="bottom-banner-header">Hard to keep up with the latest crypto trends?</div>
+      <div class="bottom-banner-explanation">Sign up for our new <b>weekly</b> newsletter and never miss out on the most vital crypto news!</div>
+      <form id="bottom-banner-form" action="#">
+        <div class="bottom-banner-group">
+          <label for="bottom-banner-email">Your email:</label>
+          <input class="bottom-banner-input" type="email" id="bottom-banner-email" placeholder="satoshi@amazingcompany.com" required>
+          <input id="bottom-banner-submit" type="submit" value="Send">
+        </div>
+      </form>
     </div>
-    <div class="bottom-banner-close"><i class="fas fa-times"></i></div>
+    <div id="bottom-banner-close" class="bottom-banner-close"><i class="fas fa-times"></i></div>
   </div>
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

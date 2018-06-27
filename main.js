@@ -102,3 +102,13 @@ $('#contact-us-form').on('submit', function(event) {
       });
   }
 });
+
+$('.bottom-banner-close').one('click', () => {
+  $('.bottom-banner').slideToggle(500);
+});
+
+// ON LOAD
+
+$(document).ready(function() {
+  $('.bottom-banner').delay(1000).slideToggle(500);
+});
