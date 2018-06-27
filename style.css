@@ -287,10 +287,6 @@ a .page-title {
   font-size: 1vw;
 }
 
-.fab, .fas {
-  font-size: 5vw;
-}
-
 .footer-button .fab, .footer-button .fas {
   color: white;
   font-size: 30px;
@@ -573,7 +569,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled {
 }
 
 .contact-us {
-  max-width: 810px;
+  max-width: 800px;
   margin: 200px auto 0 auto;
 }
 
@@ -713,4 +709,70 @@ input[type="submit"]:disabled, input[type="button"]:disabled {
 
 .top-banner .text {
   padding: 10px 0;  
+}
+
+.bottom-banner {
+  z-index: 9999;
+  bottom: 0;
+  left: 0;
+  position: sticky;
+  color: #fff;
+}
+
+.bottom-banner-container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px;
+  box-sizing: border-box;  
+}
+
+.bottom-banner.info {
+  background: linear-gradient(90deg, #00b1eb, #0082b5, #00567a);
+  /* background-color: #4a97d2; */
+}
+
+.bottom-banner-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  font-size: 1.2em;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.bottom-banner-header {
+  font-size: 1.2em;
+}
+
+.bottom-banner-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.bottom-banner-group > * {
+  margin-left: 2%;
+  margin-top: 20px;
+}
+
+.bottom-banner-group > *:first-child {
+  margin-left: 0;
+}
+
+.bottom-banner input[type="email"] {
+  min-width: 57%;
+  outline-color: #88c1ec;
+  flex-grow: 1;
+}
+
+.bottom-banner input[type="email"]::placeholder {
+  color: #ddd;
+}
+
+.bottom-banner input[type="submit"] {
+  font-size: 0.9em;
+  padding: 7px 20px;
 }
