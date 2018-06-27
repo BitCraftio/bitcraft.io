@@ -746,6 +746,11 @@ input[type="submit"]:disabled, input[type="button"]:disabled {
   font-size: 1.2em;
 }
 
+.bottom-banner-explanation {
+  margin-top: 5px;
+  color: #cde7fc;
+}
+
 .bottom-banner-group {
   display: flex;
   align-items: center;
