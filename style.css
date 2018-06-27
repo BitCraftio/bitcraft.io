@@ -23,7 +23,7 @@
       animation-timing-function: ease-in;
     } 
     20% {
-      opacity: .2;
+      opacity: 0;
   /*     transform: scale(0.5); */
       animation-timing-function: ease-in;
     } 
@@ -441,8 +441,8 @@ a .page-title {
   radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
   radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0)),
   radial-gradient(2px 2px at 180px 80px, #ddd, rgba(0,0,0,0));
-  animation: twinkle 7s infinite;
-  background-repeat: repeat;
+  animation: twinkle 10s infinite;
+  /* background-repeat: repeat; */
   opacity: 1;
   background-attachment: fixed;
   position: fixed;
@@ -456,6 +456,52 @@ a .page-title {
   background-size: 200px 200px;
 }
 
+.galaxies {
+    z-index: -1;
+    background-image:     
+    /*galaxies*/
+    radial-gradient(4px 16px at 50px 100px, #ffcccc, rgba(0,0,0,0)),
+    radial-gradient(9px 3px at 300px 30px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(9px 3px at 350px 40px, #ffcc66, rgba(0,0,0,0)),
+    radial-gradient(5px 5px at 256px 150px, #ffcc66, rgba(0,0,0,0)),
+    radial-gradient(5px 5px at 100px 250px, #99ccff, rgba(0,0,0,0)),
+    radial-gradient(16px 4px at 370px 450px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 330px 360px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 130px 280px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 1px at 220px 150px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 179px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 55px 127px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 1px at 360px 120px, #ddd, rgba(0,0,0,0)),
+     radial-gradient(2px 2px at 130px 379px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 1px at 55px 127px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 370px 160px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 420px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 1px at 440px 250px, #ddd, rgba(0,0,0,0));
+    background-repeat: repeat;
+    opacity: 1;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: 500px 500px;
+    background-position: left top;
+}
+
+.galaxies:nth-child(2){
+  transform: rotate(35deg) translate(300px, 300px);
+}
+
 .stars:nth-child(1) {
   background-position: 50% 50%;
   transform: scale(2) translate(10px, 60px);
@@ -464,12 +510,12 @@ a .page-title {
 .stars:nth-child(2) {
   background-position: 20% 60%;
   transform: rotate(60);
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 .stars:nth-child(3) {
   background-position: -20% -30%;
   transform: scale(2) rotate(30);
-  animation-delay: 4s;
+  animation-delay: 7s;
 }
 
 
