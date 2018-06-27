@@ -497,9 +497,11 @@ a .page-title {
     background-size: 500px 500px;
     background-position: left top;
 }
-
+.galaxies:nth-child(1){
+  transform: rotate(-30deg) translate(200px, 200px);
+}
 .galaxies:nth-child(2){
-  transform: rotate(35deg) translate(300px, 300px);
+  transform: rotate(35deg) scale(1.2);
 }
 
 .stars:nth-child(1) {
