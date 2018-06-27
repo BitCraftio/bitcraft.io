@@ -774,7 +774,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled {
 }
 
 .bottom-banner input[type="email"]::placeholder {
-  color: #ddd;
+  color: #a5d5fa !important;
 }
 
 .bottom-banner input[type="submit"] {
