@@ -428,8 +428,8 @@ a .page-title {
 }
 
 .stars {
-  background-image: url(images/starsREAL.png);
-  animation: twinkle 7s infinite;
+  background-image: url(images/stars.png);
+  animation: twinkle 8s infinite;
   opacity: 1;
   position: absolute;
   top: 0;
@@ -437,7 +437,7 @@ a .page-title {
   width: 100%;
   height: 100%;
   display: block;
-  background-size: 200px 200px;
+  background-size: 700px 700px;
 }
 
 .galaxies {
@@ -462,12 +462,12 @@ a .page-title {
 .stars:nth-child(1) {
   background-position: 50% 50%;
   transform: scale(2) translate(10px, 60px);
-  animation-delay: -4s;
+  animation-delay: -8s;
 }
 .stars:nth-child(2) {
   background-position: 20% 60%;
   transform: rotate(60);
-  animation-delay: -3s;
+  animation-delay: -5s;
 }
 .stars:nth-child(3) {
   background-position: -20% -30%;
@@ -476,7 +476,7 @@ a .page-title {
 }
 .stars:nth-child(4) {
   transform: translate(100px, 85px);
-  animation-delay: -1s;
+  animation-delay: 1s;
 }
 
 
