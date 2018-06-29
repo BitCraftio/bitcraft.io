@@ -19,27 +19,23 @@
 @keyframes twinkle {
     0% {
       opacity: 1;
-  /*     transform: scale(0.5); */
       animation-timing-function: ease-in;
     } 
     20% {
       opacity: 0;
-  /*     transform: scale(0.5); */
       animation-timing-function: ease-in;
     } 
     50% {
       opacity: 1;
-  /*     transform: scale(0.5); */
       animation-timing-function: ease-in;
     } 
     85% {
       opacity: .5;
-  /*     transform: scale(2.8); */
       animation-timing-function: linear;
     }
     100% {
       opacity: 1;
-  /*     transform: scale(3.5); */
+
     }
 }
 
@@ -249,15 +245,6 @@ a .page-title {
   padding-top: 0vw;
 }
 
-.team-spacer {
-  height: 80vw;
-  margin-top: 400px;
-  margin-left: 5vw;
-  width: 46vw;
-  background: border-box;
-  z-index: -10;
-}
-
 .about-words {
   width: 30vw;
   font-size: 1em;
@@ -432,20 +419,22 @@ a .page-title {
   margin-top: -20vw;
 }
 
-.background-gradient {
+.background-container {
+  z-index: -1;
   position: fixed;
+  opacity: .9;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .stars {
-  z-index: -1;
   background-image: url(images/starsREAL.png);
-  animation: twinkle 10s infinite;
+  animation: twinkle 7s infinite;
   opacity: 1;
-  background-attachment: fixed;
   position: absolute;
   top: 0;
   left: 0;
@@ -456,11 +445,9 @@ a .page-title {
 }
 
 .galaxies {
-    z-index: -1;
     background-image: url(images/galaxies.png);
     background-repeat: repeat;
     opacity: 1;
-    background-attachment: fixed;
     position: absolute;
     top: 0;
     left: 0;
@@ -471,7 +458,7 @@ a .page-title {
     /* background-position: left top; */
 }
 .galaxies:nth-child(1){
-  transform: rotate(-30deg) translate(200px, 200px);
+  transform: rotate(-30deg) translate(100px, 200px);
 }
 .galaxies:nth-child(2){
   transform: rotate(35deg) scale(1.2);
@@ -480,17 +467,17 @@ a .page-title {
 .stars:nth-child(1) {
   background-position: 50% 50%;
   transform: scale(2) translate(10px, 60px);
-  animation-delay: 0s;
+  animation-delay: -2s;
 }
 .stars:nth-child(2) {
   background-position: 20% 60%;
   transform: rotate(60);
-  animation-delay: 3s;
+  animation-delay: -4s;
 }
 .stars:nth-child(3) {
   background-position: -20% -30%;
   transform: scale(2) rotate(30);
-  animation-delay: 7s;
+  animation-delay: -6s;
 }
 
 
