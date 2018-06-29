@@ -30,7 +30,7 @@
       animation-timing-function: ease-in;
     } 
     85% {
-      opacity: .5;
+      opacity: .1;
       animation-timing-function: linear;
     }
     100% {
@@ -451,7 +451,6 @@ a .page-title {
     height: 100%;
     display: block;
     background-size: 500px 500px;
-    /* background-position: left top; */
 }
 .galaxies:nth-child(1){
   transform: rotate(-30deg) translate(100px, 200px);
@@ -463,17 +462,21 @@ a .page-title {
 .stars:nth-child(1) {
   background-position: 50% 50%;
   transform: scale(2) translate(10px, 60px);
-  animation-delay: -2s;
+  animation-delay: -4s;
 }
 .stars:nth-child(2) {
   background-position: 20% 60%;
   transform: rotate(60);
-  animation-delay: -4s;
+  animation-delay: -3s;
 }
 .stars:nth-child(3) {
   background-position: -20% -30%;
   transform: scale(2) rotate(30);
-  animation-delay: -6s;
+  animation-delay: -2s;
+}
+.stars:nth-child(4) {
+  transform: translate(100px, 85px);
+  animation-delay: -1s;
 }
 
 
