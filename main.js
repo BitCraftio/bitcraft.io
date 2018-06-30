@@ -24,6 +24,37 @@ function handleFormSubmission(name) {
   });
 }
 
+// POLYFILLS
+
+Date.prototype.nextDayOfWeek = function(desired_day_of_week) {
+  var nextDay = new Date();
+  nextDay.setDate(this.getDate() + (desired_day_of_week + (7 - this.getDay())) % 7);
+  return nextDay;
+}
+
+Date.prototype.getMonthName = function() {
+  const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"];
+  return monthNames[this.getMonth()];
+}
+
+Date.prototype.getDateth = function() {
+  var date = this.getDate();
+
+  switch (date % 10) {
+    case 1:
+      return `${date}st`;
+      break;
+    case 2:
+      return `${date}nd`;
+      break;
+    case 3:
+      return `${date}rd`;
+    default:
+      return `${date}th`;
+  }
+}
+
 // EVENT LISTENERS
 
 // Only listen for outbound links (i.e. that are empty or don't point to an id element)
