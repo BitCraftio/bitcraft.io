@@ -147,4 +147,9 @@
     color: #fff;
     font-size: 1.1em;
   }
+
+  /* SWEETALERT RULES */
+  .swal-text, .swal-content {
+    padding: 0 20px;
+  }
 }
