@@ -158,8 +158,10 @@ $('#bottom-banner-submit').on('click', function(event) {
   var required_fields = [email_el];
   var is_form_filled = true;
   required_fields.forEach((field) => {
-    if (field.value === '') is_form_filled = false;
+    if (field.val() === '') is_form_filled = false;
   });
+
+  if (!is_form_filled) return null;
 
   var current_date = new Date();
 
@@ -187,40 +189,38 @@ $('#bottom-banner-submit').on('click', function(event) {
   persists, please email us to <a href="mailto:help@bitcraft.io">help@bitcraft.io</a>.';
   var error_msg_el = $("<div></div>").append(error_msg)[0];
 
-  if (is_form_filled) {
-    // Loading button starts running after the email is submitted
-    // but before the request is made
-    submit_el.addClass('running');
+  // Loading button starts running after the email is submitted
+  // but before the request is made
+  submit_el.addClass('running');
 
-    axios.post(API_URL + '/subscribe', {
-        email: email_el.val()
+  axios.post(API_URL + '/subscribe', {
+      email: email_el.val()
+    })
+    .then((response) => {
+      swal({
+        title: success_title,
+        text: success_subtitle,
+        content: success_msg_el,
+        icon: 'success',
+        className: 'success',
+        button: 'Great!'
       })
-      .then((response) => {
-        swal({
-          title: success_title,
-          text: success_subtitle,
-          content: success_msg_el,
-          icon: 'success',
-          className: 'success',
-          button: 'Great!'
-        })
-        .then(() => {
-          bottom_banner_el.slideToggle(500);
-        });
-      })
-      .catch((error) => {
-        swal({
-          title: error_title,
-          text: error_subtitle,
-          content: error_msg_el,
-          icon: 'error',
-          className: 'error'
-        });
-      })
-      .finally(() => {
-        submit_el.removeClass('running');
+      .then(() => {
+        bottom_banner_el.slideToggle(500);
       });
-  }
+    })
+    .catch((error) => {
+      swal({
+        title: error_title,
+        text: error_subtitle,
+        content: error_msg_el,
+        icon: 'error',
+        className: 'error'
+      });
+    })
+    .finally(() => {
+      submit_el.removeClass('running');
+    });
 });
 
 // ON LOAD
