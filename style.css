@@ -259,10 +259,6 @@ a .page-title {
   font-size: 1vw;
 }
 
-.fab, .fas {
-  font-size: 5vw;
-}
-
 .footer-button .fab, .footer-button .fas {
   color: white;
   font-size: 30px;
@@ -431,7 +427,7 @@ a .page-title {
   display: table;
 }
 
-input[type="text"], input[type="email"], textarea, input[type="submit"], input[type="button"] {
+input[type="text"], input[type="email"], textarea, input[type="submit"], input[type="button"], .button {
   box-sizing: border-box;
   
   border-style: solid;
@@ -453,27 +449,35 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::pla
   opacity: 0.8;
 }
 
-input[type="submit"], input[type="button"] {
+input[type="submit"], input[type="button"], .button {
   padding: 7px 15px;
   font-size: 1em;  
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-input[type="submit"]:hover, input[type="button"]:hover {
+input[type="submit"]:hover, input[type="button"]:hover, .button:hover {
   color: #000;
   background-color: #fff;
 }
 
-input[type="submit"]:disabled, input[type="button"]:disabled {
+input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, .button.running {
   color: #777;
   background-color: #aaa;
   border-color: #aaa;
   cursor: not-allowed;
 }
 
+.button.running:before {
+  opacity: 0;
+}
+
+.ld:after {
+  background-color: #fff;
+}
+
 .contact-us {
-  max-width: 810px;
+  max-width: 800px;
   margin: 200px auto 0 auto;
 }
 
@@ -613,4 +617,118 @@ input[type="submit"]:disabled, input[type="button"]:disabled {
 
 .top-banner .text {
   padding: 10px 0;  
+}
+
+.bottom-banner {
+  z-index: 9999;
+  bottom: 0;
+  left: 0;
+  position: sticky;
+  color: #fff;
+}
+
+.bottom-banner-container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px;
+  box-sizing: border-box;  
+}
+
+.bottom-banner.info {
+  background: linear-gradient(90deg, #00b1eb, #0082b5, #00567a);
+}
+
+.bottom-banner-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  font-size: 1.2em;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.bottom-banner-header {
+  font-size: 1.2em;
+}
+
+.bottom-banner-explanation {
+  margin-top: 5px;
+  color: #cde7fc;
+}
+
+.bottom-banner-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.bottom-banner-group > * {
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.bottom-banner-group > *:first-child {
+  margin-left: 0;
+}
+
+.bottom-banner input[type="email"] {
+  min-width: 60%;
+  outline-color: #88c1ec;
+  flex-grow: 1;
+}
+
+.bottom-banner input[type="email"]::placeholder {
+  color: #a5d5fa !important;
+}
+
+.bottom-banner input[type="submit"] {
+  font-size: 0.9em;
+  padding: 7px 20px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* SWEETALERT RULES */
+
+.swal-text, .swal-content {
+  padding: 0 40px;
+}
+
+.swal-text {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.swal-content {
+  font-size: 1.1rem;
+  /* text-align: left; */
+}
+
+.swal-modal.error .swal-button {
+  background-color: #f27474;
+}
+
+.swal-modal.success .swal-button {
+  background-color: #00b1eb;
+}
+
+.swal-icon--success {
+  border-color: #00b1eb;
+}
+
+.swal-icon--success__line {
+  background-color: #00b1eb;
+}
+
+.swal-icon--success__ring {
+  border: 4px solid rgba(0,177,235, 0.2);
 }

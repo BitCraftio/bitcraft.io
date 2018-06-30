@@ -7,32 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-  <!-- <script>
-    function getOffset( element ) {
-      var top = 0, left = 0;
-      do {
-          top += element.offsetTop  || 0;
-          left += element.offsetLeft || 0;
-          element = element.parentNode;
-      } while(element);
+  <link rel="stylesheet" type="text/css" href="css/vendor/loading.css"/>
+  <link rel="stylesheet" type="text/css" href="css/vendor/loading-btn.css"/>
 
-      return {
-          top: top,
-          left: left
-      };
-    }
-
-    function scrollToId(id) {
-      var i = window.scrollY;
-      var offset = getOffset(document.getElementById(id))
-      var scroll = 10;
-      if (offset.top < window.scrollY) scroll *= -1;
-      var int = setInterval(function() {
-        window.scrollBy(0, scroll)
-        if (window.scrollY >= offset.top) clearInterval(int);
-      }, 100);
-    }
-  </script> -->
   <link href="images/bitcraft.png" rel="shortcut icon">
 
   <title>BitCraft - Crypto Consulting Cosmonauts</title>
@@ -226,7 +203,27 @@
     </div>
   </div>
 
+  <div id="bottom-banner" class="bottom-banner info" style="display: none;">
+    <div class="bottom-banner-container">
+      <div class="bottom-banner-header">Hard to keep up with the latest crypto trends?</div>
+      <div class="bottom-banner-explanation">Sign up for our new <b>weekly</b> newsletter and never miss out on the most vital crypto news!</div>
+      <form id="bottom-banner-form" action="#">
+        <div class="bottom-banner-group">
+          <label for="bottom-banner-email">Your email:</label>
+          <input class="bottom-banner-input" type="email" id="bottom-banner-email" placeholder="satoshi@amazingcompany.com" required>
+          <!-- BUTTON WITH LOADER -->
+          <div id="bottom-banner-submit" class="button ld-over-inverse">
+              Send
+              <div class="ld ld-ball ld-flip"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="bottom-banner-close" class="bottom-banner-close"><i class="fas fa-times"></i></div>
+  </div>
+
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="main.js"></script>
 </body>
 

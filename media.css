@@ -138,4 +138,18 @@
     flex-basis: 1;
     flex-grow: 1;
   }
+
+  .bottom-banner-header {
+    display: none;
+  }
+
+  .bottom-banner-explanation {
+    color: #fff;
+    font-size: 1.1em;
+  }
+
+  /* SWEETALERT RULES */
+  .swal-text, .swal-content {
+    padding: 0 20px;
+  }
 }
