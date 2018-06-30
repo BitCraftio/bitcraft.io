@@ -636,7 +636,6 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
 
 .bottom-banner.info {
   background: linear-gradient(90deg, #00b1eb, #0082b5, #00567a);
-  /* background-color: #4a97d2; */
 }
 
 .bottom-banner-close {
