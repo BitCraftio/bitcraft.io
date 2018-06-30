@@ -427,7 +427,7 @@ a .page-title {
   display: table;
 }
 
-input[type="text"], input[type="email"], textarea, input[type="submit"], input[type="button"] {
+input[type="text"], input[type="email"], textarea, input[type="submit"], input[type="button"], .button {
   box-sizing: border-box;
   
   border-style: solid;
@@ -449,23 +449,31 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::pla
   opacity: 0.8;
 }
 
-input[type="submit"], input[type="button"] {
+input[type="submit"], input[type="button"], .button {
   padding: 7px 15px;
   font-size: 1em;  
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-input[type="submit"]:hover, input[type="button"]:hover {
+input[type="submit"]:hover, input[type="button"]:hover, .button:hover {
   color: #000;
   background-color: #fff;
 }
 
-input[type="submit"]:disabled, input[type="button"]:disabled {
+input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, .button.running {
   color: #777;
   background-color: #aaa;
   border-color: #aaa;
   cursor: not-allowed;
+}
+
+.button.running:before {
+  opacity: 0;
+}
+
+.ld:after {
+  background-color: #fff;
 }
 
 .contact-us {
