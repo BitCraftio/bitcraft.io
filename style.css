@@ -752,6 +752,14 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
   padding: 7px 20px;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 /* SWEETALERT RULES */
 
 .swal-text, .swal-content {
