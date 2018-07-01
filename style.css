@@ -21,7 +21,7 @@
       opacity: 1;
       animation-timing-function: ease-in;
     } 
-    20% {
+    35% {
       opacity: 0;
       animation-timing-function: ease-in;
     } 
@@ -433,7 +433,7 @@ a .page-title {
 
 .stars {
   background-image: url(images/stars.png);
-  animation: twinkle 8s infinite;
+  animation: twinkle 12s infinite;
   opacity: 1;
   position: absolute;
   top: 0;
@@ -441,48 +441,25 @@ a .page-title {
   width: 100%;
   height: 100%;
   display: block;
-  background-size: 900px 900px;
-}
-
-.galaxies {
-    background-image: url(images/galaxies.png);
-    background-repeat: repeat;
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-size: 500px 500px;
-}
-.galaxies:nth-child(1){
-  transform: rotate(-30deg) translate(100px, 200px);
-}
-.galaxies:nth-child(2){
-  transform: rotate(35deg) scale(1.2);
+  background-size: 2500px 2500px;
 }
 
 .stars:nth-child(1) {
   background-position: 50% 50%;
-  transform: scale(2) translate(10px, 60px);
   animation-delay: -8s;
 }
 .stars:nth-child(2) {
-  background-position: 20% 60%;
-  transform: rotate(60);
   animation-delay: -5s;
 }
 .stars:nth-child(3) {
-  background-position: -20% -30%;
-  transform: scale(2) rotate(30);
+  background-position: -50% -40%;
   animation-delay: -2s;
 }
 .stars:nth-child(4) {
+  background-position: -90% -90%;
   transform: translate(100px, 85px);
   animation-delay: 1s;
 }
-
 
 .meet-team {
   width: 100%;
