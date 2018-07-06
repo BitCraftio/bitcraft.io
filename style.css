@@ -158,6 +158,7 @@ a .page-title {
 
 .about-box {
   float: right;
+  position: -webkit-sticky;
   position: sticky;
   margin-top: 50px;
   top: 10vh;
@@ -354,6 +355,7 @@ a .page-title {
   left: 0;
   height: 10vh;
   background: rgba(0, 0, 0, .72);
+  position: -webkit-sticky;
   position: sticky;
   display: flex;
   justify-content: space-between;
@@ -663,6 +665,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
   z-index: 9999;
   bottom: 0;
   left: 0;
+  position: -webkit-sticky;
   position: sticky;
   color: #fff;
 }
