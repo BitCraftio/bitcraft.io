@@ -55,6 +55,69 @@ Date.prototype.getDateth = function() {
   }
 }
 
+// FUNCTIONS
+
+async function showSuccessNewsletterModal() {
+  var current_date = new Date();
+
+  // Hack so that if it's past 10 AM, the next newsletter date
+  // shows up as next Saturday week and not today
+  if (current_date.getHours() > 10) {
+    current_date.setDate(current_date.getDate() + 1);
+  }
+
+  var next_newsletter_date = current_date.nextDayOfWeek(6);
+  var month = next_newsletter_date.getMonthName();
+  var date = next_newsletter_date.getDateth()
+
+  var success_title = 'Confirmed!';
+  var success_subtitle = 'Thanks for subscribing to our weekly newsletter!';
+  var success_msg = `We send our newsletters every <span class="underline bold">\
+    Saturday morning</span>, so you will receive your first newsletter on \
+    ${month} ${date}.`;
+  var success_msg_el = $("<div></div>").append(success_msg)[0];
+
+  await swal({
+    title: success_title,
+    text: success_subtitle,
+    content: success_msg_el,
+    icon: 'success',
+    className: 'success',
+    button: 'Great!'
+  });
+}
+
+async function showFailureNewsletterModal() {
+  var error_title = 'Oops!';
+  var error_subtitle = 'Something went wrong and we could not subscribe you to our \
+  newsletter.';
+  var error_msg = 'Maybe you are already subscribed with this email? If this problem \
+  persists, please email us to <a href="mailto:help@bitcraft.io">help@bitcraft.io</a>.';
+  var error_msg_el = $("<div></div>").append(error_msg)[0];
+
+  await swal({
+    title: error_title,
+    text: error_subtitle,
+    content: error_msg_el,
+    icon: 'error',
+    className: 'error'
+  });
+}
+
+async function subscribeToNewsletter(email, afterHttpCall) {
+  try {
+    await axios.post(API_URL + '/subscribe', {
+      email: email
+    });
+    
+    if (afterHttpCall !== undefined) afterHttpCall();
+    await showSuccessNewsletterModal();
+  } catch (_err) {
+    if (afterHttpCall !== undefined) afterHttpCall();
+    await showFailureNewsletterModal();
+  }
+}
+
 // EVENT LISTENERS
 
 // Only listen for outbound links (i.e. that are empty or don't point to an id element)
@@ -138,7 +201,7 @@ $('.bottom-banner-close').one('click', () => {
   $('.bottom-banner').slideToggle(500);
 });
 
-$('#bottom-banner-submit').on('click', function(event) {
+$('#bottom-banner-submit').on('click', async function(event) {
   event.preventDefault()
 
   var submit_el = $('#bottom-banner-submit');
@@ -163,64 +226,17 @@ $('#bottom-banner-submit').on('click', function(event) {
 
   if (!is_form_filled) return null;
 
-  var current_date = new Date();
-
-  // Hack so that if it's past 10 AM, the next newsletter date
-  // shows up as next Saturday week and not today
-  if (current_date.getHours() > 10) {
-    current_date.setDate(current_date.getDate() + 1);
-  }
-
-  var next_newsletter_date = current_date.nextDayOfWeek(6);
-  var month = next_newsletter_date.getMonthName();
-  var date = next_newsletter_date.getDateth()
-
-  var success_title = 'Confirmed!';
-  var success_subtitle = 'Thanks for subscribing to our weekly newsletter!';
-  var success_msg = `We send our newsletters every <span class="underline bold">\
-    Saturday morning</span>, so you will receive your first newsletter on \
-    ${month} ${date}.`;
-  var success_msg_el = $("<div></div>").append(success_msg)[0];
-
-  var error_title = 'Oops!';
-  var error_subtitle = 'Something went wrong and we could not subscribe you to our \
-  newsletter.';
-  var error_msg = 'Maybe you are already subscribed with this email? If this problem \
-  persists, please email us to <a href="mailto:help@bitcraft.io">help@bitcraft.io</a>.';
-  var error_msg_el = $("<div></div>").append(error_msg)[0];
-
   // Loading button starts running after the email is submitted
   // but before the request is made
   submit_el.addClass('running');
 
-  axios.post(API_URL + '/subscribe', {
-      email: email_el.val()
-    })
-    .then((response) => {
-      swal({
-        title: success_title,
-        text: success_subtitle,
-        content: success_msg_el,
-        icon: 'success',
-        className: 'success',
-        button: 'Great!'
-      })
-      .then(() => {
-        bottom_banner_el.slideToggle(500);
-      });
-    })
-    .catch((error) => {
-      swal({
-        title: error_title,
-        text: error_subtitle,
-        content: error_msg_el,
-        icon: 'error',
-        className: 'error'
-      });
-    })
-    .finally(() => {
-      submit_el.removeClass('running');
-    });
+  // Calls our API to subscribe the email to our newsletter and
+  // awaits until the modals created by this function are closed
+  await subscribeToNewsletter(email_el.val(), () => {
+    submit_el.removeClass('running'); // Right after the HTTP call is made it calls this callback
+  });
+
+  bottom_banner_el.slideToggle(500);
 });
 
 // ON LOAD
