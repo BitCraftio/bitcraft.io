@@ -1,6 +1,7 @@
 // CONSTANTS
 
 const API_URL = 'https://api.bitcraft.io'
+const BOTTOM_BANNER_SPEED = 300;
 
 // GOOGLE ANALYTICS
 
@@ -198,7 +199,7 @@ $('#contact-us-form').on('submit', function(event) {
 });
 
 $('.bottom-banner-close').one('click', () => {
-  $('.bottom-banner').slideToggle(500);
+  $('.bottom-banner').slideToggle(BOTTOM_BANNER_SPEED);
 });
 
 $('#bottom-banner-submit').on('click', async function(event) {
@@ -236,11 +237,11 @@ $('#bottom-banner-submit').on('click', async function(event) {
     submit_el.removeClass('running'); // Right after the HTTP call is made it calls this callback
   });
 
-  bottom_banner_el.slideToggle(500);
+  bottom_banner_el.slideToggle(BOTTOM_BANNER_SPEED);
 });
 
 // ON LOAD
 
 $(document).ready(function() {
-  $('.bottom-banner').delay(1000).slideToggle(500);
+  $('.bottom-banner').delay(1000).slideToggle(BOTTOM_BANNER_SPEED);
 });
