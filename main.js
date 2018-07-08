@@ -298,7 +298,7 @@ $('#newsletter-submit').on('click', async function(event) {
 // ON LOAD
 
 $(document).ready(function() {
-  if (getCookie('never_newsletter') !== 'true') {
+  if (getCookie('never_newsletter') !== 'true' && window.location.hash.substr(1) !== 'newsletter') {
     $('.bottom-banner').delay(1000).slideToggle(BOTTOM_BANNER_SPEED);
   }
 });
