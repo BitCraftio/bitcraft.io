@@ -156,36 +156,54 @@
         </div>
     </div>
 
-    <div id="contact" class="contact-us">
-      <div class="contact-us-container">
-        <div class="contact-us-title">Contact us</div>
-        <form id="contact-us-form" action="#">
-          <div class="contact-us-same-line-group">
-            <div class="contact-us-group">
-              <label for="contact-us-name">Your name *</label>
-              <input class="contact-us-input" type="text" id="contact-us-name" placeholder="Satoshi Nakamoto" required>
+    <div id="newsletter" class="newsletter">
+        <div class="newsletter-container">
+          <div class="newsletter-title">Weekly crypto newsletter</div>
+          <div class="newsletter-explanation">Subscribe here to receive the most vital crypto news every Saturday morning!</div>
+          <form id="newsletter-form" action="#">
+            <div class="newsletter-group">
+              <label for="newsletter-email">Your email:</label>
+              <input class="newsletter-input" type="email" id="newsletter-email" placeholder="satoshi@amazingcompany.com" required>
+              <!-- BUTTON WITH LOADER -->
+              <div id="newsletter-submit" class="button ld-over-inverse">
+                Subscribe
+                <div class="ld ld-ball ld-flip"></div>
+              </div>
             </div>
-            <div class="contact-us-group">
-              <label for="contact-us-email">Your email *</label>
-              <input class="contact-us-input" type="email" id="contact-us-email" placeholder="satoshi@amazingcompany.com" required>
-            </div>
-          </div>
-          <div class="contact-us-group">
-            <label for="contact-us-subject">Subject *</label>
-            <input class="contact-us-input" type="text" id="contact-us-subject" placeholder="Facebook on the blockchain" required>
-          </div>
-          <div class="contact-us-group">
-            <label for="contact-us-message">Your message *</label>
-            <textarea class="contact-us-input contact-us-textarea" id="contact-us-message" placeholder="Can you help me make the next biggest thing ever? I'm thinking of..." required></textarea>
-          </div>
-          <div class="contact-us-group">
-            <input id="contact-us-submit" type="submit" value="Send">
-            <div id="contact-us-loader" class="loader hidden"><div></div><div></div></div>
-            <div id="contact-us-response" class="hidden"></div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
+
+    <div id="contact" class="contact-us">
+        <div class="contact-us-container">
+          <div class="contact-us-title">Contact us</div>
+          <form id="contact-us-form" action="#">
+            <div class="contact-us-same-line-group">
+              <div class="contact-us-group">
+                <label for="contact-us-name">Your name *</label>
+                <input class="contact-us-input" type="text" id="contact-us-name" placeholder="Satoshi Nakamoto" required>
+              </div>
+              <div class="contact-us-group">
+                <label for="contact-us-email">Your email *</label>
+                <input class="contact-us-input" type="email" id="contact-us-email" placeholder="satoshi@amazingcompany.com" required>
+              </div>
+            </div>
+            <div class="contact-us-group">
+              <label for="contact-us-subject">Subject *</label>
+              <input class="contact-us-input" type="text" id="contact-us-subject" placeholder="Facebook on the blockchain" required>
+            </div>
+            <div class="contact-us-group">
+              <label for="contact-us-message">Your message *</label>
+              <textarea class="contact-us-input contact-us-textarea" id="contact-us-message" placeholder="Can you help me make the next biggest thing ever? I'm thinking of..." required></textarea>
+            </div>
+            <div class="contact-us-group">
+              <input id="contact-us-submit" type="submit" value="Send">
+              <div id="contact-us-loader" class="loader hidden"><div></div><div></div></div>
+              <div id="contact-us-response" class="hidden"></div>
+            </div>
+          </form>
+        </div>
+      </div>
 
     <div class="footer" id="footer">
       <div class="footer-logo-wrapper">
@@ -218,12 +236,13 @@
           <input class="bottom-banner-input" type="email" id="bottom-banner-email" placeholder="satoshi@amazingcompany.com" required>
           <!-- BUTTON WITH LOADER -->
           <div id="bottom-banner-submit" class="button ld-over-inverse">
-              Subscribe
-              <div class="ld ld-ball ld-flip"></div>
+            Subscribe
+            <div class="ld ld-ball ld-flip"></div>
           </div>
         </div>
       </form>
     </div>
+    <div id="bottom-banner-never" class="bottom-banner-never">Never show this again</div>
     <div id="bottom-banner-close" class="bottom-banner-close"><i class="fas fa-times"></i></div>
   </div>
 
