@@ -30,15 +30,13 @@
       animation-timing-function: ease-in;
     } 
     85% {
-      opacity: .1;
+      opacity: .5;
       animation-timing-function: linear;
     }
     100% {
       opacity: 1;
-
     }
 }
-
 
 body, html {
   margin: 0;
@@ -426,7 +424,7 @@ a .page-title {
 
 .stars {
   background-image: url(images/stars.png);
-  animation: twinkle 12s infinite;
+  animation: twinkle 7s infinite;
   opacity: 1;
   position: absolute;
   top: 0;
@@ -434,7 +432,7 @@ a .page-title {
   width: 100%;
   height: 100%;
   display: block;
-  background-size: 2000px 2000px;
+  background-size: 1000px 1000px;
 }
 
 .stars:nth-child(1) {
