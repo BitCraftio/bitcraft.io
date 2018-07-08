@@ -240,6 +240,41 @@ $('#bottom-banner-submit').on('click', async function(event) {
   bottom_banner_el.slideToggle(BOTTOM_BANNER_SPEED);
 });
 
+$('#newsletter-submit').on('click', async function(event) {
+  event.preventDefault()
+
+  var submit_el = $('#newsletter-submit');
+
+  // If it's already running stop executing to avoid duplicates
+  if (submit_el.hasClass('running')) {
+    return null;
+  }
+
+  handleFormSubmission('News Subscribe Section');
+
+  var email_el = $('#newsletter-email');
+
+  // We perform this check in case some browser does not support
+  // the "required" attribute we put in the HTML form
+  var required_fields = [email_el];
+  var is_form_filled = true;
+  required_fields.forEach((field) => {
+    if (field.val() === '') is_form_filled = false;
+  });
+
+  if (!is_form_filled) return null;
+
+  // Loading button starts running after the email is submitted
+  // but before the request is made
+  submit_el.addClass('running');
+
+  // Calls our API to subscribe the email to our newsletter and
+  // awaits until the modals created by this function are closed
+  await subscribeToNewsletter(email_el.val(), () => {
+    submit_el.removeClass('running'); // Right after the HTTP call is made it calls this callback
+  });
+});
+
 // ON LOAD
 
 $(document).ready(function() {

@@ -131,11 +131,6 @@ a .page-title {
   font-weight: normal;
 }
 
-.main .button:hover {
-  background-color: #fff;
-  /* color: #4a97d2; */
-}
-
 .photo-box {
   width: 45vw;
   margin-left: 5vw;
