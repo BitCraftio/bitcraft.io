@@ -56,6 +56,21 @@ Date.prototype.getDateth = function() {
   }
 }
 
+// maxAge in days
+function setCookie(key, value, maxAge) {
+  if (maxAge === undefined) maxAge = 365;
+  document.cookie = key + '=' + value + ';max-age=' + maxAge * 60 * 60 * 24;
+}
+
+function getCookie(key) {
+  var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+  return keyValue ? keyValue[2] : null;
+}
+
+function eraseCookie(key) {
+  setCookie(key, '', -1);
+}
+
 // FUNCTIONS
 
 async function showSuccessNewsletterModal() {
@@ -202,6 +217,11 @@ $('.bottom-banner-close').one('click', () => {
   $('.bottom-banner').slideToggle(BOTTOM_BANNER_SPEED);
 });
 
+$('.bottom-banner-never').one('click', () => {
+  setCookie('never_newsletter', 'true', 30);
+  $('.bottom-banner').slideToggle(BOTTOM_BANNER_SPEED);
+});
+
 $('#bottom-banner-submit').on('click', async function(event) {
   event.preventDefault()
 
@@ -278,5 +298,7 @@ $('#newsletter-submit').on('click', async function(event) {
 // ON LOAD
 
 $(document).ready(function() {
-  $('.bottom-banner').delay(1000).slideToggle(BOTTOM_BANNER_SPEED);
+  if (getCookie('never_newsletter') !== 'true') {
+    $('.bottom-banner').delay(1000).slideToggle(BOTTOM_BANNER_SPEED);
+  }
 });
