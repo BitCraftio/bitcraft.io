@@ -162,3 +162,11 @@
     margin-bottom: 10px;
   }
 }
+
+@media only screen and (max-width: 650px) {
+  /* So that the X and the "Never show me this again"
+  are not too close to the header of the banner */
+  .bottom-banner-container {
+    padding-top: 40px;
+  }
+}

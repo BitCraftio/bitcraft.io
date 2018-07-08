@@ -687,6 +687,23 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
   cursor: pointer;
 }
 
+.bottom-banner-never {
+  position: absolute;
+  top: 14px;
+  right: 40px;
+
+  font-size: 0.9em;
+  color: #69bdda;
+
+  cursor: pointer;
+
+  transition: color ease 0.2s;
+}
+
+.bottom-banner-never:hover {
+  color: #fff;
+}
+
 .bottom-banner-header {
   font-size: 1.2em;
 }
