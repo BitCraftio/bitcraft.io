@@ -73,6 +73,10 @@ function eraseCookie(key) {
 
 // FUNCTIONS
 
+function shiftWindow() {
+  scrollBy(0, -100);
+}
+
 async function showSuccessNewsletterModal() {
   var current_date = new Date();
 
@@ -295,9 +299,17 @@ $('#newsletter-submit').on('click', async function(event) {
   });
 });
 
+// If people tap on our navbar buttons, it scrolls up a
+// bit so that the navbar does not cover the content
+$(window).on('hashchange', shiftWindow);
+
 // ON LOAD
 
 $(document).ready(function() {
+  // If the website loads on an anchor (e.g. /#newsletter),
+  // it scrolls up a bit so that the navbar does not cover the content
+  if (location.hash) shiftWindow();
+
   if (getCookie('never_newsletter') !== 'true' && window.location.hash.substr(1) !== 'newsletter') {
     $('.bottom-banner').delay(1000).slideToggle(BOTTOM_BANNER_SPEED);
   }
