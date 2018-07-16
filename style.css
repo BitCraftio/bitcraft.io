@@ -638,16 +638,20 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
 .top-banner {
   color: #ffffff;
   text-align: center;
-  display: none;
 }
 
 .top-banner.urgent {
-  background-color: #d82323;
+  background: linear-gradient(90deg, #f04f4f, #d82323, #8f1717);
 }
 
 .top-banner a {
-  color: #ffffff;
+  color: #ffd6d6;
   text-decoration: none;
+  transition: color ease 0.2s;
+}
+
+.top-banner a:hover {
+  color: #ffffff;
 }
 
 .top-banner .text {
