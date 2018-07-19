@@ -670,7 +670,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
 .bottom-banner-container {
   margin: 0 auto;
   max-width: 800px;
-  padding: 30px;
+  padding: 20px;
   box-sizing: border-box;  
 }
 
@@ -704,10 +704,6 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
 
 .bottom-banner-never:hover {
   color: #fff;
-}
-
-.bottom-banner-header {
-  font-size: 1.2em;
 }
 
 .bottom-banner-explanation {
