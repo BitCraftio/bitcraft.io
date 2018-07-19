@@ -226,7 +226,7 @@ $('.bottom-banner-never').one('click', () => {
   $('.bottom-banner').slideToggle(BOTTOM_BANNER_SPEED);
 });
 
-$('#bottom-banner-submit').on('click', async function(event) {
+var bottomSubmit = async function(event) {
   event.preventDefault()
 
   var submit_el = $('#bottom-banner-submit');
@@ -262,9 +262,12 @@ $('#bottom-banner-submit').on('click', async function(event) {
   });
 
   bottom_banner_el.slideToggle(BOTTOM_BANNER_SPEED);
-});
+}
 
-$('#newsletter-submit').on('click', async function(event) {
+$('#bottom-banner-submit').on('click', bottomSubmit)
+$('#bottom-banner-form').on('submit', bottomSubmit)
+
+var newsletterSubmit = async function(event) {
   event.preventDefault()
 
   var submit_el = $('#newsletter-submit');
@@ -297,7 +300,10 @@ $('#newsletter-submit').on('click', async function(event) {
   await subscribeToNewsletter(email_el.val(), () => {
     submit_el.removeClass('running'); // Right after the HTTP call is made it calls this callback
   });
-});
+}
+
+$('#newsletter-submit').on('click', newsletterSubmit)
+$('#newsletter-form').on('submit', newsletterSubmit)
 
 // If people tap on our navbar buttons, it scrolls up a
 // bit so that the navbar does not cover the content
