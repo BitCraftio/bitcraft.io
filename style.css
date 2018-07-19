@@ -671,6 +671,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
   margin: 0 auto;
   max-width: 800px;
   padding: 20px;
+  padding-top: 40px;
   box-sizing: border-box;  
 }
 
@@ -707,8 +708,8 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
 }
 
 .bottom-banner-explanation {
-  margin-top: 5px;
-  color: #cde7fc;
+  font-size: 1.1em;
+  color: #fff;
 }
 
 .bottom-banner-group {
