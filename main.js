@@ -302,8 +302,8 @@ var newsletterSubmit = async function(event) {
   });
 }
 
-$('#newsletter-submit').on('click', newsletterSubmit)
-$('#newsletter-form').on('submit', newsletterSubmit)
+// $('#newsletter-submit').on('click', newsletterSubmit)
+// $('#newsletter-form').on('submit', newsletterSubmit)
 
 // If people tap on our navbar buttons, it scrolls up a
 // bit so that the navbar does not cover the content
@@ -316,7 +316,7 @@ $(document).ready(function() {
   // it scrolls up a bit so that the navbar does not cover the content
   if (location.hash) shiftWindow();
 
-  if (getCookie('never_newsletter') !== 'true' && window.location.hash.substr(1) !== 'newsletter') {
-    $('.bottom-banner').delay(1000).slideToggle(BOTTOM_BANNER_SPEED);
-  }
+  // if (getCookie('never_newsletter') !== 'true' && window.location.hash.substr(1) !== 'newsletter') {
+  //   $('.bottom-banner').delay(1000).slideToggle(BOTTOM_BANNER_SPEED);
+  // }
 });

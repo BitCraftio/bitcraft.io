@@ -144,12 +144,12 @@
     padding: 0 20px;
   }
 
-  .newsletter input[type="email"] {
+  /* .newsletter input[type="email"] {
     min-width: 100%;
     flex-grow: 1;
   }
 
   .newsletter-group > *:first-child {
     margin-bottom: 10px;
-  }
+  } */
 }

@@ -513,7 +513,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
 
 .contact-us {
   max-width: 800px;
-  margin: 100px auto 0 auto;
+  margin: 200px auto 0 auto;
 }
 
 .contact-us-container {
@@ -751,7 +751,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
   font-weight: bold;
 }
 
-.newsletter {
+/* .newsletter {
   max-width: 800px;
   margin: 200px auto 0 auto;
 }
@@ -786,7 +786,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
 
 .newsletter-group > *:last-child {
   margin-right: 0;
-}
+} */
 
 /* SWEETALERT RULES */
 
