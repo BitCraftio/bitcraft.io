@@ -1,6 +1,6 @@
 // CONSTANTS
 
-const API_URL = 'https://api.bitcraft.io'
+const API_URL = 'https://api.bitcraft.io:8080'
 const BOTTOM_BANNER_SPEED = 300;
 
 // GOOGLE ANALYTICS
