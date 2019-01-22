@@ -513,7 +513,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
 
 .contact-us {
   max-width: 800px;
-  margin: 100px auto 0 auto;
+  margin: 200px auto 0 auto;
 }
 
 .contact-us-container {
@@ -671,6 +671,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
   margin: 0 auto;
   max-width: 800px;
   padding: 20px;
+  padding-top: 40px;
   box-sizing: border-box;  
 }
 
@@ -695,7 +696,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
   right: 40px;
 
   font-size: 0.9em;
-  color: #69bdda;
+  color: #59a1b9;
 
   cursor: pointer;
 
@@ -707,8 +708,8 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
 }
 
 .bottom-banner-explanation {
-  margin-top: 5px;
-  color: #cde7fc;
+  font-size: 1.1em;
+  color: #fff;
 }
 
 .bottom-banner-group {
@@ -750,7 +751,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
   font-weight: bold;
 }
 
-.newsletter {
+/* .newsletter {
   max-width: 800px;
   margin: 200px auto 0 auto;
 }
@@ -785,7 +786,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
 
 .newsletter-group > *:last-child {
   margin-right: 0;
-}
+} */
 
 /* SWEETALERT RULES */
 

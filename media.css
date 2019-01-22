@@ -139,34 +139,17 @@
     flex-grow: 1;
   }
 
-  .bottom-banner-header {
-    display: none;
-  }
-
-  .bottom-banner-explanation {
-    color: #fff;
-    font-size: 1.1em;
-  }
-
   /* SWEETALERT RULES */
   .swal-text, .swal-content {
     padding: 0 20px;
   }
 
-  .newsletter input[type="email"] {
+  /* .newsletter input[type="email"] {
     min-width: 100%;
     flex-grow: 1;
   }
 
   .newsletter-group > *:first-child {
     margin-bottom: 10px;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  /* So that the X and the "Never show me this again"
-  are not too close to the header of the banner */
-  .bottom-banner-container {
-    padding-top: 40px;
-  }
+  } */
 }
