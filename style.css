@@ -150,12 +150,7 @@ a .page-title {
 }
 
 .about-box {
-  float: right;
-  position: -webkit-sticky;
-  position: sticky;
-  margin-top: 50px;
-  top: 10vh;
-  margin-right: 10vw;
+  margin: 50px 200px;
 }
 
 .about-box .pre-title {
@@ -240,7 +235,6 @@ a .page-title {
 }
 
 .about-words {
-  width: 30vw;
   font-size: 1em;
   padding-top: 1vw;
 }
@@ -751,43 +745,6 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
   font-weight: bold;
 }
 
-/* .newsletter {
-  max-width: 800px;
-  margin: 200px auto 0 auto;
-}
-
-.newsletter-container {
-  margin: 0 30px 0 30px;
-}
-
-.newsletter-title {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.newsletter-explanation {
-  margin-bottom: 20px;
-}
-
-.newsletter-group {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.newsletter input[type="email"] {
-  flex-grow: 1;
-}
-
-.newsletter-group > * {
-  margin-right: 10px;
-  margin-bottom: 20px;
-}
-
-.newsletter-group > *:last-child {
-  margin-right: 0;
-} */
-
 /* SWEETALERT RULES */
 
 .swal-text, .swal-content {
@@ -801,7 +758,6 @@ input[type="submit"]:disabled, input[type="button"]:disabled, .button:disabled, 
 
 .swal-content {
   font-size: 1.1rem;
-  /* text-align: left; */
 }
 
 .swal-modal.error .swal-button {
