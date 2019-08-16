@@ -85,10 +85,7 @@
   }
 
   .meet-team .about-box {
-    top: 90px;
-    padding-left: 20px;
-    padding-right: 30px;
-    width: 60%;
+    margin: 0 30px;
   }
 
   .about-box .pre-title {
@@ -143,13 +140,4 @@
   .swal-text, .swal-content {
     padding: 0 20px;
   }
-
-  /* .newsletter input[type="email"] {
-    min-width: 100%;
-    flex-grow: 1;
-  }
-
-  .newsletter-group > *:first-child {
-    margin-bottom: 10px;
-  } */
 }
